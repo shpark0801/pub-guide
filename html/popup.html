@@ -1,0 +1,1756 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+        <title>Overlay | 퍼블리싱 가이드</title>
+        <link href="../assets/css/import.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="skip-nav"><a href="#contents">본문 바로가기</a></div>
+        <div class="pub">
+            <header class="pub-header">
+                <h1>퍼블리싱 가이드</h1>
+                <div class="pub-toggle">
+                    <button
+                        type="button"
+                        class="menu-trigger js-menu-trigger is-active"
+                        aria-label="메뉴 열기/닫기"
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <nav class="pub-gnb" aria-label="상단 메뉴">
+                    <ul>
+                        <li class="is-active">
+                            <a href="../index.html">가이드</a>
+                        </li>
+                        <li><a href="../pub-pagelist.html">페이지</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <nav
+                class="pub-lnb js-pub-lnb is-active"
+                aria-label="퍼블리싱 가이드 메뉴"
+            >
+                <ul class="pub-lnb-list">
+                    <li class="pub-lnb-item">
+                        <button
+                            type="button"
+                            class="pub-lnb-depth1"
+                            aria-expanded="false"
+                        >
+                            퍼블리싱 가이드
+                            <span class="arrow" aria-hidden="true"></span>
+                        </button>
+                        <ul class="pub-lnb-depth2">
+                            <li>
+                                <a href="../index.html#basic-policy"
+                                    >기본 정책</a
+                                >
+                            </li>
+                            <li><a href="../index.html#rule">규칙</a></li>
+                            <li>
+                                <a href="../index.html#project"
+                                    >프로젝트 구조</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../index.html#file-naming"
+                                    >네이밍 규칙</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../index.html#html-rule">HTML 규칙</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#css-rule">CSS 규칙</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#accessibility"
+                                    >웹접근성</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pub-lnb-item is-open">
+                        <button
+                            type="button"
+                            class="pub-lnb-depth1"
+                            aria-expanded="true"
+                        >
+                            컴포넌트
+                            <span class="arrow" aria-hidden="true"></span>
+                        </button>
+                        <ul class="pub-lnb-depth2">
+                            <li>
+                                <button
+                                    type="button"
+                                    class="pub-lnb-depth2-btn"
+                                    aria-expanded="false"
+                                >
+                                    Form
+                                    <span
+                                        class="arrow"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                                <ul class="pub-lnb-depth3">
+                                    <li><a href="input.html">input</a></li>
+                                    <li>
+                                        <a href="input.html#textarea"
+                                            >textarea</a
+                                        >
+                                    </li>
+                                    <li><a href="input.html#file">file</a></li>
+                                    <li><a href="select.html">select</a></li>
+                                    <li>
+                                        <a href="checkbox.html">checkbox</a>
+                                    </li>
+                                    <li><a href="radio.html">radio</a></li>
+                                    <li><a href="toggle.html">toggle</a></li>
+                                </ul>
+                            </li>
+                            <!-- 상태 컴포넌트 메뉴 -->
+                            <li>
+                                <button
+                                    type="button"
+                                    class="pub-lnb-depth2-btn"
+                                    aria-expanded="false"
+                                >
+                                    UI
+                                    <span
+                                        class="arrow"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                                <ul class="pub-lnb-depth3">
+                                    <li><a href="ui.html#button">button</a></li>
+                                    <li><a href="ui.html#tab">tab</a></li>
+                                    <li>
+                                        <a href="ui.html#accordion"
+                                            >accordion</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="ui.html#timeline">timeline</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui.html#pagination"
+                                            >pagination</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="ui.html#tooltip">tooltip</a>
+                                    </li>
+                                    <li><a href="ui.html#badge">badge</a></li>
+                                    <li><a href="image.html">image</a></li>
+                                    <li>
+                                        <a href="status.html#progress"
+                                            >progress</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="status.html#loading"
+                                            >loading</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- 레이어 메뉴 -->
+                            <li class="is-open">
+                                <button
+                                    type="button"
+                                    class="pub-lnb-depth2-btn"
+                                    aria-expanded="true"
+                                >
+                                    Overlay
+                                    <span
+                                        class="arrow"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                                <ul class="pub-lnb-depth3">
+                                    <li class="is-active">
+                                        <a href="popup.html#modal"
+                                            >modal popup</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#image-banner-layer"
+                                            >image banner layer</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#alert">alert</a>
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#confirm">confirm</a>
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#message-close"
+                                            >close type</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#bottom-sheet"
+                                            >bottom sheet</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#bottom-sheet-close"
+                                            >bottom sheet close</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#bottom-sheet-row"
+                                            >bottom sheet 2 column</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#toast"
+                                            >toast popup</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <main id="contents" class="pub-container">
+                <!-- 모달 팝업 가이드 -->
+                <section id="modal" class="pub-section">
+                    <h2>modal popup</h2>
+                    <div class="guide-box">
+                        <h3>
+                            <em>01.</em>
+                            modal popup - 기본
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <button
+                                    type="button"
+                                    class="form-button form-button-secondary js-modal-open"
+                                    data-modal-target="#guide-modal"
+                                >
+                                    모달 열기
+                                </button>
+                                <!-- 모달 팝업 기본 예제 -->
+                                <div
+                                    id="guide-modal"
+                                    class="ui-modal"
+                                    role="dialog"
+                                    aria-modal="true"
+                                    aria-labelledby="guide-modal-title"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="ui-modal-dimmed js-modal-close"
+                                    ></div>
+                                    <div class="ui-modal-dialog">
+                                        <div class="ui-modal-header">
+                                            <h3
+                                                id="guide-modal-title"
+                                                class="ui-modal-title"
+                                            >
+                                                알림
+                                            </h3>
+                                        </div>
+                                        <div class="ui-modal-body">
+                                            <p>모달 팝업 내용입니다.</p>
+                                        </div>
+                                        <div class="ui-modal-footer">
+                                            <button
+                                                type="button"
+                                                class="form-button js-modal-close"
+                                            >
+                                                닫기
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="form-button form-button-secondary js-modal-close"
+                                            >
+                                                확인
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;button type="button" class="form-button form-button-secondary js-modal-open" data-modal-target="#guide-modal"&gt;모달 열기&lt;/button&gt;
+
+&lt;!-- modal popup 기본 예제 --&gt;
+&lt;div id="guide-modal" class="ui-modal" role="dialog" aria-modal="true" aria-labelledby="guide-modal-title" aria-hidden="true"&gt;
+    &lt;div class="ui-modal-dimmed js-modal-close"&gt;&lt;/div&gt;
+    &lt;div class="ui-modal-dialog"&gt;
+        &lt;div class="ui-modal-header"&gt;&lt;h3 id="guide-modal-title" class="ui-modal-title"&gt;알림&lt;/h3&gt;&lt;/div&gt;
+        &lt;div class="ui-modal-body"&gt;&lt;p&gt;모달 팝업 내용입니다.&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="ui-modal-footer"&gt;&lt;button type="button" class="form-button js-modal-close"&gt;닫기&lt;/button&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="css">.ui-modal-dialog {
+    width: 100%;
+    max-width: 400px;
+}
+
+.ui-modal-header {
+    position: relative;
+}
+
+.ui-modal-header::after {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    left: 15px;
+    height: 1px;
+    background-color: #e5e5e5;
+    content: "";
+}
+
+.ui-modal-footer {
+    border-top: 0;
+}</code></pre>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="javascript">// modal popup 동작
+const modal = document.querySelector('#guide-modal');
+const openButton = document.querySelector('[data-modal-target="#guide-modal"]');
+const closeButtons = modal.querySelectorAll('.js-modal-close');
+
+openButton.addEventListener('click', function () {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    modal.querySelector('button.js-modal-close').focus();
+});
+
+closeButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        openButton.focus();
+    });
+});</code></pre>
+                                </div>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        모달·알럿·컨펌은 PC에서 최대 너비
+                                        400px를 사용하고, 작은 화면에서는 가용
+                                        너비에 맞게 축소한다.
+                                    </li>
+                                    <li>
+                                        열기 버튼의 data-modal-target과 모달
+                                        id를 연결한다.
+                                    </li>
+                                    <li>
+                                        열림 시 초점을 내부로 이동하고 Tab
+                                        포커스를 레이어 안에서 순환시킨다.
+                                    </li>
+                                    <li>
+                                        Esc 또는 닫기 버튼으로 닫은 뒤 실행
+                                        버튼으로 포커스를 복원한다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 이미지 배너 레이어 가이드 -->
+                <section id="image-banner-layer" class="pub-section">
+                    <h2>image banner layer</h2>
+                    <div class="guide-box">
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div
+                                    class="ui-actions ui-actions-row ui-modal-banner-buttons"
+                                >
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-line js-modal-open"
+                                        data-modal-target="#guide-banner-image"
+                                    >
+                                        이미지 + 확인
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-line js-modal-open"
+                                        data-modal-target="#guide-banner-slide"
+                                    >
+                                        이미지 슬라이드 번호
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-line js-modal-open"
+                                        data-modal-target="#guide-banner-slide-dot"
+                                    >
+                                        이미지 슬라이드 도트
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-line js-modal-open"
+                                        data-modal-target="#guide-banner-today"
+                                    >
+                                        오늘 하루 안보기
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-line js-modal-open"
+                                        data-modal-target="#guide-banner-title-bottom"
+                                    >
+                                        타이틀 + 하단 확인
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-line js-modal-open"
+                                        data-modal-target="#guide-banner-title-close"
+                                    >
+                                        타이틀 닫기 + 하단 버튼
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-line js-modal-open"
+                                        data-modal-target="#guide-banner-close"
+                                    >
+                                        상단 닫기
+                                    </button>
+                                </div>
+                                <div
+                                    id="guide-banner-image"
+                                    class="ui-modal ui-modal-banner"
+                                    role="dialog"
+                                    aria-modal="true"
+                                    aria-labelledby="guide-banner-image-title"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="ui-modal-dimmed js-modal-close"
+                                    ></div>
+                                    <div class="ui-modal-dialog">
+                                        <h3
+                                            id="guide-banner-image-title"
+                                            class="blind"
+                                        >
+                                            이미지 배너 안내
+                                        </h3>
+                                        <div class="ui-modal-body">
+                                            <img
+                                                class="ui-modal-banner-img"
+                                                src="../assets/images/sample/sample-landscape.jpg"
+                                                width="1600"
+                                                height="1078"
+                                                alt="산과 호수가 어우러진 이벤트 배너"
+                                            />
+                                        </div>
+                                        <div class="ui-modal-footer">
+                                            <button
+                                                type="button"
+                                                class="ui-modal-banner-confirm js-modal-close"
+                                            >
+                                                확인
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    id="guide-banner-slide"
+                                    class="ui-modal ui-modal-banner"
+                                    role="dialog"
+                                    aria-modal="true"
+                                    aria-labelledby="guide-banner-slide-title"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="ui-modal-dimmed js-modal-close"
+                                    ></div>
+                                    <div class="ui-modal-dialog">
+                                        <h3
+                                            id="guide-banner-slide-title"
+                                            class="blind"
+                                        >
+                                            이미지 배너 슬라이드
+                                        </h3>
+                                        <div class="ui-modal-body">
+                                            <div
+                                                class="ui-modal-banner-slide swiper js-banner-swiper"
+                                                data-pagination-type="fraction"
+                                            >
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img
+                                                            class="ui-modal-banner-img"
+                                                            src="../assets/images/sample/sample-landscape.jpg"
+                                                            width="1600"
+                                                            height="1078"
+                                                            alt="첫 번째 풍경 이벤트 배너"
+                                                        />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img
+                                                            class="ui-modal-banner-img"
+                                                            src="../assets/images/sample/sample-cat.jpg"
+                                                            width="900"
+                                                            height="1350"
+                                                            alt="두 번째 고양이 이벤트 배너"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <button
+                                                    type="button"
+                                                    class="ui-modal-banner-arrow ui-modal-banner-prev js-banner-prev"
+                                                    aria-label="이전 이미지"
+                                                >
+                                                    <span aria-hidden="true"
+                                                        >‹</span
+                                                    >
+                                                </button>
+                                                <div
+                                                    class="ui-modal-banner-page swiper-pagination js-banner-pagination"
+                                                ></div>
+                                                <button
+                                                    type="button"
+                                                    class="ui-modal-banner-arrow ui-modal-banner-next js-banner-next"
+                                                    aria-label="다음 이미지"
+                                                >
+                                                    <span aria-hidden="true"
+                                                        >›</span
+                                                    >
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="ui-modal-footer">
+                                            <button
+                                                type="button"
+                                                class="ui-modal-banner-confirm js-modal-close"
+                                            >
+                                                확인
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    id="guide-banner-slide-dot"
+                                    class="ui-modal ui-modal-banner"
+                                    role="dialog"
+                                    aria-modal="true"
+                                    aria-labelledby="guide-banner-slide-dot-title"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="ui-modal-dimmed js-modal-close"
+                                    ></div>
+                                    <div class="ui-modal-dialog">
+                                        <h3
+                                            id="guide-banner-slide-dot-title"
+                                            class="blind"
+                                        >
+                                            이미지 배너 슬라이드 도트
+                                        </h3>
+                                        <div class="ui-modal-body">
+                                            <div
+                                                class="ui-modal-banner-slide swiper js-banner-swiper"
+                                                data-pagination-type="bullets"
+                                            >
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img
+                                                            class="ui-modal-banner-img"
+                                                            src="../assets/images/sample/sample-landscape.jpg"
+                                                            width="1600"
+                                                            height="1078"
+                                                            alt="첫 번째 풍경 이벤트 배너"
+                                                        />
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img
+                                                            class="ui-modal-banner-img"
+                                                            src="../assets/images/sample/sample-cat.jpg"
+                                                            width="900"
+                                                            height="1350"
+                                                            alt="두 번째 고양이 이벤트 배너"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <button
+                                                    type="button"
+                                                    class="ui-modal-banner-arrow ui-modal-banner-prev js-banner-prev"
+                                                    aria-label="이전 이미지"
+                                                >
+                                                    <span aria-hidden="true"
+                                                        >‹</span
+                                                    >
+                                                </button>
+                                                <div
+                                                    class="ui-modal-banner-dots swiper-pagination js-banner-pagination"
+                                                ></div>
+                                                <button
+                                                    type="button"
+                                                    class="ui-modal-banner-arrow ui-modal-banner-next js-banner-next"
+                                                    aria-label="다음 이미지"
+                                                >
+                                                    <span aria-hidden="true"
+                                                        >›</span
+                                                    >
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="ui-modal-footer">
+                                            <button
+                                                type="button"
+                                                class="ui-modal-banner-confirm js-modal-close"
+                                            >
+                                                확인
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    id="guide-banner-today"
+                                    class="ui-modal ui-modal-banner"
+                                    role="dialog"
+                                    aria-modal="true"
+                                    aria-labelledby="guide-banner-today-title"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="ui-modal-dimmed js-modal-close"
+                                    ></div>
+                                    <div class="ui-modal-dialog">
+                                        <h3
+                                            id="guide-banner-today-title"
+                                            class="blind"
+                                        >
+                                            오늘 하루 보지 않기 이미지 배너
+                                        </h3>
+                                        <div class="ui-modal-body">
+                                            <img
+                                                class="ui-modal-banner-img"
+                                                src="../assets/images/sample/sample-cat.jpg"
+                                                width="900"
+                                                height="1350"
+                                                alt="고양이 이벤트 배너"
+                                            />
+                                        </div>
+                                        <div
+                                            class="ui-modal-footer ui-actions ui-actions-split"
+                                        >
+                                            <label class="ui-modal-banner-today"><input type="checkbox" /> 오늘 하루 안보기</label>
+                                            <button
+                                                type="button"
+                                                class="ui-modal-banner-confirm js-modal-close"
+                                            >
+                                                확인
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    id="guide-banner-title-bottom"
+                                    class="ui-modal ui-modal-banner"
+                                    role="dialog"
+                                    aria-modal="true"
+                                    aria-labelledby="guide-banner-title-bottom-title"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="ui-modal-dimmed js-modal-close"
+                                    ></div>
+                                    <div class="ui-modal-dialog">
+                                        <div class="ui-modal-header">
+                                            <h3
+                                                id="guide-banner-title-bottom-title"
+                                                class="ui-modal-title"
+                                            >
+                                                이벤트 안내
+                                            </h3>
+                                        </div>
+                                        <div class="ui-modal-body">
+                                            <img
+                                                class="ui-modal-banner-img"
+                                                src="../assets/images/sample/sample-landscape.jpg"
+                                                width="1600"
+                                                height="1078"
+                                                alt="산과 호수가 어우러진 이벤트 배너"
+                                            />
+                                        </div>
+                                        <div class="ui-modal-footer">
+                                            <button
+                                                type="button"
+                                                class="ui-modal-banner-confirm js-modal-close"
+                                            >
+                                                확인
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    id="guide-banner-title-close"
+                                    class="ui-modal ui-modal-banner has-header"
+                                    role="dialog"
+                                    aria-modal="true"
+                                    aria-labelledby="guide-banner-title-close-title"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="ui-modal-dimmed js-modal-close"
+                                    ></div>
+                                    <div class="ui-modal-dialog">
+                                        <div class="ui-modal-header">
+                                            <h3
+                                                id="guide-banner-title-close-title"
+                                                class="ui-modal-title"
+                                            >
+                                                이벤트 안내
+                                            </h3>
+                                            <button
+                                                type="button"
+                                                class="ui-modal-close js-modal-close"
+                                                aria-label="이벤트 배너 닫기"
+                                            >
+                                                <span aria-hidden="true"
+                                                    >×</span
+                                                >
+                                            </button>
+                                        </div>
+                                        <div class="ui-modal-body">
+                                            <img
+                                                class="ui-modal-banner-img"
+                                                src="../assets/images/sample/sample-cat.jpg"
+                                                width="900"
+                                                height="1350"
+                                                alt="고양이 이벤트 배너"
+                                            />
+                                        </div>
+                                        <div class="ui-modal-footer">
+                                            <button
+                                                type="button"
+                                                class="ui-modal-banner-confirm js-modal-close"
+                                            >
+                                                확인
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    id="guide-banner-close"
+                                    class="ui-modal ui-modal-banner"
+                                    role="dialog"
+                                    aria-modal="true"
+                                    aria-labelledby="guide-banner-close-title"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="ui-modal-dimmed js-modal-close"
+                                    ></div>
+                                    <div class="ui-modal-dialog">
+                                        <button
+                                            type="button"
+                                            class="ui-modal-close js-modal-close"
+                                            aria-label="이미지 배너 닫기"
+                                        >
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                        <h3
+                                            id="guide-banner-close-title"
+                                            class="blind"
+                                        >
+                                            상단 닫기 이미지 배너
+                                        </h3>
+                                        <div class="ui-modal-body">
+                                            <img
+                                                class="ui-modal-banner-img"
+                                                src="../assets/images/sample/sample-landscape.jpg"
+                                                width="1600"
+                                                height="1078"
+                                                alt="산과 호수가 어우러진 이벤트 배너"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- 이미지 + 확인 --&gt;
+&lt;div class="ui-modal ui-modal-banner" role="dialog" aria-modal="true" aria-labelledby="banner-title"&gt;
+    &lt;div class="ui-modal-dialog"&gt;
+        &lt;h3 id="banner-title" class="blind"&gt;이미지 배너 안내&lt;/h3&gt;
+        &lt;div class="ui-modal-body"&gt;&lt;img class="ui-modal-banner-img" src="..." alt="이벤트 배너 설명"&gt;&lt;/div&gt;
+        &lt;div class="ui-modal-footer"&gt;&lt;button type="button" class="ui-modal-banner-confirm js-modal-close"&gt;확인&lt;/button&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 오늘 하루 안보기 + 확인 --&gt;
+&lt;label class="ui-modal-banner-today"&gt;&lt;input type="checkbox" /&gt; 오늘 하루 안보기&lt;/label&gt;
+&lt;button type="button" class="ui-modal-banner-confirm js-modal-close"&gt;확인&lt;/button&gt;
+
+&lt;!-- 타이틀 + 이미지 + 하단 확인 --&gt;
+&lt;div class="ui-modal-header"&gt;
+    &lt;h3 class="ui-modal-title"&gt;이벤트 안내&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="ui-modal-body"&gt;...&lt;/div&gt;
+&lt;div class="ui-modal-footer"&gt;
+    &lt;button type="button" class="ui-modal-banner-confirm js-modal-close"&gt;확인&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- 타이틀과 상단 닫기 + 이미지 + 하단 버튼 --&gt;
+&lt;div class="ui-modal ui-modal-banner has-header"&gt;
+    &lt;div class="ui-modal-header"&gt;
+        &lt;h3 class="ui-modal-title"&gt;이벤트 안내&lt;/h3&gt;
+        &lt;button type="button" class="ui-modal-close js-modal-close" aria-label="이벤트 배너 닫기"&gt;
+            &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Swiper 번호 페이지네이션 --&gt;
+&lt;div class="ui-modal-banner-slide swiper js-banner-swiper" data-pagination-type="fraction"&gt;
+    &lt;div class="swiper-wrapper"&gt;
+        &lt;div class="swiper-slide"&gt;...&lt;/div&gt;
+        &lt;div class="swiper-slide"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button type="button" class="ui-modal-banner-arrow ui-modal-banner-prev js-banner-prev" aria-label="이전 이미지"&gt;‹&lt;/button&gt;
+    &lt;div class="ui-modal-banner-page swiper-pagination js-banner-pagination"&gt;&lt;/div&gt;
+    &lt;button type="button" class="ui-modal-banner-arrow ui-modal-banner-next js-banner-next" aria-label="다음 이미지"&gt;›&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- 도트 페이지네이션은 컨테이너와 pagination type만 교체 --&gt;
+&lt;div class="ui-modal-banner-slide swiper js-banner-swiper" data-pagination-type="bullets"&gt;
+    &lt;div class="swiper-wrapper"&gt;
+        &lt;div class="swiper-slide"&gt;...&lt;/div&gt;
+        &lt;div class="swiper-slide"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button type="button" class="ui-modal-banner-arrow ui-modal-banner-prev js-banner-prev" aria-label="이전 이미지"&gt;‹&lt;/button&gt;
+    &lt;div class="ui-modal-banner-dots swiper-pagination js-banner-pagination"&gt;&lt;/div&gt;
+    &lt;button type="button" class="ui-modal-banner-arrow ui-modal-banner-next js-banner-next" aria-label="다음 이미지"&gt;›&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- 하단 버튼 없이 상단 닫기 --&gt;
+&lt;button type="button" class="ui-modal-close js-modal-close" aria-label="이미지 배너 닫기"&gt;&lt;span aria-hidden="true"&gt;×&lt;/span&gt;&lt;/button&gt;</code></pre>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="css">.ui-modal-banner-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+.ui-modal-banner-buttons .form-button {
+    width: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+.ui-modal-banner .ui-modal-body {
+    padding: 0;
+}
+.ui-modal-banner .ui-modal-header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.ui-modal-banner .ui-modal-dialog {
+    border-radius: 0;
+}
+.ui-modal-banner .ui-modal-footer {
+    gap: 0;
+    padding: 0;
+    border-top: 1px solid #e5e5e5;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+.ui-modal-banner-confirm {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    color: #333;
+}
+.ui-modal-banner-today {
+    flex: 1 1 50%;
+    justify-content: center;
+}
+.ui-modal-banner-today + .ui-modal-banner-confirm {
+    flex: 1 1 50%;
+    border-left: 1px solid #e5e5e5;
+}
+.ui-modal-banner .ui-modal-close {
+    background-color: transparent;
+}
+.ui-modal-banner.has-header .ui-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-right: 5px;
+}
+.ui-modal-banner.has-header .ui-modal-close {
+    position: static;
+    flex: 0 0 36px;
+}
+.ui-modal-banner-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+.ui-modal-banner-arrow {
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: #fff;
+    color: #333;
+    font-size: 34px;
+    transform: translateY(-50%);
+}
+.ui-modal-banner-arrow span {
+    display: block;
+    line-height: 1;
+    transform: translateY(-1px);
+}
+.ui-modal-banner-slide.swiper &gt; .ui-modal-banner-page {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 12px;
+    left: 50%;
+    z-index: 2;
+    width: auto;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #333;
+    transform: translateX(-50%);
+}
+.ui-modal-banner-slide.swiper &gt; .ui-modal-banner-dots {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 18px;
+    left: 50%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    width: auto;
+    transform: translateX(-50%);
+}
+</code></pre>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="javascript">document.querySelectorAll('.js-banner-swiper').forEach(function (slider) {
+    new Swiper(slider, {
+        loop: false,
+        speed: 350,
+        navigation: {
+            prevEl: slider.querySelector('.js-banner-prev'),
+            nextEl: slider.querySelector('.js-banner-next')
+        },
+        pagination: {
+            el: slider.querySelector('.js-banner-pagination'),
+            type: slider.dataset.paginationType || 'fraction'
+        }
+    });
+});</code></pre>
+                                </div>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        <strong>공통</strong>
+                                        이미지 레이어의 라운드, 배경과 구분선은
+                                        프로젝트 디자인에 맞게 적용한다.
+                                    </li>
+                                    <li>
+                                        이미지와 하단 조작 영역은 경계를
+                                        구분하되 색상과 선의 형태는 프로젝트
+                                        기준을 따른다.
+                                    </li>
+                                    <li>
+                                        배너 이미지가 정보를 포함하면 목적과
+                                        내용을 alt로 제공하고, 장식 이미지는
+                                        alt를 비운다.
+                                    </li>
+                                </ul>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        <strong>버튼과 닫기</strong>
+                                        확인 버튼은 하단 영역 전체를 클릭
+                                        영역으로 사용할 수 있다.
+                                    </li>
+                                    <li>
+                                        이미지 위에 배치하는 상단 닫기 버튼은
+                                        배경과의 대비를 확인한다.
+                                    </li>
+                                    <li>
+                                        타이틀형은 하단 확인 유형과 상단
+                                        닫기·하단 확인 유형을 목적에 맞게
+                                        구분한다.
+                                    </li>
+                                    <li>
+                                        하단 버튼이 없는 유형은 상단 닫기 버튼에
+                                        구체적인 aria-label을 제공하고 닫은 뒤
+                                        열기 버튼으로 포커스를 복원한다.
+                                    </li>
+                                </ul>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        <strong>슬라이드</strong>
+                                        반복하지 않고 첫 번째·마지막 이미지에서
+                                        이동할 수 없는 방향 버튼을 노출하지
+                                        않는다.
+                                    </li>
+                                    <li>
+                                        페이지네이션 유형은 번호 또는 도트 중
+                                        목적에 맞는 한 가지 유형을 사용한다.
+                                    </li>
+                                    <li>
+                                        숨겨진 탭이나 팝업 안에서 Swiper를
+                                        초기화할 경우 노출 시점에
+                                        <code>update()</code>
+                                        를 실행해 크기와 위치를 다시 계산한다.
+                                    </li>
+                                </ul>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        <strong>오늘 하루 안보기</strong>
+                                        확인 버튼과 동일한 너비로 배치하고 두
+                                        항목을 시각적으로 구분한다.
+                                    </li>
+                                    <li>
+                                        선택 상태를 저장하는 프로젝트 로직과
+                                        연결하고 확인 버튼과 명확히 구분한다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 알림창 가이드 -->
+                <section id="alert" class="pub-section">
+                    <h2>alert</h2>
+                    <div class="guide-box">
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <button
+                                    type="button"
+                                    class="form-button form-button-line js-modal-open"
+                                    data-modal-target="#guide-alert"
+                                >
+                                    알럿 열기
+                                </button>
+                                <div
+                                    id="guide-alert"
+                                    class="ui-modal ui-modal-msg"
+                                    role="alertdialog"
+                                    aria-modal="true"
+                                    aria-labelledby="guide-alert-title"
+                                    aria-describedby="guide-alert-desc"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="ui-modal-dimmed js-modal-close"
+                                    ></div>
+                                    <div class="ui-modal-dialog">
+                                        <div class="ui-modal-header">
+                                            <h3
+                                                id="guide-alert-title"
+                                                class="ui-modal-title"
+                                            >
+                                                알림
+                                            </h3>
+                                        </div>
+                                        <div class="ui-modal-body">
+                                            <p id="guide-alert-desc">
+                                                저장이 완료되었습니다.
+                                            </p>
+                                        </div>
+                                        <div class="ui-modal-footer">
+                                            <button
+                                                type="button"
+                                                class="form-button form-button-fill form-button-block js-modal-close"
+                                            >
+                                                확인
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- alert --&gt;
+&lt;div class="ui-modal ui-modal-msg" role="alertdialog" aria-modal="true" aria-labelledby="alert-title" aria-describedby="alert-desc"&gt;
+    &lt;h3 id="alert-title"&gt;알림&lt;/h3&gt;&lt;p id="alert-desc"&gt;저장이 완료되었습니다.&lt;/p&gt;&lt;button type="button"&gt;확인&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 확인창 가이드 -->
+                <section id="confirm" class="pub-section">
+                    <h2>confirm</h2>
+                    <div class="guide-box">
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <button
+                                    type="button"
+                                    class="form-button form-button-line js-modal-open"
+                                    data-modal-target="#guide-confirm"
+                                >
+                                    컨펌 열기
+                                </button>
+                                <div
+                                    id="guide-confirm"
+                                    class="ui-modal ui-modal-msg"
+                                    role="alertdialog"
+                                    aria-modal="true"
+                                    aria-labelledby="guide-confirm-title"
+                                    aria-describedby="guide-confirm-desc"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="ui-modal-dimmed js-modal-close"
+                                    ></div>
+                                    <div class="ui-modal-dialog">
+                                        <div class="ui-modal-header">
+                                            <h3
+                                                id="guide-confirm-title"
+                                                class="ui-modal-title"
+                                            >
+                                                삭제 확인
+                                            </h3>
+                                        </div>
+                                        <div class="ui-modal-body">
+                                            <p id="guide-confirm-desc">
+                                                선택한 항목을 삭제하시겠습니까?
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="ui-modal-footer ui-actions ui-actions-row ui-actions-equal"
+                                        >
+                                            <button
+                                                type="button"
+                                                class="form-button form-button-line form-button-block js-modal-close"
+                                            >
+                                                취소
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="form-button form-button-fill form-button-block js-modal-close"
+                                            >
+                                                삭제
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- confirm --&gt;
+&lt;div class="ui-modal ui-modal-msg" role="alertdialog" aria-modal="true" aria-labelledby="confirm-title" aria-describedby="confirm-desc"&gt;
+    &lt;h3 id="confirm-title"&gt;삭제 확인&lt;/h3&gt;&lt;p id="confirm-desc"&gt;선택한 항목을 삭제하시겠습니까?&lt;/p&gt;
+    &lt;button type="button"&gt;취소&lt;/button&gt;&lt;button type="button"&gt;삭제&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        alert는 확인만 필요한 결과나 필수 안내에
+                                        사용한다.
+                                    </li>
+                                    <li>
+                                        confirm은 취소와 실행 결과를 명확한
+                                        동사로 작성한다.
+                                    </li>
+                                    <li>
+                                        삭제처럼 되돌리기 어려운 작업은 취소
+                                        버튼에 초기 포커스를 두는 방안을 우선
+                                        검토한다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 알림창·확인창 닫기 버튼 가이드 -->
+                <section id="message-close" class="pub-section">
+                    <h2>alert / confirm - close</h2>
+                    <div class="guide-box">
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <button
+                                    type="button"
+                                    class="form-button form-button-line js-modal-open"
+                                    data-modal-target="#guide-alert-close"
+                                >
+                                    닫기 버튼 알럿
+                                </button>
+                                <button
+                                    type="button"
+                                    class="form-button form-button-line js-modal-open"
+                                    data-modal-target="#guide-confirm-close"
+                                >
+                                    닫기 버튼 컨펌
+                                </button>
+                                <div
+                                    id="guide-alert-close"
+                                    class="ui-modal ui-modal-msg has-close"
+                                    role="alertdialog"
+                                    aria-modal="true"
+                                    aria-labelledby="guide-alert-close-title"
+                                    aria-describedby="guide-alert-close-desc"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="ui-modal-dimmed js-modal-close"
+                                    ></div>
+                                    <div class="ui-modal-dialog">
+                                        <button
+                                            type="button"
+                                            class="ui-modal-close js-modal-close"
+                                            aria-label="알럿 닫기"
+                                        >
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                        <div class="ui-modal-header">
+                                            <h3
+                                                id="guide-alert-close-title"
+                                                class="ui-modal-title"
+                                            >
+                                                알림
+                                            </h3>
+                                        </div>
+                                        <div class="ui-modal-body">
+                                            <p id="guide-alert-close-desc">
+                                                알림 내용을 확인해 주세요.
+                                            </p>
+                                        </div>
+                                        <div class="ui-modal-footer">
+                                            <button
+                                                type="button"
+                                                class="form-button form-button-fill form-button-block js-modal-close"
+                                            >
+                                                확인
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    id="guide-confirm-close"
+                                    class="ui-modal ui-modal-msg has-close"
+                                    role="alertdialog"
+                                    aria-modal="true"
+                                    aria-labelledby="guide-confirm-close-title"
+                                    aria-describedby="guide-confirm-close-desc"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="ui-modal-dimmed js-modal-close"
+                                    ></div>
+                                    <div class="ui-modal-dialog">
+                                        <button
+                                            type="button"
+                                            class="ui-modal-close js-modal-close"
+                                            aria-label="컨펌 닫기"
+                                        >
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                        <div class="ui-modal-header">
+                                            <h3
+                                                id="guide-confirm-close-title"
+                                                class="ui-modal-title"
+                                            >
+                                                변경 확인
+                                            </h3>
+                                        </div>
+                                        <div class="ui-modal-body">
+                                            <p id="guide-confirm-close-desc">
+                                                변경 내용을 적용하시겠습니까?
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="ui-modal-footer ui-actions ui-actions-row ui-actions-equal"
+                                        >
+                                            <button
+                                                type="button"
+                                                class="form-button form-button-line form-button-block js-modal-close"
+                                            >
+                                                취소
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="form-button form-button-fill form-button-block js-modal-close"
+                                            >
+                                                적용
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- 상단 닫기 버튼형 --&gt;
+&lt;div class="ui-modal ui-modal-msg has-close" role="alertdialog" aria-modal="true"&gt;
+    &lt;div class="ui-modal-dialog"&gt;
+        &lt;button type="button" class="ui-modal-close js-modal-close" aria-label="팝업 닫기"&gt;&lt;span aria-hidden="true"&gt;×&lt;/span&gt;&lt;/button&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        닫기 아이콘은 장식 문자로 숨기고
+                                        button에 팝업 종류를 포함한 aria-label을
+                                        제공한다.
+                                    </li>
+                                    <li>
+                                        Alert·Confirm의 제목과 구분선은 5px
+                                        간격을 적용하고 본문과 하단 영역은 15px
+                                        패딩을 사용한다.
+                                    </li>
+                                    <li>
+                                        Confirm 버튼은 가용 너비를 동일하게
+                                        나누고 480px 이하에서는 세로로 전환한다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 하단 시트 가이드 -->
+                <section id="bottom-sheet" class="pub-section">
+                    <h2>bottom sheet</h2>
+                    <div class="guide-box">
+                        <h3>
+                            <em>01.</em>
+                            bottom sheet - 기본
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <button
+                                    type="button"
+                                    class="form-button form-button-fill js-bottom-sheet-open"
+                                    data-bottom-sheet-target="#guide-bottom-sheet"
+                                >
+                                    바텀시트 열기
+                                </button>
+                                <!-- 하단 시트 기본 예제 -->
+                                <div
+                                    id="guide-bottom-sheet"
+                                    class="ui-bottom-sheet"
+                                    role="dialog"
+                                    aria-modal="true"
+                                    aria-labelledby="guide-bottom-sheet-title"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="ui-bottom-sheet-dimmed js-bottom-sheet-close"
+                                    ></div>
+                                    <div class="ui-bottom-sheet-panel">
+                                        <span
+                                            class="ui-bottom-sheet-handle"
+                                            aria-hidden="true"
+                                        ></span>
+                                        <h3
+                                            id="guide-bottom-sheet-title"
+                                            class="ui-bottom-sheet-title"
+                                        >
+                                            옵션 선택
+                                        </h3>
+                                        <div class="ui-bottom-sheet-content">
+                                            <p>원하는 옵션을 선택해 주세요.</p>
+                                        </div>
+                                        <div
+                                            class="ui-bottom-sheet-actions ui-actions ui-actions-equal"
+                                        >
+                                            <button
+                                                type="button"
+                                                class="form-button form-button-line form-button-block js-bottom-sheet-close"
+                                            >
+                                                취소
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="form-button form-button-fill form-button-block js-bottom-sheet-close"
+                                            >
+                                                확인
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- bottom sheet 기본 예제 --&gt;
+&lt;div id="guide-bottom-sheet" class="ui-bottom-sheet" role="dialog" aria-modal="true" aria-labelledby="guide-bottom-sheet-title" aria-hidden="true"&gt;
+    &lt;div class="ui-bottom-sheet-dimmed js-bottom-sheet-close"&gt;&lt;/div&gt;
+    &lt;div class="ui-bottom-sheet-panel"&gt;
+        &lt;span class="ui-bottom-sheet-handle" aria-hidden="true"&gt;&lt;/span&gt;
+        &lt;h3 id="guide-bottom-sheet-title" class="ui-bottom-sheet-title"&gt;옵션 선택&lt;/h3&gt;
+        &lt;div class="ui-bottom-sheet-content"&gt;
+            &lt;p&gt;원하는 옵션을 선택해 주세요.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="ui-bottom-sheet-actions ui-actions ui-actions-equal"&gt;
+            &lt;button type="button" class="form-button form-button-line form-button-block js-bottom-sheet-close"&gt;취소&lt;/button&gt;
+            &lt;button type="button" class="form-button form-button-fill form-button-block js-bottom-sheet-close"&gt;확인&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="css">.ui-bottom-sheet-content {
+    min-height: 120px;
+}
+
+.ui-bottom-sheet.is-closing .ui-bottom-sheet-dimmed {
+    opacity: 0;
+}
+
+.ui-bottom-sheet.is-opening .ui-bottom-sheet-dimmed {
+    opacity: 0;
+}
+
+.ui-bottom-sheet.is-closing .ui-bottom-sheet-panel {
+    transform: translateY(100%);
+}
+
+.ui-bottom-sheet.is-opening .ui-bottom-sheet-panel {
+    transform: translateY(100%);
+}</code></pre>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="javascript">// bottom sheet 동작
+const sheet = document.querySelector('#guide-bottom-sheet');
+const sheetOpenButton = document.querySelector('[data-bottom-sheet-target="#guide-bottom-sheet"]');
+
+sheetOpenButton.addEventListener('click', function () {
+    sheet.classList.add('is-opening');
+    sheet.classList.add('is-open');
+    sheet.setAttribute('aria-hidden', 'false');
+    sheet.querySelector('button.js-bottom-sheet-close').focus();
+
+    window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () {
+            sheet.classList.remove('is-opening');
+        });
+    });
+});
+
+sheet.querySelectorAll('.js-bottom-sheet-close').forEach(function (button) {
+    button.addEventListener('click', function () {
+        sheet.classList.add('is-closing');
+        sheet.setAttribute('aria-hidden', 'true');
+
+        window.setTimeout(function () {
+            sheet.classList.remove('is-open', 'is-closing');
+            sheetOpenButton.focus();
+        }, 250);
+    });
+});</code></pre>
+                                </div>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        열 때는 패널이 아래에서 올라오며 딤이
+                                        나타나고, 닫을 때는 반대로 전환되는
+                                        0.25초 모션을 사용한다.
+                                    </li>
+                                    <li>
+                                        동작 줄이기 설정에서는 열림·닫힘 모션을
+                                        즉시 완료한다.
+                                    </li>
+                                    <li>
+                                        바텀시트 콘텐츠 영역은 기본 최소 높이
+                                        120px를 사용하고, 내용이 많아지면
+                                        자연스럽게 확장되도록 한다.
+                                    </li>
+                                    <li>
+                                        바텀시트는 PC에서 최대 480px로 하단
+                                        중앙에 배치하고, 480px 이하에서는 화면
+                                        너비에 맞게 사용한다.
+                                    </li>
+                                    <li>
+                                        핸들은 바텀시트임을 알리는 장식 요소로
+                                        사용하며, 단독으로 닫기 기능을 부여하지
+                                        않는다.
+                                    </li>
+                                    <li>
+                                        드래그로 닫는 기능은 보조 수단으로만
+                                        제공하고, 닫기 기능이 필요하면 접근
+                                        가능한 이름을 가진 button과 열기
+                                        버튼으로의 포커스 복원을 함께 구현한다.
+                                    </li>
+                                    <li>
+                                        바텀시트는 화면 하단에서 제공하는
+                                        선택·보조 작업에 사용하고 열린 동안 Tab
+                                        포커스를 내부에서 순환시킨다.
+                                    </li>
+                                    <li>
+                                        버튼은 가용 너비를 동일하게 나누고,
+                                        480px 이하에서는 세로로 전환해 텍스트
+                                        잘림을 방지한다.
+                                    </li>
+                                    <li>
+                                        버튼 수와 문구 길이를 변경한 뒤 모바일
+                                        최소 해상도에서 겹침과 가로 스크롤을
+                                        확인한다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 하단 시트 닫기 버튼 가이드 -->
+                <section id="bottom-sheet-close" class="pub-section">
+                    <h2>bottom sheet - close</h2>
+                    <div class="guide-box">
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <button
+                                    type="button"
+                                    class="form-button form-button-fill js-bottom-sheet-open"
+                                    data-bottom-sheet-target="#guide-bottom-sheet-close"
+                                >
+                                    닫기 버튼 바텀시트 열기
+                                </button>
+                                <div
+                                    id="guide-bottom-sheet-close"
+                                    class="ui-bottom-sheet"
+                                    role="dialog"
+                                    aria-modal="true"
+                                    aria-labelledby="guide-bottom-sheet-close-title"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="ui-bottom-sheet-dimmed js-bottom-sheet-close"
+                                    ></div>
+                                    <div
+                                        class="ui-bottom-sheet-panel has-close"
+                                    >
+                                        <span
+                                            class="ui-bottom-sheet-handle"
+                                            aria-hidden="true"
+                                        ></span>
+                                        <button
+                                            type="button"
+                                            class="ui-bottom-sheet-close js-bottom-sheet-close"
+                                            aria-label="바텀시트 닫기"
+                                        >
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                        <h3
+                                            id="guide-bottom-sheet-close-title"
+                                            class="ui-bottom-sheet-title"
+                                        >
+                                            옵션 선택
+                                        </h3>
+                                        <div class="ui-bottom-sheet-content">
+                                            <p>필요한 옵션을 확인해 주세요.</p>
+                                        </div>
+                                        <div
+                                            class="ui-bottom-sheet-actions ui-actions ui-actions-equal"
+                                        >
+                                            <button
+                                                type="button"
+                                                class="form-button form-button-fill form-button-block js-bottom-sheet-close"
+                                            >
+                                                확인
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="ui-bottom-sheet-panel has-close"&gt;
+    &lt;span class="ui-bottom-sheet-handle" aria-hidden="true"&gt;&lt;/span&gt;
+    &lt;button type="button" class="ui-bottom-sheet-close js-bottom-sheet-close" aria-label="바텀시트 닫기"&gt;
+        &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;h3 class="ui-bottom-sheet-title"&gt;옵션 선택&lt;/h3&gt;
+    &lt;div class="ui-bottom-sheet-content"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="css">.ui-bottom-sheet-close {
+    position: absolute;
+    top: 17px;
+    right: 8px;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+}
+
+.ui-bottom-sheet-panel.has-close .ui-bottom-sheet-title {
+    padding-right: 32px;
+}</code></pre>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="javascript">// 기존 js-bottom-sheet-close 동작을 재사용한다.
+document.querySelectorAll('.js-bottom-sheet-close').forEach(function (button) {
+    button.addEventListener('click', function () {
+        const sheet = this.closest('.ui-bottom-sheet');
+        sheet.classList.add('is-closing');
+        sheet.setAttribute('aria-hidden', 'true');
+
+        window.setTimeout(function () {
+            sheet.classList.remove('is-open', 'is-closing');
+            document.body.classList.remove('is-modal-open');
+
+            if (lastFocusedElement) lastFocusedElement.focus();
+        }, 250);
+    });
+});</code></pre>
+                                </div>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        닫기 버튼은 타이틀과 같은 선상에
+                                        배치한다.
+                                    </li>
+                                    <li>
+                                        닫기 버튼은 button으로 작성하고 바텀시트
+                                        종류를 포함한 aria-label을 제공한다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 하단 시트 고정 영역 가이드 -->
+                <section id="bottom-sheet-row" class="pub-section">
+                    <h2>bottom sheet - 2 column</h2>
+                    <div class="guide-box">
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <button
+                                    type="button"
+                                    class="form-button form-button-fill js-bottom-sheet-open"
+                                    data-bottom-sheet-target="#guide-bottom-sheet-row"
+                                >
+                                    2열 바텀시트 열기
+                                </button>
+                                <div
+                                    id="guide-bottom-sheet-row"
+                                    class="ui-bottom-sheet"
+                                    role="dialog"
+                                    aria-modal="true"
+                                    aria-labelledby="guide-bottom-sheet-row-title"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="ui-bottom-sheet-dimmed js-bottom-sheet-close"
+                                    ></div>
+                                    <div class="ui-bottom-sheet-panel">
+                                        <span
+                                            class="ui-bottom-sheet-handle"
+                                            aria-hidden="true"
+                                        ></span>
+                                        <h3
+                                            id="guide-bottom-sheet-row-title"
+                                            class="ui-bottom-sheet-title"
+                                        >
+                                            옵션 선택
+                                        </h3>
+                                        <div class="ui-bottom-sheet-content">
+                                            <p>
+                                                두 버튼이 모든 해상도에서 한
+                                                줄로 유지됩니다.
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="ui-bottom-sheet-actions ui-actions ui-actions-row ui-actions-equal is-row"
+                                        >
+                                            <button
+                                                type="button"
+                                                class="form-button form-button-line form-button-block js-bottom-sheet-close"
+                                            >
+                                                취소
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="form-button form-button-fill form-button-block js-bottom-sheet-close"
+                                            >
+                                                확인
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- bottom sheet 2열 유지형 --&gt;
+&lt;div class="ui-bottom-sheet-content"&gt;
+    &lt;p&gt;두 버튼이 모든 해상도에서 한 줄로 유지됩니다.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ui-bottom-sheet-actions ui-actions ui-actions-row ui-actions-equal is-row"&gt;
+    &lt;button type="button" class="form-button form-button-line form-button-block"&gt;취소&lt;/button&gt;
+    &lt;button type="button" class="form-button form-button-fill form-button-block"&gt;확인&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        기본 버튼 영역은 480px 이하에서 세로로
+                                        전환되고, is-row를 추가하면 두 버튼을
+                                        가로 2열로 유지한다.
+                                    </li>
+                                    <li>
+                                        2열 유지형은 취소·확인처럼 짧은 문구에
+                                        사용한다.
+                                    </li>
+                                    <li>
+                                        320px에서 버튼 문구가 줄바꿈되거나
+                                        잘리면 is-row를 제거하고 기본 세로
+                                        전환형을 사용한다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 토스트 팝업 가이드 -->
+                <section id="toast" class="pub-section">
+                    <h2>toast popup</h2>
+                    <div class="guide-box">
+                        <h3>
+                            <em>01.</em>
+                            toast popup - 기본
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <button
+                                    type="button"
+                                    class="form-button form-button-secondary js-toast-open"
+                                    data-toast-target="#guide-toast"
+                                >
+                                    토스트 열기
+                                </button>
+                                <!-- 토스트 팝업 기본 예제 -->
+                                <div
+                                    id="guide-toast"
+                                    class="ui-toast"
+                                    role="status"
+                                    aria-live="polite"
+                                >
+                                    설정이 저장되었습니다.
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;button type="button" class="form-button form-button-secondary js-toast-open" data-toast-target="#guide-toast"&gt;토스트 열기&lt;/button&gt;
+
+&lt;!-- toast popup 기본 예제 --&gt;
+&lt;div id="guide-toast" class="ui-toast" role="status" aria-live="polite"&gt;설정이 저장되었습니다.&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="javascript">// toast popup 동작
+const toastButton = document.querySelector('[data-toast-target="#guide-toast"]');
+const toast = document.querySelector('#guide-toast');
+let toastTimer = null;
+
+toastButton.addEventListener('click', function () {
+    window.clearTimeout(toastTimer);
+    toast.classList.add('is-open');
+    toastTimer = window.setTimeout(function () {
+        toast.classList.remove('is-open');
+    }, 3000);
+});</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    토스트는 작업 결과처럼 짧은 상태 안내에
+                                    사용하며, 중요한 확인이나 사용자 선택이
+                                    필요한 경우 모달을 사용한다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="../assets/js/vendor/jquery-3.5.1.min.js"></script>
+        <script src="../assets/js/vendor/swiper-bundle.min.js"></script>
+        <script src="../assets/js/vendor/guide-vendor.js"></script>
+        <script src="../assets/js/guide.js"></script>
+    </body>
+</html>

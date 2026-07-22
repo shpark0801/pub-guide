@@ -1,0 +1,814 @@
+@charset "UTF-8";
+
+/* 폼 컴포넌트 */
+/* 폼 */
+.is-hidden {
+    display: none !important;
+}
+
+.form {
+    width: 100%;
+}
+
+.form-field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-field:last-child {
+    margin-bottom: 0;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-label,
+.form-row-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-required {
+    margin-left: 2px;
+    color: #d44950;
+}
+
+/* 폼 가로형 - 왼쪽 label / 오른쪽 입력 영역 */
+.form-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 40px;
+    width: 100%;
+}
+
+.form-row + .form-row {
+    margin-top: 12px;
+}
+
+.form-row-label {
+    flex: 0 0 120px;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    margin-bottom: 0;
+}
+
+.form-row-control {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.form-row-control > * {
+    width: 100%;
+}
+
+/* label 테두리 겹침 유형 */
+.form-float {
+    position: relative;
+    margin-top: 8px;
+}
+
+.form-float-label {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    transform: translateY(-50%);
+}
+
+.form-float-label .form-float-text {
+    display: inline-block;
+    padding: 0 1px;
+    background: #fff;
+}
+
+/* 비활성 상태 클래스 - :has() 미지원 환경 대응 */
+.form-float.is-disabled .form-float-text {
+    background: #f7f7f7;
+}
+
+/* disabled 속성 자동 감지 */
+.form-float:has(.form-input:disabled) .form-float-text {
+    background: #f7f7f7;
+}
+
+/* 입력 항목 그룹 */
+.form-fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.form-fieldset + .form-fieldset {
+    margin-top: 20px;
+}
+
+.form-legend {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+}
+
+.form-option-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+}
+
+.form-option-group-vertical {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* 폼 그룹 */
+.form-group,
+.form-email,
+.form-phone,
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.form-group .form-input,
+.form-email .form-input,
+.form-email .form-select,
+.form-phone .form-select,
+.search-box .form-input {
+    flex: 1;
+    min-width: 0;
+}
+
+.form-input:focus-visible,
+.form-select:focus-visible {
+    outline: 2px solid rgba(0, 0, 0, 0.3);
+    outline-offset: 1px;
+}
+
+/* 입력 필드 */
+.form-input {
+    width: 100%;
+    height: 44px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #111;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-input::placeholder {
+    color: #b8bcc4;
+}
+
+.form-input-line {
+    padding: 0 10px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+}
+
+.form-input-box {
+    padding: 0 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-input:focus {
+    border-color: #666;
+}
+
+.form-input-line:focus {
+    border-bottom-color: #666;
+}
+
+/* select */
+.form-select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 14px;
+    color: #111;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.form-select:focus {
+    border-color: #666;
+}
+
+/* 커스텀 select */
+.form-select-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.form-select-wrap::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+    transform: translateY(-65%) rotate(45deg);
+    pointer-events: none;
+}
+
+.form-select-arrow,
+.form-select-line,
+.form-select-box {
+    padding-right: 36px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.form-select-arrow::-ms-expand,
+.form-select-line::-ms-expand,
+.form-select-box::-ms-expand {
+    display: none;
+}
+
+/* 화살표 유형 */
+.form-select-arrow {
+    border: 0;
+    border-radius: 0;
+}
+
+/* 라인 유형 */
+.form-select-line {
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+}
+
+.form-select-line:focus {
+    border-bottom-color: #111;
+}
+
+/* 박스 유형 */
+.form-select-box {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-select-box:focus {
+    border-color: #111;
+}
+
+/* 다중 선택 */
+.form-select-mult {
+    height: auto;
+    min-height: 120px;
+    padding: 8px 12px;
+    overflow-y: auto;
+}
+
+.form-select-mult option {
+    padding: 6px 4px;
+}
+
+/* 상태 - 오류, 경고, 비활성, 읽기 전용 */
+.form-field.is-error .form-input,
+.form-field.is-error .form-select {
+    border-color: #ff4b3e;
+}
+
+.form-field.is-warn .form-input,
+.form-field.is-warn .form-select {
+    border-color: #f5a623;
+}
+
+.form-msg {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.form-msg-error {
+    color: #ff4b3e;
+}
+
+.form-msg-warn {
+    color: #f5a623;
+}
+
+.form-input:disabled,
+.form-select:disabled {
+    background-color: #f7f7f7;
+    color: #999;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+.form-select-wrap.is-disabled::after {
+    border-color: #aaa;
+}
+
+.form-input:disabled::placeholder {
+    color: #bbb;
+}
+
+.form-input[readonly] {
+    background-color: #fafafa;
+    color: #666;
+}
+
+/* 체크박스 / 라디오 공통 */
+.form-check,
+.form-radio {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+}
+
+.form-check-input,
+.form-radio-input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    flex-shrink: 0;
+    accent-color: #111;
+    cursor: pointer;
+}
+
+.form-check-label,
+.form-radio-label {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #111;
+    cursor: pointer;
+}
+
+.form-check-input:focus-visible,
+.form-radio-input:focus-visible {
+    outline: 2px solid rgba(0, 0, 0, 0.35);
+    outline-offset: 2px;
+}
+
+.form-check-input:disabled,
+.form-radio-input:disabled,
+.form-check-input:disabled + .form-check-label,
+.form-radio-input:disabled + .form-radio-label {
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* 기본 체크박스 / 라디오 */
+.form-check:not(.form-check-custom) .form-check-input {
+    appearance: auto;
+    -webkit-appearance: checkbox;
+}
+
+.form-radio:not(.form-radio-custom) .form-radio-input {
+    appearance: auto;
+    -webkit-appearance: radio;
+}
+
+/* 커스텀 체크박스 / 라디오 공통 */
+.form-check-custom .form-check-input,
+.form-radio-custom .form-radio-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+.form-check-custom .form-check-label,
+.form-radio-custom .form-radio-label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+    margin-left: 0;
+    padding-left: 28px;
+}
+
+.form-check-custom .form-check-label::before,
+.form-radio-custom .form-radio-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+}
+
+.form-check-custom .form-check-input:focus-visible + .form-check-label::before,
+.form-radio-custom .form-radio-input:focus-visible + .form-radio-label::before {
+    outline: 2px solid rgba(0, 0, 0, 0.35);
+    outline-offset: 2px;
+}
+
+.form-check-custom .form-check-input:disabled + .form-check-label,
+.form-radio-custom .form-radio-input:disabled + .form-radio-label {
+    color: #999;
+    cursor: not-allowed;
+}
+
+.form-check-custom .form-check-input:disabled + .form-check-label::before,
+.form-radio-custom .form-radio-input:disabled + .form-radio-label::before {
+    border-color: #ddd;
+    background-color: #f5f5f5;
+}
+
+/* 체크박스 */
+.form-check-custom .form-check-label::before {
+    border-radius: 3px;
+}
+
+.form-check-custom .form-check-label::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    width: 5px;
+    height: 9px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: translateY(-60%) rotate(45deg);
+    opacity: 0;
+}
+
+.form-check-custom .form-check-input:checked + .form-check-label::before {
+    border-color: #ff5252;
+    background-color: #ff5252;
+}
+
+.form-check-custom .form-check-input:checked + .form-check-label::after {
+    opacity: 1;
+}
+
+.form-check-custom
+    .form-check-input:checked:disabled
+    + .form-check-label::before {
+    border-color: #bbb;
+    background-color: #bbb;
+}
+
+.form-check-all {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* 라디오 */
+.form-radio-custom .form-radio-label::before {
+    border-radius: 50%;
+}
+
+.form-radio-custom .form-radio-label::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ff5252;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.form-radio-custom .form-radio-input:checked + .form-radio-label::before {
+    border-color: #ccc;
+}
+
+.form-radio-custom .form-radio-input:checked + .form-radio-label::after {
+    opacity: 1;
+}
+
+.form-radio-custom
+    .form-radio-input:checked:disabled
+    + .form-radio-label::after {
+    background-color: #aaa;
+}
+
+/* 토글 */
+.form-toggle {
+    display: inline-flex;
+    align-items: center;
+}
+
+.form-toggle-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+.form-toggle-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #111;
+    cursor: pointer;
+}
+
+.form-toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #ccc;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.form-toggle-switch::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.form-toggle-input:checked + .form-toggle-label .form-toggle-switch {
+    background-color: #111;
+}
+
+.form-toggle-input:checked + .form-toggle-label .form-toggle-switch::after {
+    transform: translateX(20px);
+}
+
+.form-toggle-input:focus-visible + .form-toggle-label .form-toggle-switch {
+    outline: 2px solid rgba(0, 0, 0, 0.35);
+    outline-offset: 2px;
+}
+
+.form-toggle-input:disabled + .form-toggle-label {
+    color: #999;
+    cursor: not-allowed;
+}
+
+.form-toggle-input:disabled + .form-toggle-label .form-toggle-switch {
+    background-color: #e5e5e5;
+}
+
+.form-toggle-input:checked:disabled + .form-toggle-label .form-toggle-switch {
+    background-color: #aaa;
+}
+
+.form-toggle-reverse .form-toggle-label {
+    flex-direction: row-reverse;
+}
+
+/* 이메일 */
+.form-email-at {
+    flex: 0 0 auto;
+    color: #999;
+}
+
+.form-email-direct {
+    margin-top: 12px;
+}
+
+/* 전화번호 */
+.form-phone > .form-select-wrap,
+.form-phone > .form-input {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.form-phone .form-select {
+    display: block;
+    width: 100%;
+}
+
+.form-phone-dash {
+    flex: 0 0 auto;
+    color: #999;
+}
+
+/* 반응형 */
+/* 여러 줄 입력, 파일 */
+.form-textarea {
+    display: block;
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font: inherit;
+    line-height: 1.5;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.form-textarea:focus {
+    border-color: #222;
+}
+
+.form-textarea:focus-visible {
+    outline: 2px solid #111;
+    outline-offset: 2px;
+}
+
+.form-file {
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.form-file::file-selector-button {
+    min-height: 40px;
+    margin-right: 10px;
+    padding: 0 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    color: #222;
+    cursor: pointer;
+}
+
+.form-file-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.form-file-input:focus-visible + .form-file-button {
+    outline: 2px solid #111;
+    outline-offset: 2px;
+}
+
+.form-file-group:has(.form-file-input:focus-visible) .form-file-button,
+.form-file-box:has(.form-file-input:focus-visible) .form-file-button {
+    outline: 2px solid #111;
+    outline-offset: 2px;
+}
+
+.form-file-group {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+}
+
+.form-file-group > .form-file-name {
+    min-width: 0;
+}
+
+.form-file-name {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    color: #555;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.form-file-button {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    color: #222;
+    font-size: 13px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.form-file-icon {
+    width: 40px;
+    padding: 0;
+}
+
+.form-file-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.form-file-box {
+    padding: 24px;
+    border: 1px dashed #bbb;
+    border-radius: 6px;
+    background: #fafafa;
+    text-align: center;
+}
+
+.form-file-box .form-file-button {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .form-field {
+        margin-top: 24px;
+    }
+
+    .form-label {
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .form-float-label {
+        font-size: 12px;
+    }
+
+    .form-row-label {
+        flex: 0 0 auto;
+        width: auto;
+        font-size: 15px;
+    }
+
+    .form-row-float {
+        position: relative;
+        display: block;
+        margin-top: 8px;
+    }
+
+    .form-row-float .form-row-label {
+        position: absolute;
+        left: 10px;
+        top: 0;
+        z-index: 1;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+        background: transparent;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1;
+        transform: translateY(-50%);
+    }
+
+    .form-row-float .form-float-text {
+        display: inline-block;
+        padding: 0 1px;
+        background: #fff;
+    }
+
+    /* 비활성 상태 클래스 - :has() 미지원 환경 대응 */
+    .form-row-float.is-disabled .form-float-text {
+        background: #f7f7f7;
+    }
+
+    /* disabled 속성 자동 감지 */
+    .form-row-float:has(.form-input:disabled) .form-float-text {
+        background: #f7f7f7;
+    }
+
+    .form-row-float .form-row-control {
+        width: 100%;
+    }
+
+    .form-input,
+    .form-select {
+        height: 42px;
+        font-size: 15px;
+    }
+
+    .form-group,
+    .form-email,
+    .form-phone,
+    .search-box {
+        gap: 8px;
+    }
+}

@@ -1,0 +1,1300 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+        <title>UI 컴포넌트 | 퍼블리싱 가이드</title>
+        <link href="../assets/css/import.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="skip-nav"><a href="#contents">본문 바로가기</a></div>
+        <div class="pub">
+            <header class="pub-header">
+                <h1>퍼블리싱 가이드</h1>
+                <div class="pub-toggle">
+                    <button
+                        type="button"
+                        class="menu-trigger js-menu-trigger is-active"
+                        aria-label="메뉴 열기/닫기"
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <nav class="pub-gnb" aria-label="상단 메뉴">
+                    <ul>
+                        <li class="is-active">
+                            <a href="../index.html">가이드</a>
+                        </li>
+                        <li><a href="../pub-pagelist.html">페이지</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <nav
+                class="pub-lnb js-pub-lnb is-active"
+                aria-label="퍼블리싱 가이드 메뉴"
+            >
+                <ul class="pub-lnb-list">
+                    <li class="pub-lnb-item">
+                        <button
+                            type="button"
+                            class="pub-lnb-depth1"
+                            aria-expanded="false"
+                        >
+                            퍼블리싱 가이드
+                            <span class="arrow" aria-hidden="true"></span>
+                        </button>
+                        <ul class="pub-lnb-depth2">
+                            <li>
+                                <a href="../index.html#basic-policy"
+                                    >기본 정책</a
+                                >
+                            </li>
+                            <li><a href="../index.html#rule">규칙</a></li>
+                            <li>
+                                <a href="../index.html#project"
+                                    >프로젝트 구조</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../index.html#file-naming"
+                                    >네이밍 규칙</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../index.html#html-rule">HTML 규칙</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#css-rule">CSS 규칙</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#accessibility"
+                                    >웹접근성</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pub-lnb-item is-open">
+                        <button
+                            type="button"
+                            class="pub-lnb-depth1"
+                            aria-expanded="true"
+                        >
+                            컴포넌트
+                            <span class="arrow" aria-hidden="true"></span>
+                        </button>
+                        <ul class="pub-lnb-depth2">
+                            <li>
+                                <button
+                                    type="button"
+                                    class="pub-lnb-depth2-btn"
+                                    aria-expanded="false"
+                                >
+                                    Form
+                                    <span
+                                        class="arrow"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                                <ul class="pub-lnb-depth3">
+                                    <li><a href="input.html">input</a></li>
+                                    <li>
+                                        <a href="input.html#textarea"
+                                            >textarea</a
+                                        >
+                                    </li>
+                                    <li><a href="input.html#file">file</a></li>
+                                    <li><a href="select.html">select</a></li>
+                                    <li>
+                                        <a href="checkbox.html">checkbox</a>
+                                    </li>
+                                    <li><a href="radio.html">radio</a></li>
+                                    <li><a href="toggle.html">toggle</a></li>
+                                </ul>
+                            </li>
+                            <!-- 사용자 인터페이스 메뉴 -->
+                            <li class="is-open">
+                                <button
+                                    type="button"
+                                    class="pub-lnb-depth2-btn"
+                                    aria-expanded="true"
+                                >
+                                    UI
+                                    <span
+                                        class="arrow"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                                <ul class="pub-lnb-depth3">
+                                    <li class="is-active">
+                                        <a href="ui.html#button">button</a>
+                                    </li>
+                                    <li><a href="ui.html#tab">tab</a></li>
+                                    <li>
+                                        <a href="ui.html#accordion"
+                                            >accordion</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="ui.html#timeline">timeline</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui.html#pagination"
+                                            >pagination</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="ui.html#tooltip">tooltip</a>
+                                    </li>
+                                    <li><a href="ui.html#badge">badge</a></li>
+                                    <li><a href="image.html">image</a></li>
+                                    <li>
+                                        <a href="status.html#progress"
+                                            >progress</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="status.html#loading"
+                                            >loading</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- 레이어 메뉴 -->
+                            <li>
+                                <button
+                                    type="button"
+                                    class="pub-lnb-depth2-btn"
+                                    aria-expanded="false"
+                                >
+                                    Overlay
+                                    <span
+                                        class="arrow"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                                <ul class="pub-lnb-depth3">
+                                    <li>
+                                        <a href="popup.html#modal"
+                                            >modal popup</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#image-banner-layer"
+                                            >image banner layer</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#alert">alert</a>
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#confirm">confirm</a>
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#message-close"
+                                            >close type</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#bottom-sheet"
+                                            >bottom sheet</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#bottom-sheet-close"
+                                            >bottom sheet close</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#bottom-sheet-row"
+                                            >bottom sheet 2 column</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#toast"
+                                            >toast popup</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <main id="contents" class="pub-container">
+                <!-- 버튼 가이드 -->
+                <section id="button" class="pub-section">
+                    <h2>button</h2>
+                    <div class="guide-box">
+                        <h3>
+                            <em>01.</em>
+                            button - 너비
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <!-- 버튼 유동/고정 너비 예제 -->
+                                <button
+                                    type="button"
+                                    class="form-button form-button-fill form-button-block"
+                                >
+                                    유동적 버튼
+                                </button>
+                                <br />
+                                <br />
+                                <button
+                                    type="button"
+                                    class="form-button form-button-fill form-button-fixed"
+                                >
+                                    정적 버튼
+                                </button>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- button 유동/정적 너비 예제 --&gt;
+&lt;button type="button" class="form-button form-button-fill form-button-block"&gt;유동적 버튼&lt;/button&gt;
+&lt;button type="button" class="form-button form-button-fill form-button-fixed"&gt;정적 버튼&lt;/button&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-box">
+                        <h3>
+                            <em>02.</em>
+                            button - 크기
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <!-- 버튼 크기 예제 -->
+                                <div class="form-button-align-bottom">
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-fill form-button-xs"
+                                    >
+                                        XS
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-fill form-button-sm"
+                                    >
+                                        Small
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-fill form-button-md"
+                                    >
+                                        Medium
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-fill form-button-lg"
+                                    >
+                                        Large
+                                    </button>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- button 크기 예제 --&gt;
+&lt;div class="form-button-align-bottom"&gt;
+    &lt;button type="button" class="form-button form-button-fill form-button-xs"&gt;XS&lt;/button&gt;
+    &lt;button type="button" class="form-button form-button-fill form-button-sm"&gt;Small&lt;/button&gt;
+    &lt;button type="button" class="form-button form-button-fill form-button-md"&gt;Medium&lt;/button&gt;
+    &lt;button type="button" class="form-button form-button-fill form-button-lg"&gt;Large&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    높이가 다른 버튼을 한 줄에 배치할 때
+                                    .form-button-align-bottom으로 하단 기준을
+                                    맞춘다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-box">
+                        <h3>
+                            <em>03.</em>
+                            button - 표현
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <!-- 버튼 채움/선 예제 -->
+                                <button
+                                    type="button"
+                                    class="form-button form-button-fill"
+                                >
+                                    배경 버튼
+                                </button>
+                                <button
+                                    type="button"
+                                    class="form-button form-button-line"
+                                >
+                                    라인 버튼
+                                </button>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- button fill/line 예제 --&gt;
+&lt;button type="button" class="form-button form-button-fill"&gt;배경 버튼&lt;/button&gt;
+&lt;button type="button" class="form-button form-button-line"&gt;라인 버튼&lt;/button&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-box">
+                        <h3>
+                            <em>04.</em>
+                            button - 아이콘
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <!-- 아이콘 버튼 예제 -->
+                                <button
+                                    type="button"
+                                    class="form-button form-button-fill form-button-icon"
+                                >
+                                    <svg
+                                        class="form-button-icon-shape"
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            fill="currentColor"
+                                            d="M11 4h2v16h-2zM4 11h16v2H4z"
+                                        />
+                                    </svg>
+                                    추가
+                                </button>
+                                <button
+                                    type="button"
+                                    class="form-button form-button-line form-button-icon form-button-icon-only"
+                                    aria-label="추가"
+                                >
+                                    <svg
+                                        class="form-button-icon-shape"
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            fill="currentColor"
+                                            d="M11 4h2v16h-2zM4 11h16v2H4z"
+                                        />
+                                    </svg>
+                                </button>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- button icon 예제 --&gt;
+&lt;button type="button" class="form-button form-button-fill form-button-icon"&gt;
+    &lt;svg class="form-button-icon-shape" viewBox="0 0 24 24" aria-hidden="true"&gt;...&lt;/svg&gt;추가
+&lt;/button&gt;
+&lt;button type="button" class="form-button form-button-line form-button-icon form-button-icon-only" aria-label="추가"&gt;...&lt;/button&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    아이콘 단독 버튼에는 동작을 설명하는
+                                    aria-label을 반드시 제공한다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 텍스트 버튼 -->
+                    <div class="guide-box">
+                        <h3>
+                            <em>05.</em>
+                            button - 텍스트
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <button
+                                    type="button"
+                                    class="form-button form-button-text"
+                                >
+                                    자세히 보기
+                                </button>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- button 텍스트형 --&gt;
+&lt;button type="button" class="form-button form-button-text"&gt;자세히 보기&lt;/button&gt;</code></pre>
+                                </div>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        배경과 테두리가 필요 없는 보조 동작에
+                                        사용하며, 페이지 이동 목적이면 button
+                                        대신 a를 사용한다.
+                                    </li>
+                                    <li>
+                                        텍스트 버튼도 키보드 초점 표시와 충분한
+                                        클릭 영역을 유지한다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-box">
+                        <h3>
+                            <em>06.</em>
+                            button - 배열
+                        </h3>
+                        <div class="guide-contents">
+                            <h4>가로 배열 - 2개</h4>
+                            <div class="markup-box">
+                                <!-- 버튼 가로 2개 배열 예제 -->
+                                <div
+                                    class="ui-actions ui-actions-row ui-actions-equal"
+                                >
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-line"
+                                    >
+                                        취소
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-fill"
+                                    >
+                                        확인
+                                    </button>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- button 가로 2개 배열 예제 --&gt;
+&lt;div class="ui-actions ui-actions-row ui-actions-equal"&gt;
+    &lt;button type="button" class="form-button form-button-line"&gt;취소&lt;/button&gt;
+    &lt;button type="button" class="form-button form-button-fill"&gt;확인&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            <h4>가로 배열 - 3개</h4>
+                            <div class="markup-box">
+                                <!-- 버튼 가로 3개 배열 예제 -->
+                                <div
+                                    class="ui-actions ui-actions-row ui-actions-equal"
+                                >
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-line"
+                                    >
+                                        이전
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-line"
+                                    >
+                                        임시 저장
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-fill"
+                                    >
+                                        다음
+                                    </button>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- button 가로 3개 배열 예제 --&gt;
+&lt;div class="ui-actions ui-actions-row ui-actions-equal"&gt;
+    &lt;button type="button" class="form-button form-button-line"&gt;이전&lt;/button&gt;
+    &lt;button type="button" class="form-button form-button-line"&gt;임시 저장&lt;/button&gt;
+    &lt;button type="button" class="form-button form-button-fill"&gt;다음&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            <h4>세로 배열 - 2개</h4>
+                            <div class="markup-box">
+                                <!-- 버튼 세로 2개 배열 예제 -->
+                                <div class="ui-actions ui-actions-stack">
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-fill"
+                                    >
+                                        계속하기
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-line"
+                                    >
+                                        취소
+                                    </button>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- button 세로 2개 배열 예제 --&gt;
+&lt;div class="ui-actions ui-actions-stack"&gt;
+    &lt;button type="button" class="form-button form-button-fill"&gt;계속하기&lt;/button&gt;
+    &lt;button type="button" class="form-button form-button-line"&gt;취소&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            <h4>세로 배열 - 3개</h4>
+                            <div class="markup-box">
+                                <!-- 버튼 세로 3개 배열 예제 -->
+                                <div class="ui-actions ui-actions-stack">
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-fill"
+                                    >
+                                        사진 촬영
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-line"
+                                    >
+                                        앨범에서 선택
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-line"
+                                    >
+                                        닫기
+                                    </button>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- button 세로 3개 배열 예제 --&gt;
+&lt;div class="ui-actions ui-actions-stack"&gt;
+    &lt;button type="button" class="form-button form-button-fill"&gt;사진 촬영&lt;/button&gt;
+    &lt;button type="button" class="form-button form-button-line"&gt;앨범에서 선택&lt;/button&gt;
+    &lt;button type="button" class="form-button form-button-line"&gt;닫기&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    가로 배열은 .ui-actions-row와
+                                    .ui-actions-equal을 조합하고, 세로 배열은
+                                    .ui-actions-stack을 사용한다. 버튼 수와
+                                    관계없이 같은 배열 구조를 유지한다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 탭 가이드 -->
+                <section id="tab" class="pub-section">
+                    <h2>tab</h2>
+                    <div class="guide-box">
+                        <h3>
+                            <em>01.</em>
+                            tab - 라인
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <!-- 선형 탭 예제 -->
+                                <div class="ui-tab ui-tab-line js-tab">
+                                    <div
+                                        class="ui-tab-list"
+                                        role="tablist"
+                                        aria-label="상품 정보"
+                                    >
+                                        <button
+                                            type="button"
+                                            id="tab-line-01"
+                                            class="ui-tab-button"
+                                            role="tab"
+                                            aria-controls="panel-line-01"
+                                            aria-selected="true"
+                                        >
+                                            상세정보
+                                        </button>
+                                        <button
+                                            type="button"
+                                            id="tab-line-02"
+                                            class="ui-tab-button"
+                                            role="tab"
+                                            aria-controls="panel-line-02"
+                                            aria-selected="false"
+                                            tabindex="-1"
+                                        >
+                                            리뷰
+                                        </button>
+                                    </div>
+                                    <div
+                                        id="panel-line-01"
+                                        class="ui-tab-panel"
+                                        role="tabpanel"
+                                        aria-labelledby="tab-line-01"
+                                    >
+                                        상세정보 내용
+                                    </div>
+                                    <div
+                                        id="panel-line-02"
+                                        class="ui-tab-panel"
+                                        role="tabpanel"
+                                        aria-labelledby="tab-line-02"
+                                        hidden
+                                    >
+                                        리뷰 내용
+                                    </div>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- line tab 예제 --&gt;
+&lt;div class="ui-tab ui-tab-line js-tab"&gt;
+    &lt;div class="ui-tab-list" role="tablist" aria-label="상품 정보"&gt;
+        &lt;button type="button" id="tab-line-01" class="ui-tab-button" role="tab" aria-controls="panel-line-01" aria-selected="true"&gt;상세정보&lt;/button&gt;
+        &lt;button type="button" id="tab-line-02" class="ui-tab-button" role="tab" aria-controls="panel-line-02" aria-selected="false" tabindex="-1"&gt;리뷰&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div id="panel-line-01" class="ui-tab-panel" role="tabpanel" aria-labelledby="tab-line-01"&gt;상세정보 내용&lt;/div&gt;
+    &lt;div id="panel-line-02" class="ui-tab-panel" role="tabpanel" aria-labelledby="tab-line-02" hidden&gt;리뷰 내용&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="javascript">// tab 동작
+document.querySelectorAll('.js-tab').forEach(function (tab) {
+    const buttons = tab.querySelectorAll('[role="tab"]');
+    const panels = tab.querySelectorAll('[role="tabpanel"]');
+
+    buttons.forEach(function (button, index) {
+        button.addEventListener('click', function () {
+            buttons.forEach(function (item) { item.setAttribute('aria-selected', 'false'); });
+            panels.forEach(function (panel) { panel.hidden = true; });
+            button.setAttribute('aria-selected', 'true');
+            panels[index].hidden = false;
+        });
+    });
+});</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-box">
+                        <h3>
+                            <em>02.</em>
+                            tab - 배경형 / 균등형
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <!-- 균등 채움 탭 예제 -->
+                                <div
+                                    class="ui-tab ui-tab-fill ui-tab-equal js-tab"
+                                >
+                                    <div
+                                        class="ui-tab-list"
+                                        role="tablist"
+                                        aria-label="조회 기간"
+                                    >
+                                        <button
+                                            type="button"
+                                            id="tab-fill-01"
+                                            class="ui-tab-button"
+                                            role="tab"
+                                            aria-controls="panel-fill-01"
+                                            aria-selected="true"
+                                        >
+                                            1개월
+                                        </button>
+                                        <button
+                                            type="button"
+                                            id="tab-fill-02"
+                                            class="ui-tab-button"
+                                            role="tab"
+                                            aria-controls="panel-fill-02"
+                                            aria-selected="false"
+                                            tabindex="-1"
+                                        >
+                                            3개월
+                                        </button>
+                                    </div>
+                                    <div
+                                        id="panel-fill-01"
+                                        class="ui-tab-panel"
+                                        role="tabpanel"
+                                        aria-labelledby="tab-fill-01"
+                                    >
+                                        최근 1개월 내용
+                                    </div>
+                                    <div
+                                        id="panel-fill-02"
+                                        class="ui-tab-panel"
+                                        role="tabpanel"
+                                        aria-labelledby="tab-fill-02"
+                                        hidden
+                                    >
+                                        최근 3개월 내용
+                                    </div>
+                                </div>
+                                <div class="pub-blockquote">
+                                    기본 라인형에 .ui-tab-fill을 추가하면
+                                    배경형, .ui-tab-equal을 추가하면 동일 너비로
+                                    사용한다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 아코디언 가이드 -->
+                <section id="accordion" class="pub-section">
+                    <h2>accordion</h2>
+                    <div class="guide-box">
+                        <h3>
+                            <em>01.</em>
+                            기본형
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <ul class="ui-accordion js-accordion">
+                                    <li class="ui-accordion-item">
+                                        <h4>
+                                            <button
+                                                type="button"
+                                                class="ui-accordion-button"
+                                                aria-expanded="false"
+                                                aria-controls="accordion-panel-01"
+                                            >
+                                                아코디언은 언제 사용하나요?
+                                            </button>
+                                        </h4>
+                                        <div
+                                            id="accordion-panel-01"
+                                            class="ui-accordion-panel"
+                                            hidden
+                                        >
+                                            <p>
+                                                연관된 내용을 제목별로 구분하고
+                                                사용자가 필요한 내용을 선택하여
+                                                확인할 때 사용합니다.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="ui-accordion-item">
+                                        <h4>
+                                            <button
+                                                type="button"
+                                                class="ui-accordion-button"
+                                                aria-expanded="false"
+                                                aria-controls="accordion-panel-02"
+                                            >
+                                                제목과 패널은 어떻게 연결하나요?
+                                            </button>
+                                        </h4>
+                                        <div
+                                            id="accordion-panel-02"
+                                            class="ui-accordion-panel"
+                                            hidden
+                                        >
+                                            <p>
+                                                제목 버튼의 aria-controls 값과
+                                                콘텐츠 패널의 id 값을 동일하게
+                                                작성합니다.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="ui-accordion-item">
+                                        <h4>
+                                            <button
+                                                type="button"
+                                                class="ui-accordion-button"
+                                                aria-expanded="false"
+                                                aria-controls="accordion-panel-03"
+                                            >
+                                                펼침 상태는 어떻게 표시하나요?
+                                            </button>
+                                        </h4>
+                                        <div
+                                            id="accordion-panel-03"
+                                            class="ui-accordion-panel"
+                                            hidden
+                                        >
+                                            <p>
+                                                버튼의 aria-expanded와 패널의
+                                                hidden 상태를 실제 화면 상태와
+                                                동일하게 변경합니다.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- 아코디언 리스트 --&gt;
+&lt;ul class="ui-accordion js-accordion"&gt;
+    &lt;li class="ui-accordion-item"&gt;
+        &lt;h4&gt;
+            &lt;button
+                type="button"
+                class="ui-accordion-button"
+                aria-expanded="false"
+                aria-controls="accordion-panel-01"
+            &gt;
+                아코디언은 언제 사용하나요?
+            &lt;/button&gt;
+        &lt;/h4&gt;
+        &lt;div id="accordion-panel-01" class="ui-accordion-panel" hidden&gt;
+            &lt;p&gt;연관된 내용을 제목별로 구분하여 확인할 때 사용합니다.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class="ui-accordion-item"&gt;
+        &lt;h4&gt;
+            &lt;button
+                type="button"
+                class="ui-accordion-button"
+                aria-expanded="false"
+                aria-controls="accordion-panel-02"
+            &gt;
+                제목과 패널은 어떻게 연결하나요?
+            &lt;/button&gt;
+        &lt;/h4&gt;
+        &lt;div id="accordion-panel-02" class="ui-accordion-panel" hidden&gt;
+            &lt;p&gt;aria-controls 값과 패널의 id 값을 동일하게 작성합니다.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class="ui-accordion-item"&gt;
+        &lt;h4&gt;
+            &lt;button
+                type="button"
+                class="ui-accordion-button"
+                aria-expanded="false"
+                aria-controls="accordion-panel-03"
+            &gt;
+                펼침 상태는 어떻게 표시하나요?
+            &lt;/button&gt;
+        &lt;/h4&gt;
+        &lt;div id="accordion-panel-03" class="ui-accordion-panel" hidden&gt;
+            &lt;p&gt;aria-expanded와 hidden 상태를 실제 화면 상태와 동일하게 변경합니다.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                                </div>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        여러 항목으로 구성된 리스트형 아코디언은
+                                        ul과 li로 작성한다.
+                                    </li>
+                                    <li>
+                                        리스트형은 새 항목을 펼치면 기존에
+                                        펼쳐진 항목을 접는다.
+                                    </li>
+                                    <li>
+                                        하나의 항목만 사용하는 단일 아코디언은
+                                        div로 작성한다.
+                                    </li>
+                                    <li>
+                                        각 항목의 제목 버튼과 콘텐츠 패널을
+                                        고유한 aria-controls와 id로 연결한다.
+                                    </li>
+                                    <li>
+                                        버튼의 aria-expanded와 패널의 hidden
+                                        상태를 함께 변경한다.
+                                    </li>
+                                    <li>
+                                        여러 항목에서 콘텐츠 높이가 달라도 모션
+                                        종료 후 내용이 잘리지 않는지 확인한다.
+                                    </li>
+                                    <li>
+                                        콘텐츠 높이 변화가 큰 경우
+                                        prefers-reduced-motion 설정에서 펼침·접힘
+                                        모션을 즉시 완료한다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-box">
+                        <h3>
+                            <em>02.</em>
+                            단일형
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="ui-accordion js-accordion">
+                                    <div class="ui-accordion-item">
+                                        <h4>
+                                            <button
+                                                type="button"
+                                                class="ui-accordion-button"
+                                                aria-expanded="false"
+                                                aria-controls="accordion-single-panel-01"
+                                            >
+                                                단일 아코디언은 언제 사용하나요?
+                                            </button>
+                                        </h4>
+                                        <div
+                                            id="accordion-single-panel-01"
+                                            class="ui-accordion-panel"
+                                            hidden
+                                        >
+                                            <p>
+                                                하나의 제목과 콘텐츠만 펼치고
+                                                접어야 할 때 사용합니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- 단일 아코디언 --&gt;
+&lt;div class="ui-accordion js-accordion"&gt;
+    &lt;div class="ui-accordion-item"&gt;
+        &lt;h4&gt;
+            &lt;button
+                type="button"
+                class="ui-accordion-button"
+                aria-expanded="false"
+                aria-controls="accordion-single-panel-01"
+            &gt;
+                단일 아코디언은 언제 사용하나요?
+            &lt;/button&gt;
+        &lt;/h4&gt;
+        &lt;div id="accordion-single-panel-01" class="ui-accordion-panel" hidden&gt;
+            &lt;p&gt;하나의 제목과 콘텐츠만 펼치고 접어야 할 때 사용합니다.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        하나의 항목만 사용하는 단일형은 div로
+                                        작성한다.
+                                    </li>
+                                    <li>
+                                        단일형은 리스트형의 단일 펼침 제어
+                                        대상에 포함하지 않는다.
+                                    </li>
+                                    <li>
+                                        모션 축소 설정에서도 aria-expanded와 hidden
+                                        상태는 실제 노출 결과와 동일하게 변경한다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 타임라인 가이드 -->
+                <section id="timeline" class="pub-section">
+                    <h2>timeline</h2>
+                    <div class="guide-box">
+                        <h3>
+                            <em>01.</em>
+                            진행 이력
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <ol class="ui-timeline">
+                                    <li class="ui-timeline-item">
+                                        <time
+                                            class="ui-timeline-date"
+                                            datetime="2026-07-15"
+                                            >2026-07-15</time
+                                        >
+                                        <strong>검수 완료</strong>
+                                        <p>접근성 확인을 완료했습니다.</p>
+                                    </li>
+                                    <li class="ui-timeline-item">
+                                        <time
+                                            class="ui-timeline-date"
+                                            datetime="2026-07-14"
+                                            >2026-07-14</time
+                                        >
+                                        <strong>퍼블리싱 완료</strong>
+                                    </li>
+                                </ol>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- timeline --&gt;
+&lt;ol class="ui-timeline"&gt;
+    &lt;li class="ui-timeline-item"&gt;&lt;time class="ui-timeline-date" datetime="2026-07-15"&gt;2026-07-15&lt;/time&gt;검수 완료&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 페이지네이션 가이드 -->
+                <section id="pagination" class="pub-section">
+                    <h2>pagination</h2>
+                    <div class="guide-box">
+                        <h3>
+                            <em>01.</em>
+                            페이지 버튼 유형
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <nav
+                                    class="ui-pagination"
+                                    aria-label="페이지 이동"
+                                >
+                                    <a href="?page=1" aria-label="이전 페이지"
+                                        >이전</a
+                                    >
+                                    <a href="?page=1" aria-current="page">1</a>
+                                    <a href="?page=2">2</a>
+                                    <a href="?page=2" aria-label="다음 페이지"
+                                        >다음</a
+                                    >
+                                </nav>
+                                <br />
+                                <nav
+                                    class="ui-pagination"
+                                    aria-label="페이지 이동 기호형"
+                                >
+                                    <a
+                                        href="?page=1"
+                                        class="ui-pagination-symbol"
+                                        aria-label="이전 페이지"
+                                    >
+                                        <span aria-hidden="true">‹</span>
+                                    </a>
+                                    <a href="?page=1" aria-current="page">1</a>
+                                    <a href="?page=2">2</a>
+                                    <a
+                                        href="?page=2"
+                                        class="ui-pagination-symbol"
+                                        aria-label="다음 페이지"
+                                    >
+                                        <span aria-hidden="true">›</span>
+                                    </a>
+                                </nav>
+                                <br />
+                                <nav
+                                    class="ui-pagination"
+                                    aria-label="페이지 이동 아이콘형"
+                                >
+                                    <a
+                                        href="?page=1"
+                                        class="ui-pagination-icon"
+                                        aria-label="이전 페이지"
+                                    >
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="M15.5 4 7.5 12l8 8 1.5-1.5L10.5 12 17 5.5z"
+                                            />
+                                        </svg>
+                                    </a>
+                                    <a href="?page=1" aria-current="page">1</a>
+                                    <a href="?page=2">2</a>
+                                    <a
+                                        href="?page=2"
+                                        class="ui-pagination-icon"
+                                        aria-label="다음 페이지"
+                                    >
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="m8.5 4 8 8-8 8L7 18.5l6.5-6.5L7 5.5z"
+                                            />
+                                        </svg>
+                                    </a>
+                                </nav>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- pagination 기호형 --&gt;
+&lt;nav class="ui-pagination" aria-label="페이지 이동"&gt;
+    &lt;a href="?page=1" class="ui-pagination-symbol" aria-label="이전 페이지"&gt;&lt;span aria-hidden="true"&gt;‹&lt;/span&gt;&lt;/a&gt;
+    &lt;a href="?page=1" aria-current="page"&gt;1&lt;/a&gt;
+    &lt;a href="?page=2" class="ui-pagination-symbol" aria-label="다음 페이지"&gt;&lt;span aria-hidden="true"&gt;›&lt;/span&gt;&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+                                </div>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        현재 페이지는 aria-current="page"로
+                                        표시한다.
+                                    </li>
+                                    <li>
+                                        기호나 이미지만 제공하는 이동 버튼에는
+                                        동작을 설명하는 aria-label을 반드시
+                                        작성한다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 도움말 가이드 -->
+                <section id="tooltip" class="pub-section">
+                    <h2>tooltip</h2>
+                    <div class="guide-box">
+                        <h3>
+                            <em>01.</em>
+                            기본형
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <span class="ui-tooltip">
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-line"
+                                        aria-describedby="tooltip-01"
+                                    >
+                                        기본 툴팁
+                                    </button>
+                                    <span
+                                        id="tooltip-01"
+                                        class="ui-tooltip-text"
+                                        role="tooltip"
+                                    >
+                                        추가 안내 내용입니다.
+                                    </span>
+                                </span>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- tooltip 기본형 --&gt;
+&lt;span class="ui-tooltip"&gt;
+    &lt;button type="button" aria-describedby="tooltip-01"&gt;기본 툴팁&lt;/button&gt;
+    &lt;span id="tooltip-01" class="ui-tooltip-text" role="tooltip"&gt;추가 안내 내용입니다.&lt;/span&gt;
+&lt;/span&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-box">
+                        <h3>
+                            <em>02.</em>
+                            말풍선형
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <span class="ui-tooltip ui-tooltip-bubble">
+                                    <button
+                                        type="button"
+                                        class="form-button form-button-fill"
+                                        aria-describedby="tooltip-02"
+                                    >
+                                        말풍선 툴팁
+                                    </button>
+                                    <span
+                                        id="tooltip-02"
+                                        class="ui-tooltip-text"
+                                        role="tooltip"
+                                    >
+                                        말풍선 형태의 안내입니다.
+                                    </span>
+                                </span>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- tooltip 말풍선형 --&gt;
+&lt;span class="ui-tooltip ui-tooltip-bubble"&gt;
+    &lt;button type="button" aria-describedby="tooltip-02"&gt;말풍선 툴팁&lt;/button&gt;
+    &lt;span id="tooltip-02" class="ui-tooltip-text" role="tooltip"&gt;말풍선 형태의 안내입니다.&lt;/span&gt;
+&lt;/span&gt;</code></pre>
+                                </div>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        기본형은 간단한 보조 설명, 말풍선형은
+                                        트리거와 설명의 연결을 시각적으로 강조할
+                                        때 사용한다.
+                                    </li>
+                                    <li>
+                                        예제 버튼의 색상은 유형 구분을 위한
+                                        것이며 실제 화면에서는 주변 버튼 체계를
+                                        따른다.
+                                    </li>
+                                    <li>
+                                        마우스 hover와 키보드 focus에서 동일한
+                                        내용을 확인할 수 있어야 하며 Esc로 닫을
+                                        수 있어야 한다.
+                                    </li>
+                                    <li>
+                                        중요한 정보나 오류 문구는 tooltip에만
+                                        제공하지 않는다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-box">
+                        <h3>
+                            <em>03.</em>
+                            노출 위치
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="ui-actions ui-actions-row">
+                                    <span class="ui-tooltip">
+                                        <button
+                                            type="button"
+                                            class="form-button form-button-line"
+                                            aria-describedby="tooltip-pos-01"
+                                        >
+                                            시작
+                                        </button>
+                                        <span
+                                            id="tooltip-pos-01"
+                                            class="ui-tooltip-text"
+                                            role="tooltip"
+                                        >
+                                            시작 경계에 맞춘 안내
+                                        </span>
+                                    </span>
+                                    <span class="ui-tooltip ui-tooltip-center">
+                                        <button
+                                            type="button"
+                                            class="form-button form-button-line"
+                                            aria-describedby="tooltip-pos-02"
+                                        >
+                                            가운데
+                                        </button>
+                                        <span
+                                            id="tooltip-pos-02"
+                                            class="ui-tooltip-text"
+                                            role="tooltip"
+                                        >
+                                            가운데에 맞춘 안내
+                                        </span>
+                                    </span>
+                                    <span class="ui-tooltip ui-tooltip-end">
+                                        <button
+                                            type="button"
+                                            class="form-button form-button-line"
+                                            aria-describedby="tooltip-pos-03"
+                                        >
+                                            끝
+                                        </button>
+                                        <span
+                                            id="tooltip-pos-03"
+                                            class="ui-tooltip-text"
+                                            role="tooltip"
+                                        >
+                                            끝 경계에 맞춘 안내
+                                        </span>
+                                    </span>
+                                    <span class="ui-tooltip ui-tooltip-bottom">
+                                        <button
+                                            type="button"
+                                            class="form-button form-button-line"
+                                            aria-describedby="tooltip-pos-04"
+                                        >
+                                            하단
+                                        </button>
+                                        <span
+                                            id="tooltip-pos-04"
+                                            class="ui-tooltip-text"
+                                            role="tooltip"
+                                        >
+                                            하단에 배치한 안내
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;span class="ui-tooltip ui-tooltip-center"&gt;
+    &lt;button type="button" aria-describedby="tooltip-pos"&gt;가운데&lt;/button&gt;
+    &lt;span id="tooltip-pos" class="ui-tooltip-text" role="tooltip"&gt;안내 내용&lt;/span&gt;
+&lt;/span&gt;</code></pre>
+                                </div>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        기본은 텍스트 시작 경계이며,
+                                        중앙·끝·하단 배치가 필요할 때 위치
+                                        클래스만 추가한다.
+                                    </li>
+                                    <li>
+                                        화면 가장자리에서는 안내가 잘리지 않는지
+                                        실제 문구 길이로 확인한다.
+                                    </li>
+                                    <li>
+                                        상위 요소에
+                                        <code>overflow: hidden</code>
+                                        이 적용되어 안내 영역이 잘리지 않는지
+                                        확인한다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="badge" class="pub-section">
+                    <h2>badge</h2>
+                    <div class="guide-box">
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <span class="ui-badge">기본</span>
+                                <span class="ui-badge is-emphasis">강조</span>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- badge --&gt;
+&lt;span class="ui-badge"&gt;기본&lt;/span&gt;
+&lt;span class="ui-badge is-emphasis"&gt;강조&lt;/span&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="../assets/js/vendor/jquery-3.5.1.min.js"></script>
+        <script src="../assets/js/vendor/guide-vendor.js"></script>
+        <script src="../assets/js/guide.js"></script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/* tab 컴포넌트 */
+/* line tab */
+.ui-tab-list {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.ui-tab-button {
+    position: relative;
+    flex: 0 0 auto;
+    min-height: 44px;
+    padding: 0 18px;
+    border: 0;
+    background: none;
+    font-size: 14px;
+    color: #777;
+    cursor: pointer;
+}
+
+.ui-tab-button[aria-selected="true"] {
+    font-weight: 500;
+    color: #111;
+}
+
+.ui-tab-line .ui-tab-button[aria-selected="true"]::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    background-color: #ff5252;
+}
+
+/* fill tab */
+.ui-tab-fill .ui-tab-list {
+    gap: 4px;
+    border-bottom: 0;
+}
+
+.ui-tab-fill .ui-tab-button {
+    border-radius: 6px;
+    background-color: #f3f3f3;
+}
+
+.ui-tab-fill .ui-tab-button[aria-selected="true"] {
+    background-color: #111;
+    color: #fff;
+}
+
+/* equal tab */
+.ui-tab-equal .ui-tab-button {
+    flex: 1 1 0;
+}
+
+/* tab panel */
+.ui-tab-panel {
+    padding: 20px 0;
+    font-size: 14px;
+    color: #555;
+}

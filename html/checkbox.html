@@ -1,0 +1,473 @@
+<!doctype html>
+
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+        <title>Checkbox | 퍼블리싱 가이드</title>
+        <link href="../assets/css/import.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <!-- 건너뛰기 링크 -->
+        <div id="skip-nav">
+            <a href="#contents">본문 바로가기</a>
+        </div>
+
+        <!-- 헤더 -->
+        <div class="pub">
+            <header class="pub-header">
+                <h1>퍼블리싱 가이드</h1>
+                <div class="pub-toggle">
+                    <button
+                        type="button"
+                        class="menu-trigger js-menu-trigger is-active"
+                        aria-label="메뉴 열기/닫기"
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <nav class="pub-gnb" aria-label="상단 메뉴">
+                    <ul>
+                        <li class="is-active">
+                            <a href="../index.html">가이드</a>
+                        </li>
+                        <li><a href="../pub-pagelist.html">페이지</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- 주 메뉴 -->
+            <nav
+                class="pub-lnb js-pub-lnb is-active"
+                aria-label="퍼블리싱 가이드 메뉴"
+            >
+                <ul class="pub-lnb-list">
+                    <li class="pub-lnb-item">
+                        <button
+                            type="button"
+                            class="pub-lnb-depth1"
+                            aria-expanded="false"
+                        >
+                            퍼블리싱 가이드
+                            <span class="arrow" aria-hidden="true"></span>
+                        </button>
+
+                        <ul class="pub-lnb-depth2">
+                            <li>
+                                <a href="../index.html#basic-policy"
+                                    >기본 정책</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../index.html#rule">규칙</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#project"
+                                    >프로젝트 구조</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../index.html#file-naming"
+                                    >네이밍 규칙</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../index.html#html-rule">HTML 규칙</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#css-rule">CSS 규칙</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#accessibility"
+                                    >웹접근성</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pub-lnb-item is-open">
+                        <button
+                            type="button"
+                            class="pub-lnb-depth1"
+                            aria-expanded="true"
+                        >
+                            컴포넌트
+                            <span class="arrow" aria-hidden="true"></span>
+                        </button>
+
+                        <ul class="pub-lnb-depth2">
+                            <li class="is-open">
+                                <button
+                                    type="button"
+                                    class="pub-lnb-depth2-btn"
+                                    aria-expanded="true"
+                                >
+                                    Form
+                                    <span
+                                        class="arrow"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+
+                                <ul class="pub-lnb-depth3">
+                                    <li><a href="input.html">input</a></li>
+                                    <li>
+                                        <a href="input.html#textarea"
+                                            >textarea</a
+                                        >
+                                    </li>
+                                    <li><a href="input.html#file">file</a></li>
+                                    <li><a href="select.html">select</a></li>
+                                    <li class="is-active">
+                                        <a href="checkbox.html">checkbox</a>
+                                    </li>
+                                    <li><a href="radio.html">radio</a></li>
+                                    <li><a href="toggle.html">toggle</a></li>
+                                </ul>
+                            </li>
+                            <!-- 상태 컴포넌트 메뉴 -->
+                            <li>
+                                <button
+                                    type="button"
+                                    class="pub-lnb-depth2-btn"
+                                    aria-expanded="false"
+                                >
+                                    UI
+                                    <span
+                                        class="arrow"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                                <ul class="pub-lnb-depth3">
+                                    <li><a href="ui.html#button">button</a></li>
+                                    <li><a href="ui.html#tab">tab</a></li>
+                                    <li>
+                                        <a href="ui.html#accordion"
+                                            >accordion</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="ui.html#timeline">timeline</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui.html#pagination"
+                                            >pagination</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="ui.html#tooltip">tooltip</a>
+                                    </li>
+                                    <li><a href="ui.html#badge">badge</a></li>
+                                    <li><a href="image.html">image</a></li>
+                                    <li>
+                                        <a href="status.html#progress"
+                                            >progress</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="status.html#loading"
+                                            >loading</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- 레이어 메뉴 -->
+                            <li>
+                                <button
+                                    type="button"
+                                    class="pub-lnb-depth2-btn"
+                                    aria-expanded="false"
+                                >
+                                    Overlay
+                                    <span
+                                        class="arrow"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                                <ul class="pub-lnb-depth3">
+                                    <li>
+                                        <a href="popup.html#modal"
+                                            >modal popup</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#image-banner-layer"
+                                            >image banner layer</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#alert">alert</a>
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#confirm">confirm</a>
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#message-close"
+                                            >close type</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#bottom-sheet"
+                                            >bottom sheet</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#bottom-sheet-close"
+                                            >bottom sheet close</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#bottom-sheet-row"
+                                            >bottom sheet 2 column</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#toast"
+                                            >toast popup</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <main id="contents" class="pub-container">
+                <section class="pub-section">
+                    <h2>checkbox</h2>
+
+                    <!-- 체크박스 기본 -->
+                    <div class="guide-box">
+                        <h3>
+                            <em>01.</em>
+                            checkbox - 기본
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="form-check">
+                                    <input type="checkbox" id="check-default" class="form-check-input" />
+                                    <label for="check-default" class="form-check-label">기본 체크박스</label>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-check"&gt;
+    &lt;input type="checkbox" id="check-default" class="form-check-input" /&gt;
+    &lt;label for="check-default" class="form-check-label"&gt;기본 체크박스&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 체크박스 사용자형 -->
+                    <div class="guide-box">
+                        <h3>
+                            <em>02.</em>
+                            checkbox - 커스텀
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="form-check form-check-custom">
+                                    <input type="checkbox" id="check-custom" class="form-check-input" />
+                                    <label for="check-custom" class="form-check-label">커스텀 체크박스</label>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-check form-check-custom"&gt;
+    &lt;input type="checkbox" id="check-custom" class="form-check-input" /&gt;
+    &lt;label for="check-custom" class="form-check-label"&gt;커스텀 체크박스&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    커스텀 체크박스는 기본 구조에
+                                    .form-check-custom 클래스를 추가한다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 체크박스 상태 -->
+                    <div class="guide-box">
+                        <h3>
+                            <em>03.</em>
+                            checkbox - 상태별
+                        </h3>
+                        <div class="guide-contents">
+                            <h4>checkbox - 선택</h4>
+                            <div class="markup-box">
+                                <div class="form-check form-check-custom">
+                                    <input type="checkbox" id="check-checked" class="form-check-input" checked />
+                                    <label for="check-checked" class="form-check-label">선택 상태</label>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-check form-check-custom"&gt;
+    &lt;input type="checkbox" id="check-checked" class="form-check-input" checked /&gt;
+    &lt;label for="check-checked" class="form-check-label"&gt;선택 상태&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <h4>checkbox - 비활성</h4>
+                            <div class="markup-box">
+                                <div class="form-check form-check-custom">
+                                    <input type="checkbox" id="check-disabled" class="form-check-input" disabled />
+                                    <label for="check-disabled" class="form-check-label">비활성 상태</label>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-check form-check-custom"&gt;
+    &lt;input type="checkbox" id="check-disabled" class="form-check-input" disabled /&gt;
+    &lt;label for="check-disabled" class="form-check-label"&gt;비활성 상태&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <h4>checkbox - 선택 비활성</h4>
+                            <div class="markup-box">
+                                <div class="form-check form-check-custom">
+                                    <input type="checkbox" id="check-checked-disabled" class="form-check-input" checked disabled />
+                                    <label for="check-checked-disabled" class="form-check-label">선택 비활성 상태</label>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-check form-check-custom"&gt;
+    &lt;input
+        type="checkbox"
+        id="check-checked-disabled"
+        class="form-check-input"
+        checked
+        disabled
+    /&gt;
+    &lt;label for="check-checked-disabled" class="form-check-label"&gt;선택 비활성 상태&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 체크박스 그룹 -->
+                    <div class="guide-box">
+                        <h3>
+                            <em>04.</em>
+                            checkbox - 그룹
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <fieldset class="form-fieldset">
+                                    <legend class="form-legend">
+                                        관심 항목
+                                    </legend>
+                                    <div class="form-option-group">
+                                        <div
+                                            class="form-check form-check-custom"
+                                        >
+                                            <input type="checkbox" id="check-group-01" class="form-check-input" />
+                                            <label for="check-group-01" class="form-check-label">옵션 1</label>
+                                        </div>
+                                        <div
+                                            class="form-check form-check-custom"
+                                        >
+                                            <input type="checkbox" id="check-group-02" class="form-check-input" />
+                                            <label for="check-group-02" class="form-check-label">옵션 2</label>
+                                        </div>
+                                        <div
+                                            class="form-check form-check-custom"
+                                        >
+                                            <input type="checkbox" id="check-group-03" class="form-check-input" />
+                                            <label for="check-group-03" class="form-check-label">옵션 3</label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;fieldset class="form-fieldset"&gt;
+    &lt;legend class="form-legend"&gt;관심 항목&lt;/legend&gt;
+
+    &lt;div class="form-option-group"&gt;
+        &lt;div class="form-check form-check-custom"&gt;
+            &lt;input type="checkbox" id="check-group-01" class="form-check-input" /&gt;
+            &lt;label for="check-group-01" class="form-check-label"&gt;옵션 1&lt;/label&gt;
+        &lt;/div&gt;
+
+        &lt;div class="form-check form-check-custom"&gt;
+            &lt;input type="checkbox" id="check-group-02" class="form-check-input" /&gt;
+            &lt;label for="check-group-02" class="form-check-label"&gt;옵션 2&lt;/label&gt;
+        &lt;/div&gt;
+
+        &lt;div class="form-check form-check-custom"&gt;
+            &lt;input type="checkbox" id="check-group-03" class="form-check-input" /&gt;
+            &lt;label for="check-group-03" class="form-check-label"&gt;옵션 3&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    동일한 질문에 속하는 체크박스 묶음은
+                                    fieldset과 legend를 사용한다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 전체 선택 체크박스 -->
+                    <div class="guide-box">
+                        <h3>
+                            <em>05.</em>
+                            checkbox - 전체 선택
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div
+                                    class="form-check form-check-custom form-check-all"
+                                >
+                                    <input type="checkbox" id="check-all" class="form-check-input js-check-all" />
+                                    <label for="check-all" class="form-check-label">전체 선택</label>
+                                </div>
+
+                                <div
+                                    class="form-option-group form-option-group-vertical"
+                                >
+                                    <div class="form-check form-check-custom">
+                                        <input type="checkbox" id="check-item-01" class="form-check-input js-check-item" />
+                                        <label for="check-item-01" class="form-check-label">항목 1</label>
+                                    </div>
+                                    <div class="form-check form-check-custom">
+                                        <input type="checkbox" id="check-item-02" class="form-check-input js-check-item" />
+                                        <label for="check-item-02" class="form-check-label">항목 2</label>
+                                    </div>
+                                </div>
+
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-check form-check-custom form-check-all"&gt;
+    &lt;input type="checkbox" id="check-all" class="form-check-input js-check-all" /&gt;
+    &lt;label for="check-all" class="form-check-label"&gt;전체 선택&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="form-option-group form-option-group-vertical"&gt;
+    &lt;div class="form-check form-check-custom"&gt;
+        &lt;input type="checkbox" id="check-item-01" class="form-check-input js-check-item" /&gt;
+        &lt;label for="check-item-01" class="form-check-label"&gt;항목 1&lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div class="form-check form-check-custom"&gt;
+        &lt;input type="checkbox" id="check-item-02" class="form-check-input js-check-item" /&gt;
+        &lt;label for="check-item-02" class="form-check-label"&gt;항목 2&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    전체 선택은 JavaScript로 제어한다.
+                                    <br />
+                                    개별 항목을 모두 선택하면 전체 선택도 함께
+                                    선택되며, 일부만 선택된 경우에는 중간 선택
+                                    상태로 표시된다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="../assets/js/vendor/jquery-3.5.1.min.js"></script>
+        <script src="../assets/js/vendor/guide-vendor.js"></script>
+        <script src="../assets/js/guide.js"></script>
+    </body>
+</html>

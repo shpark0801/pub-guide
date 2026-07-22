@@ -1,0 +1,792 @@
+<!doctype html>
+
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+        <title>Select | 퍼블리싱 가이드</title>
+        <link href="../assets/css/import.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <!-- 건너뛰기 링크 -->
+        <div id="skip-nav">
+            <a href="#contents">본문 바로가기</a>
+        </div>
+
+        <!-- 헤더 -->
+        <div class="pub">
+            <header class="pub-header">
+                <h1>퍼블리싱 가이드</h1>
+                <div class="pub-toggle">
+                    <button
+                        type="button"
+                        class="menu-trigger js-menu-trigger is-active"
+                        aria-label="메뉴 열기/닫기"
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <nav class="pub-gnb" aria-label="상단 메뉴">
+                    <ul>
+                        <li class="is-active">
+                            <a href="../index.html">가이드</a>
+                        </li>
+                        <li><a href="../pub-pagelist.html">페이지</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- 주 메뉴 -->
+            <nav
+                class="pub-lnb js-pub-lnb is-active"
+                aria-label="퍼블리싱 가이드 메뉴"
+            >
+                <ul class="pub-lnb-list">
+                    <li class="pub-lnb-item">
+                        <button
+                            type="button"
+                            class="pub-lnb-depth1"
+                            aria-expanded="false"
+                        >
+                            퍼블리싱 가이드
+                            <span class="arrow" aria-hidden="true"></span>
+                        </button>
+
+                        <ul class="pub-lnb-depth2">
+                            <li>
+                                <a href="../index.html#basic-policy"
+                                    >기본 정책</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../index.html#rule">규칙</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#project"
+                                    >프로젝트 구조</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../index.html#file-naming"
+                                    >네이밍 규칙</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../index.html#html-rule">HTML 규칙</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#css-rule">CSS 규칙</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#accessibility"
+                                    >웹접근성</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pub-lnb-item is-open">
+                        <button
+                            type="button"
+                            class="pub-lnb-depth1"
+                            aria-expanded="true"
+                        >
+                            컴포넌트
+                            <span class="arrow" aria-hidden="true"></span>
+                        </button>
+
+                        <ul class="pub-lnb-depth2">
+                            <li class="is-open">
+                                <button
+                                    type="button"
+                                    class="pub-lnb-depth2-btn"
+                                    aria-expanded="true"
+                                >
+                                    Form
+                                    <span
+                                        class="arrow"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+
+                                <ul class="pub-lnb-depth3">
+                                    <li><a href="input.html">input</a></li>
+                                    <li>
+                                        <a href="input.html#textarea"
+                                            >textarea</a
+                                        >
+                                    </li>
+                                    <li><a href="input.html#file">file</a></li>
+                                    <li class="is-active">
+                                        <a href="select.html">select</a>
+                                    </li>
+                                    <li>
+                                        <a href="checkbox.html">checkbox</a>
+                                    </li>
+                                    <li><a href="radio.html">radio</a></li>
+                                    <li><a href="toggle.html">toggle</a></li>
+                                </ul>
+                            </li>
+                            <!-- 상태 컴포넌트 메뉴 -->
+                            <li>
+                                <button
+                                    type="button"
+                                    class="pub-lnb-depth2-btn"
+                                    aria-expanded="false"
+                                >
+                                    UI
+                                    <span
+                                        class="arrow"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                                <ul class="pub-lnb-depth3">
+                                    <li><a href="ui.html#button">button</a></li>
+                                    <li><a href="ui.html#tab">tab</a></li>
+                                    <li>
+                                        <a href="ui.html#accordion"
+                                            >accordion</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="ui.html#timeline">timeline</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui.html#pagination"
+                                            >pagination</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="ui.html#tooltip">tooltip</a>
+                                    </li>
+                                    <li><a href="ui.html#badge">badge</a></li>
+                                    <li><a href="image.html">image</a></li>
+                                    <li>
+                                        <a href="status.html#progress"
+                                            >progress</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="status.html#loading"
+                                            >loading</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- 레이어 메뉴 -->
+                            <li>
+                                <button
+                                    type="button"
+                                    class="pub-lnb-depth2-btn"
+                                    aria-expanded="false"
+                                >
+                                    Overlay
+                                    <span
+                                        class="arrow"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                                <ul class="pub-lnb-depth3">
+                                    <li>
+                                        <a href="popup.html#modal"
+                                            >modal popup</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#image-banner-layer"
+                                            >image banner layer</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#alert">alert</a>
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#confirm">confirm</a>
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#message-close"
+                                            >close type</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#bottom-sheet"
+                                            >bottom sheet</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#bottom-sheet-close"
+                                            >bottom sheet close</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#bottom-sheet-row"
+                                            >bottom sheet 2 column</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#toast"
+                                            >toast popup</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <main id="contents" class="pub-container">
+                <!-- select -->
+                <section class="pub-section">
+                    <h2>select</h2>
+
+                    <!-- select 유형 -->
+                    <div class="guide-box">
+                        <h3>
+                            <em>01.</em>
+                            select - 기본
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="form-row">
+                                    <label for="selectBasic" class="form-row-label">기본형</label>
+                                    <div class="form-row-control">
+                                        <select
+                                            id="selectBasic"
+                                            class="form-select"
+                                        >
+                                            <option value="">선택하세요</option>
+                                            <option value="option1">
+                                                옵션 1
+                                            </option>
+                                            <option value="option2">
+                                                옵션 2
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class=&quot;form-row&quot;&gt;
+    &lt;label for=&quot;selectBasic&quot; class=&quot;form-row-label&quot;&gt;기본형&lt;/label&gt;
+    &lt;div class=&quot;form-row-control&quot;&gt;
+        &lt;select id=&quot;selectBasic&quot; class=&quot;form-select&quot;&gt;
+            &lt;option value=&quot;&quot;&gt;선택하세요&lt;/option&gt;
+            &lt;option value=&quot;option1&quot;&gt;옵션 1&lt;/option&gt;
+            &lt;option value=&quot;option2&quot;&gt;옵션 2&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    기본형은 브라우저 기본 UI를 사용하며,
+                                    화살표의 위치와 형태는 브라우저 및
+                                    운영체제에 따라 다르게 표시될 수 있다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-box">
+                        <h3>
+                            <em>02.</em>
+                            select - 화살표형
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="form-row">
+                                    <label for="selectArrow" class="form-row-label">화살표형</label>
+                                    <div class="form-row-control">
+                                        <div class="form-select-wrap">
+                                            <select
+                                                id="selectArrow"
+                                                class="form-select form-select-arrow"
+                                            >
+                                                <option value="">
+                                                    선택하세요
+                                                </option>
+                                                <option value="option1">
+                                                    옵션 1
+                                                </option>
+                                                <option value="option2">
+                                                    옵션 2
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class=&quot;form-row&quot;&gt;
+    &lt;label for=&quot;selectArrow&quot; class=&quot;form-row-label&quot;&gt;화살표형&lt;/label&gt;
+    &lt;div class=&quot;form-row-control&quot;&gt;
+        &lt;div class=&quot;form-select-wrap&quot;&gt;
+            &lt;select id=&quot;selectArrow&quot; class=&quot;form-select form-select-arrow&quot;&gt;
+                &lt;option value=&quot;&quot;&gt;선택하세요&lt;/option&gt;
+                &lt;option value=&quot;option1&quot;&gt;옵션 1&lt;/option&gt;
+                &lt;option value=&quot;option2&quot;&gt;옵션 2&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    커스텀 화살표를 사용하는 select는
+                                    .form-select-wrap으로 감싸고, select에
+                                    .form-select-arrow를 적용한다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-box">
+                        <h3>
+                            <em>03.</em>
+                            select - 라인형
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="form-row">
+                                    <label for="selectLine" class="form-row-label">라인형</label>
+                                    <div class="form-row-control">
+                                        <div class="form-select-wrap">
+                                            <select
+                                                id="selectLine"
+                                                class="form-select form-select-line"
+                                            >
+                                                <option value="">
+                                                    선택하세요
+                                                </option>
+                                                <option value="option1">
+                                                    옵션 1
+                                                </option>
+                                                <option value="option2">
+                                                    옵션 2
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class=&quot;form-row&quot;&gt;
+    &lt;label for=&quot;selectLine&quot; class=&quot;form-row-label&quot;&gt;라인형&lt;/label&gt;
+    &lt;div class=&quot;form-row-control&quot;&gt;
+        &lt;div class=&quot;form-select-wrap&quot;&gt;
+            &lt;select id=&quot;selectLine&quot; class=&quot;form-select form-select-line&quot;&gt;
+                &lt;option value=&quot;&quot;&gt;선택하세요&lt;/option&gt;
+                &lt;option value=&quot;option1&quot;&gt;옵션 1&lt;/option&gt;
+                &lt;option value=&quot;option2&quot;&gt;옵션 2&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-box">
+                        <h3>
+                            <em>04.</em>
+                            select - 박스형
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="form-row">
+                                    <label for="selectBox" class="form-row-label">박스형</label>
+                                    <div class="form-row-control">
+                                        <div class="form-select-wrap">
+                                            <select
+                                                id="selectBox"
+                                                class="form-select form-select-box"
+                                            >
+                                                <option value="">
+                                                    선택하세요
+                                                </option>
+                                                <option value="option1">
+                                                    옵션 1
+                                                </option>
+                                                <option value="option2">
+                                                    옵션 2
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class=&quot;form-row&quot;&gt;
+    &lt;label for=&quot;selectBox&quot; class=&quot;form-row-label&quot;&gt;박스형&lt;/label&gt;
+    &lt;div class=&quot;form-row-control&quot;&gt;
+        &lt;div class=&quot;form-select-wrap&quot;&gt;
+            &lt;select id=&quot;selectBox&quot; class=&quot;form-select form-select-box&quot;&gt;
+                &lt;option value=&quot;&quot;&gt;선택하세요&lt;/option&gt;
+                &lt;option value=&quot;option1&quot;&gt;옵션 1&lt;/option&gt;
+                &lt;option value=&quot;option2&quot;&gt;옵션 2&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-box">
+                        <h3>
+                            <em>05.</em>
+                            select - 세로형
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="form-field">
+                                    <label for="selectVertical" class="form-label">선택</label>
+                                    <div class="form-select-wrap">
+                                        <select
+                                            id="selectVertical"
+                                            class="form-select form-select-box"
+                                        >
+                                            <option value="">
+                                                선택해주세요
+                                            </option>
+                                            <option value="option1">
+                                                옵션1
+                                            </option>
+                                            <option value="option2">
+                                                옵션2
+                                            </option>
+                                            <option value="option2">
+                                                옵션3
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class=&quot;form-field&quot;&gt;
+    &lt;label for=&quot;selectVertical&quot; class=&quot;form-label&quot;&gt;선택&lt;/label&gt;
+    &lt;div class=&quot;form-select-wrap&quot;&gt;
+        &lt;select id=&quot;selectVertical&quot; class=&quot;form-select form-select-box&quot;&gt;
+            &lt;option value=&quot;&quot;&gt;선택해주세요&lt;/option&gt;
+            &lt;option value=&quot;option1&quot;&gt;옵션1&lt;/option&gt;
+            &lt;option value=&quot;option2&quot;&gt;옵션2&lt;/option&gt;
+            &lt;option value=&quot;option3&quot;&gt;옵션3&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    세로형은 .form-field 안에 .form-label과
+                                    select를 배치한다.
+                                    <br />
+                                    좌우형은 .form-row 구조를 사용한다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-box">
+                        <h3>
+                            <em>06.</em>
+                            select - 필수 선택
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="form-field">
+                                    <label
+                                        for="selectRequired"
+                                        class="form-label"
+                                    >
+                                        문의 유형
+                                        <span
+                                            class="form-required"
+                                            aria-hidden="true"
+                                            >*</span
+                                        >
+                                    </label>
+                                    <div class="form-select-wrap">
+                                        <select
+                                            id="selectRequired"
+                                            class="form-select form-select-box"
+                                            required
+                                            aria-required="true"
+                                        >
+                                            <option value="" selected disabled>
+                                                선택해주세요
+                                            </option>
+                                            <option value="service">
+                                                서비스 문의
+                                            </option>
+                                            <option value="payment">
+                                                결제 문의
+                                            </option>
+                                            <option value="etc">
+                                                기타 문의
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class=&quot;form-field&quot;&gt;
+    &lt;label for=&quot;selectRequired&quot; class=&quot;form-label&quot;&gt;
+        문의 유형 &lt;span class=&quot;form-required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;div class=&quot;form-select-wrap&quot;&gt;
+        &lt;select
+            id=&quot;selectRequired&quot;
+            class=&quot;form-select form-select-box&quot;
+            required
+            aria-required=&quot;true&quot;&gt;
+            &lt;option value=&quot;&quot; selected disabled&gt;선택해주세요&lt;/option&gt;
+            &lt;option value=&quot;service&quot;&gt;서비스 문의&lt;/option&gt;
+            &lt;option value=&quot;payment&quot;&gt;결제 문의&lt;/option&gt;
+            &lt;option value=&quot;etc&quot;&gt;기타 문의&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    필수 선택 항목에는 required를 사용한다.
+                                    <br />
+                                    안내용 첫 option은 value를 비우고 selected,
+                                    disabled를 적용해 실제 값으로 제출되지
+                                    않도록 구성한다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-box">
+                        <h3>
+                            <em>07.</em>
+                            select - 옵션 그룹
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="form-field">
+                                    <label for="selectOptgroup" class="form-label">지역 선택</label>
+                                    <div class="form-select-wrap">
+                                        <select
+                                            id="selectOptgroup"
+                                            class="form-select form-select-box"
+                                        >
+                                            <option value="">
+                                                지역을 선택해주세요
+                                            </option>
+                                            <optgroup label="수도권">
+                                                <option value="seoul">
+                                                    서울
+                                                </option>
+                                                <option value="gyeonggi">
+                                                    경기
+                                                </option>
+                                                <option value="incheon">
+                                                    인천
+                                                </option>
+                                            </optgroup>
+                                            <optgroup label="충청권">
+                                                <option value="daejeon">
+                                                    대전
+                                                </option>
+                                                <option value="sejong">
+                                                    세종
+                                                </option>
+                                                <option value="chungcheong">
+                                                    충청
+                                                </option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class=&quot;form-field&quot;&gt;
+    &lt;label for=&quot;selectOptgroup&quot; class=&quot;form-label&quot;&gt;지역 선택&lt;/label&gt;
+    &lt;div class=&quot;form-select-wrap&quot;&gt;
+        &lt;select id=&quot;selectOptgroup&quot; class=&quot;form-select form-select-box&quot;&gt;
+            &lt;option value=&quot;&quot;&gt;지역을 선택해주세요&lt;/option&gt;
+            &lt;optgroup label=&quot;수도권&quot;&gt;
+                &lt;option value=&quot;seoul&quot;&gt;서울&lt;/option&gt;
+                &lt;option value=&quot;gyeonggi&quot;&gt;경기&lt;/option&gt;
+                &lt;option value=&quot;incheon&quot;&gt;인천&lt;/option&gt;
+            &lt;/optgroup&gt;
+            &lt;optgroup label=&quot;충청권&quot;&gt;
+                &lt;option value=&quot;daejeon&quot;&gt;대전&lt;/option&gt;
+                &lt;option value=&quot;sejong&quot;&gt;세종&lt;/option&gt;
+                &lt;option value=&quot;chungcheong&quot;&gt;충청&lt;/option&gt;
+            &lt;/optgroup&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    관련 옵션이 많을 경우 optgroup의 label로
+                                    항목을 구분한다.
+                                    <br />
+                                    optgroup 자체는 선택할 수 없으며 하위
+                                    option만 선택된다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- select 상태 -->
+                    <div class="guide-box">
+                        <h3>
+                            <em>08.</em>
+                            select - 상태별
+                        </h3>
+                        <div class="guide-contents">
+                            <h4>select - 에러</h4>
+                            <div class="markup-box">
+                                <div class="form-field is-error">
+                                    <label for="selectError" class="form-label">문의 유형</label>
+                                    <div class="form-select-wrap">
+                                        <select
+                                            id="selectError"
+                                            class="form-select form-select-box"
+                                            aria-invalid="true"
+                                            aria-describedby="selectErrorMessage"
+                                        >
+                                            <option value="">
+                                                선택해주세요
+                                            </option>
+                                            <option value="service">
+                                                서비스 문의
+                                            </option>
+                                            <option value="payment">
+                                                결제 문의
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <p
+                                        id="selectErrorMessage"
+                                        class="form-msg form-msg-error"
+                                    >
+                                        문의 유형을 선택해주세요.
+                                    </p>
+                                </div>
+
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class=&quot;form-field is-error&quot;&gt;
+    &lt;label for=&quot;selectError&quot; class=&quot;form-label&quot;&gt;문의 유형&lt;/label&gt;
+    &lt;div class=&quot;form-select-wrap&quot;&gt;
+        &lt;select
+            id=&quot;selectError&quot;
+            class=&quot;form-select form-select-box&quot;
+            aria-invalid=&quot;true&quot;
+            aria-describedby=&quot;selectErrorMessage&quot;&gt;
+            &lt;option value=&quot;&quot;&gt;선택해주세요&lt;/option&gt;
+            &lt;option value=&quot;service&quot;&gt;서비스 문의&lt;/option&gt;
+            &lt;option value=&quot;payment&quot;&gt;결제 문의&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;p id=&quot;selectErrorMessage&quot; class=&quot;form-msg form-msg-error&quot;&gt;
+        문의 유형을 선택해주세요.
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <h4>select - 경고</h4>
+                            <div class="markup-box">
+                                <div class="form-field is-warn">
+                                    <label for="selectWarning" class="form-label">배송 지역</label>
+                                    <div class="form-select-wrap">
+                                        <select
+                                            id="selectWarning"
+                                            class="form-select form-select-box"
+                                            aria-describedby="selectWarningMessage"
+                                        >
+                                            <option value="">
+                                                선택해주세요
+                                            </option>
+                                            <option value="seoul">서울</option>
+                                            <option value="jeju" selected>
+                                                제주
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <p
+                                        id="selectWarningMessage"
+                                        class="form-msg form-msg-warn"
+                                    >
+                                        선택한 지역은 추가 배송비가 발생할 수
+                                        있습니다.
+                                    </p>
+                                </div>
+
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class=&quot;form-field is-warn&quot;&gt;
+    &lt;label for=&quot;selectWarning&quot; class=&quot;form-label&quot;&gt;배송 지역&lt;/label&gt;
+    &lt;div class=&quot;form-select-wrap&quot;&gt;
+        &lt;select
+            id=&quot;selectWarning&quot;
+            class=&quot;form-select form-select-box&quot;
+            aria-describedby=&quot;selectWarningMessage&quot;&gt;
+            &lt;option value=&quot;&quot;&gt;선택해주세요&lt;/option&gt;
+            &lt;option value=&quot;seoul&quot;&gt;서울&lt;/option&gt;
+            &lt;option value=&quot;jeju&quot; selected&gt;제주&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;p id=&quot;selectWarningMessage&quot; class=&quot;form-msg form-msg-warn&quot;&gt;
+        선택한 지역은 추가 배송비가 발생할 수 있습니다.
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <h4>select - 비활성</h4>
+                            <div class="markup-box">
+                                <div class="form-field">
+                                    <label for="selectDisabled" class="form-label">선택 불가</label>
+                                    <div class="form-select-wrap is-disabled">
+                                        <select
+                                            id="selectDisabled"
+                                            class="form-select form-select-box"
+                                            disabled
+                                        >
+                                            <option value="">
+                                                선택할 수 없습니다
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class=&quot;form-field&quot;&gt;
+    &lt;label for=&quot;selectDisabled&quot; class=&quot;form-label&quot;&gt;선택 불가&lt;/label&gt;
+    &lt;div class=&quot;form-select-wrap is-disabled&quot;&gt;
+        &lt;select
+            id=&quot;selectDisabled&quot;
+            class=&quot;form-select form-select-box&quot;
+            disabled&gt;
+            &lt;option value=&quot;&quot;&gt;선택할 수 없습니다&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    상태 유형은 부모 .form-field에 .is-error
+                                    또는 .is-warn을 적용한다.
+                                    <br />
+                                    비활성 상태는 select에 disabled를 사용한다.
+                                    <br />
+                                    select 요소는 readonly 속성을 지원하지
+                                    않는다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="../assets/js/vendor/jquery-3.5.1.min.js"></script>
+        <script src="../assets/js/vendor/guide-vendor.js"></script>
+        <script src="../assets/js/guide.js"></script>
+    </body>
+</html>
+

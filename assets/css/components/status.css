@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/* 진행률 / 로딩 컴포넌트 */
+/* 진행률 */
+.ui-progress {
+    width: 100%;
+    max-width: 520px;
+}
+
+.ui-progress-fluid {
+    max-width: none;
+}
+
+.ui-progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+.ui-progress-track {
+    height: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #e5e5e5;
+}
+
+.ui-progress-bar {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background-color: #ff5252;
+    transform: scaleX(0);
+    transform-origin: left center;
+    animation: ui-progress-fill 0.7s ease-out forwards;
+    transition: width 0.3s ease;
+}
+
+@keyframes ui-progress-fill {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* 로딩 */
+.ui-loading {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.ui-loading-spinner {
+    width: 28px;
+    height: 28px;
+    border: 3px solid #e5e5e5;
+    border-top-color: #ff5252;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: ui-loading-spin 0.8s linear infinite;
+}
+
+@keyframes ui-loading-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ui-progress-bar {
+        transform: none;
+        animation: none;
+        transition: none;
+    }
+    .ui-loading-spinner {
+        animation: none;
+    }
+}

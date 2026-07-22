@@ -1,0 +1,499 @@
+@charset "UTF-8";
+
+/* 모달 / 토스트 / 바텀시트 컴포넌트 */
+/* 모달 팝업 */
+.ui-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.ui-modal.is-open {
+    display: flex;
+}
+
+.ui-modal-dimmed {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.ui-modal-dialog {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 400px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.ui-modal-header,
+.ui-modal-body,
+.ui-modal-footer {
+    padding: 20px;
+}
+
+.ui-modal-header {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ui-modal-header::after {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    left: 15px;
+    height: 1px;
+    background-color: #e5e5e5;
+    content: "";
+}
+
+.ui-modal-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+}
+
+.ui-modal-body {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.ui-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+body.is-modal-open {
+    overflow: hidden;
+}
+
+/* 이미지 배너 모달 */
+/* 실행 버튼 */
+.ui-modal-banner-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ui-modal-banner-buttons .form-button {
+    width: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+/* 대화상자 레이아웃 */
+.ui-modal-banner .ui-modal-dialog {
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.ui-modal-banner .ui-modal-body {
+    padding: 0;
+}
+
+.ui-modal-banner .ui-modal-header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* 배너 이미지 */
+.ui-modal-banner-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+/* 하단 액션 */
+.ui-modal-banner .ui-modal-footer {
+    gap: 0;
+    padding: 0;
+    border-top: 1px solid #e5e5e5;
+    background-color: #fff;
+}
+
+.ui-modal-banner-confirm {
+    width: 100%;
+    height: 50px;
+    padding: 0 16px;
+    border: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.ui-modal-banner-today {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+    flex: 1 1 50%;
+    height: 50px;
+    color: #333;
+    font-size: 13px;
+}
+
+.ui-modal-banner-today + .ui-modal-banner-confirm {
+    flex: 1 1 50%;
+    border-left: 1px solid #e5e5e5;
+}
+
+/* 스와이퍼 이전·다음 버튼 및 페이지네이션 */
+.ui-modal-banner-slide {
+    position: relative;
+}
+
+.ui-modal-banner-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #333;
+    font-size: 34px;
+    line-height: 1;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.ui-modal-banner-arrow span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #333;
+    border-right: 2px solid #333;
+    font-size: 0;
+}
+
+.ui-modal-banner-prev span {
+    transform: rotate(135deg);
+}
+
+.ui-modal-banner-next span {
+    transform: rotate(-45deg);
+}
+
+.ui-modal-banner-arrow[hidden] {
+    display: none;
+}
+
+.ui-modal-banner-prev {
+    left: 0;
+}
+
+.ui-modal-banner-next {
+    right: 0;
+}
+
+.ui-modal-banner-slide.swiper > .ui-modal-banner-page {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 12px;
+    left: 50%;
+    z-index: 2;
+    width: auto;
+    min-width: 48px;
+    padding: 4px 8px;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #333;
+    font-size: 12px;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+.ui-modal-banner-slide.swiper > .ui-modal-banner-dots {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 18px;
+    left: 50%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    width: auto;
+    transform: translateX(-50%);
+}
+
+.ui-modal-banner-slide .ui-modal-banner-dots .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.65);
+    opacity: 1;
+}
+
+.ui-modal-banner-slide .ui-modal-banner-dots .swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+
+/* 닫기 버튼 유형 */
+.ui-modal-banner .ui-modal-close {
+    border-radius: 0;
+    background-color: transparent;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+}
+
+.ui-modal-banner.has-header .ui-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-right: 5px;
+}
+
+.ui-modal-banner.has-header .ui-modal-close {
+    position: static;
+    flex: 0 0 36px;
+    color: #222;
+    text-shadow: none;
+}
+
+.ui-modal-banner-arrow.swiper-button-disabled {
+    display: none;
+}
+
+/* 토스트 팝업 */
+.ui-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    z-index: 1100;
+    min-width: 240px;
+    max-width: calc(100% - 40px);
+    padding: 14px 18px;
+    border-radius: 6px;
+    background-color: rgba(17, 17, 17, 0.92);
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 12px);
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s;
+}
+
+.ui-toast.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+/* 바텀시트 */
+/* 바텀시트 컨테이너 */
+.ui-bottom-sheet {
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    display: none;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.ui-bottom-sheet.is-open {
+    display: flex;
+}
+
+/* 열기·닫기 모션 */
+.ui-bottom-sheet-dimmed {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    opacity: 1;
+    transition: opacity 0.25s ease;
+}
+
+.ui-bottom-sheet-panel {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 480px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding: 24px 20px 20px;
+    border-radius: 16px 16px 0 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    transform: translateY(0);
+    transition: transform 0.25s ease;
+}
+
+.ui-bottom-sheet.is-closing .ui-bottom-sheet-dimmed {
+    opacity: 0;
+}
+
+.ui-bottom-sheet.is-opening .ui-bottom-sheet-dimmed {
+    opacity: 0;
+}
+
+.ui-bottom-sheet.is-closing .ui-bottom-sheet-panel {
+    transform: translateY(100%);
+}
+
+.ui-bottom-sheet.is-opening .ui-bottom-sheet-panel {
+    transform: translateY(100%);
+}
+
+/* 바텀시트 헤더 */
+.ui-bottom-sheet-handle {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #ccc;
+    transform: translateX(-50%);
+}
+
+.ui-bottom-sheet-title {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+}
+
+/* 바텀시트 콘텐츠 및 액션 */
+.ui-bottom-sheet-actions {
+    margin-top: 20px;
+}
+
+.ui-bottom-sheet-content {
+    min-height: 120px;
+}
+
+/* 알림 / 확인 */
+/* 메시지 레이아웃 */
+.ui-modal-msg .ui-modal-header,
+.ui-modal-msg .ui-modal-body,
+.ui-modal-msg .ui-modal-footer {
+    padding: 15px;
+}
+
+.ui-modal-msg .ui-modal-header {
+    padding: 10px 15px 5px;
+}
+
+.ui-modal-msg .ui-modal-footer .form-button {
+    color: #333;
+}
+
+.ui-modal-msg .ui-modal-footer .form-button-fill {
+    color: #fff;
+}
+
+.ui-modal-msg.has-close .ui-modal-header {
+    padding-right: 48px;
+}
+
+/* 공통 닫기 버튼 */
+.ui-modal-close,
+.ui-bottom-sheet-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #222;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.ui-bottom-sheet-panel.has-close .ui-bottom-sheet-title {
+    padding-right: 32px;
+}
+
+.ui-bottom-sheet-close {
+    top: 17px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ui-bottom-sheet-dimmed,
+    .ui-bottom-sheet-panel {
+        transition-duration: 0.01ms;
+    }
+}
+
+/* 메시지 반응형 액션 */
+@media (max-width: 480px) {
+    .ui-modal-msg .ui-modal-footer {
+        flex-direction: column;
+    }
+
+    .ui-modal-msg .ui-modal-footer .form-button {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .ui-modal-msg .ui-modal-footer.ui-actions-row {
+        flex-direction: row;
+    }
+
+    .ui-modal-msg .ui-modal-footer.ui-actions-row .form-button {
+        flex: 1 1 0;
+        width: auto;
+        min-width: 0;
+    }
+}
+
+/* 바텀시트 반응형 액션 */
+@media (max-width: 480px) {
+    .ui-bottom-sheet-panel {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .ui-bottom-sheet-actions {
+        flex-direction: column;
+    }
+
+    .ui-bottom-sheet-actions .form-button {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .ui-bottom-sheet-actions.is-row {
+        flex-direction: row;
+    }
+
+    .ui-bottom-sheet-actions.is-row .form-button {
+        flex: 1 1 0;
+        width: auto;
+        min-width: 0;
+    }
+}

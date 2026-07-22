@@ -1,0 +1,1133 @@
+<!doctype html>
+
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+        <title>Input · Textarea · File | 퍼블리싱 가이드</title>
+        <link href="../assets/css/import.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <!-- 건너뛰기 링크 -->
+        <div id="skip-nav">
+            <a href="#contents">본문 바로가기</a>
+        </div>
+
+        <!-- 헤더 -->
+        <div class="pub">
+            <header class="pub-header">
+                <h1>퍼블리싱 가이드</h1>
+                <div class="pub-toggle">
+                    <button
+                        type="button"
+                        class="menu-trigger js-menu-trigger is-active"
+                        aria-label="메뉴 열기/닫기"
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <nav class="pub-gnb" aria-label="상단 메뉴">
+                    <ul>
+                        <li class="is-active">
+                            <a href="../index.html">가이드</a>
+                        </li>
+                        <li><a href="../pub-pagelist.html">페이지</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- 주 메뉴 -->
+            <nav
+                class="pub-lnb js-pub-lnb is-active"
+                aria-label="퍼블리싱 가이드 메뉴"
+            >
+                <ul class="pub-lnb-list">
+                    <li class="pub-lnb-item">
+                        <button
+                            type="button"
+                            class="pub-lnb-depth1"
+                            aria-expanded="false"
+                        >
+                            퍼블리싱 가이드
+                            <span class="arrow" aria-hidden="true"></span>
+                        </button>
+
+                        <ul class="pub-lnb-depth2">
+                            <li>
+                                <a href="../index.html#basic-policy"
+                                    >기본 정책</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../index.html#rule">규칙</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#project"
+                                    >프로젝트 구조</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../index.html#file-naming"
+                                    >네이밍 규칙</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../index.html#html-rule">HTML 규칙</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#css-rule">CSS 규칙</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#accessibility"
+                                    >웹접근성</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pub-lnb-item is-open">
+                        <button
+                            type="button"
+                            class="pub-lnb-depth1"
+                            aria-expanded="true"
+                        >
+                            컴포넌트
+                            <span class="arrow" aria-hidden="true"></span>
+                        </button>
+
+                        <ul class="pub-lnb-depth2">
+                            <li class="is-open">
+                                <button
+                                    type="button"
+                                    class="pub-lnb-depth2-btn"
+                                    aria-expanded="true"
+                                >
+                                    Form
+                                    <span
+                                        class="arrow"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+
+                                <ul class="pub-lnb-depth3">
+                                    <li class="is-active">
+                                        <a href="input.html">input</a>
+                                    </li>
+                                    <li>
+                                        <a href="input.html#textarea"
+                                            >textarea</a
+                                        >
+                                    </li>
+                                    <li><a href="input.html#file">file</a></li>
+                                    <li><a href="select.html">select</a></li>
+                                    <li>
+                                        <a href="checkbox.html">checkbox</a>
+                                    </li>
+                                    <li><a href="radio.html">radio</a></li>
+                                    <li><a href="toggle.html">toggle</a></li>
+                                </ul>
+                            </li>
+                            <!-- 상태 컴포넌트 메뉴 -->
+                            <li>
+                                <button
+                                    type="button"
+                                    class="pub-lnb-depth2-btn"
+                                    aria-expanded="false"
+                                >
+                                    UI
+                                    <span
+                                        class="arrow"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                                <ul class="pub-lnb-depth3">
+                                    <li><a href="ui.html#button">button</a></li>
+                                    <li><a href="ui.html#tab">tab</a></li>
+                                    <li>
+                                        <a href="ui.html#accordion"
+                                            >accordion</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="ui.html#timeline">timeline</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui.html#pagination"
+                                            >pagination</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="ui.html#tooltip">tooltip</a>
+                                    </li>
+                                    <li><a href="ui.html#badge">badge</a></li>
+                                    <li><a href="image.html">image</a></li>
+                                    <li>
+                                        <a href="status.html#progress"
+                                            >progress</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="status.html#loading"
+                                            >loading</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- 레이어 메뉴 -->
+                            <li>
+                                <button
+                                    type="button"
+                                    class="pub-lnb-depth2-btn"
+                                    aria-expanded="false"
+                                >
+                                    Overlay
+                                    <span
+                                        class="arrow"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                                <ul class="pub-lnb-depth3">
+                                    <li>
+                                        <a href="popup.html#modal"
+                                            >modal popup</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#image-banner-layer"
+                                            >image banner layer</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#alert">alert</a>
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#confirm">confirm</a>
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#message-close"
+                                            >close type</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#bottom-sheet"
+                                            >bottom sheet</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#bottom-sheet-close"
+                                            >bottom sheet close</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#bottom-sheet-row"
+                                            >bottom sheet 2 column</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="popup.html#toast"
+                                            >toast popup</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <main id="contents" class="pub-container">
+                <!-- 입력 요소 -->
+                <section class="pub-section">
+                    <h2>input</h2>
+
+                    <!-- 선형 입력란 -->
+                    <div class="guide-box">
+                        <h3>
+                            <em>01.</em>
+                            Textinput - 라인형
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="form-field">
+                                    <label for="input-line-default" class="form-label">기본 상태</label>
+                                    <input type="text" id="input-line-default" class="form-input form-input-line" placeholder="기본 상태" />
+                                </div>
+
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-field"&gt;
+    &lt;label for="input-line-default" class="form-label"&gt;기본 상태&lt;/label&gt;
+    &lt;input
+        type="text"
+        id="input-line-default"
+        class="form-input form-input-line"
+        placeholder="기본 상태"
+    /&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+
+                                <div class="pub-blockquote">
+                                    Input은 .form-field를 기본 구조로 사용하며,
+                                    스타일은 아래 클래스로 구분한다.
+                                    <br />
+                                    라인형 : .form-input-line
+                                    <br />
+                                    박스형 : .form-input-box
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-box">
+                        <h3>
+                            <em>02.</em>
+                            Textinput - 라인형 상태별
+                        </h3>
+                        <div class="guide-contents">
+                            <h4>Textinput - 라인형 + 에러</h4>
+                            <div class="markup-box">
+                                <div class="form-field is-error">
+                                    <label for="input-line-error" class="form-label">에러 상태</label>
+                                    <input
+                                        type="text"
+                                        id="input-line-error"
+                                        class="form-input form-input-line"
+                                        placeholder="에러 상태"
+                                        aria-invalid="true"
+                                        aria-describedby="input-line-error-message"
+                                    />
+                                    <p
+                                        id="input-line-error-message"
+                                        class="form-msg form-msg-error"
+                                    >
+                                        입력값을 확인해주세요.
+                                    </p>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-field is-error"&gt;
+    &lt;label for="input-line-error" class="form-label"&gt;에러 상태&lt;/label&gt;
+    &lt;input
+        type="text"
+        id="input-line-error"
+        class="form-input form-input-line"
+        placeholder="에러 상태"
+        aria-invalid="true"
+        aria-describedby="input-line-error-message"
+    /&gt;
+    &lt;p id="input-line-error-message" class="form-msg form-msg-error"&gt;
+        입력값을 확인해주세요.
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <h4>Textinput - 라인형 + 경고</h4>
+                            <div class="markup-box">
+                                <div class="form-field is-warn">
+                                    <label for="input-line-warning" class="form-label">경고 상태</label>
+                                    <input
+                                        type="text"
+                                        id="input-line-warning"
+                                        class="form-input form-input-line"
+                                        placeholder="경고 상태"
+                                        aria-describedby="input-line-warning-message"
+                                    />
+                                    <p
+                                        id="input-line-warning-message"
+                                        class="form-msg form-msg-warn"
+                                    >
+                                        입력 형식을 다시 확인해주세요.
+                                    </p>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">
+&lt;div class="form-field is-warn"&gt;
+    &lt;label for="input-line-warning" class="form-label"&gt;경고 상태&lt;/label&gt;
+    &lt;input
+        type="text"
+        id="input-line-warning"
+        class="form-input form-input-line"
+        placeholder="경고 상태"
+        aria-describedby="input-line-warning-message"
+    /&gt;
+    &lt;p id="input-line-warning-message" class="form-msg form-msg-warn"&gt;
+        입력 형식을 다시 확인해주세요.
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    input의 상태 유형은 부모 요소의 상태
+                                    클래스로 구분된다.
+                                    <br />
+                                    에러 : .is-error
+                                    <br />
+                                    경고 : .is-warn
+                                </div>
+                            </div>
+
+                            <h4>Textinput - 라인형 + 비활성 (예시)</h4>
+                            <div class="markup-box">
+                                <div class="form-field">
+                                    <label for="input-line-disabled" class="form-label">비활성 상태</label>
+                                    <input
+                                        type="text"
+                                        id="input-line-disabled"
+                                        class="form-input form-input-line"
+                                        value="입력할 수 없습니다"
+                                        disabled
+                                    />
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">
+&lt;div class="form-field"&gt;
+    &lt;label for="input-line-disabled" class="form-label"&gt;비활성 상태&lt;/label&gt;
+    &lt;input
+        type="text"
+        id="input-line-disabled"
+        class="form-input form-input-line"
+        value="입력할 수 없습니다"
+        disabled
+    /&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    input에 disabled 속성을 직접 적용하며,
+                                    .form-input:disabled 선택자로 비활성 스타일이
+                                    적용된다. 일반 input은 별도의 상태 클래스가
+                                    필요하지 않다.
+                                </div>
+                            </div>
+
+                            <h4>Textinput - 라인형 + 읽기전용</h4>
+                            <div class="markup-box">
+                                <div class="form-field">
+                                    <label for="input-line-readonly" class="form-label">읽기전용 상태</label>
+                                    <input
+                                        type="text"
+                                        id="input-line-readonly"
+                                        class="form-input form-input-line"
+                                        value="수정할 수 없습니다"
+                                        readonly
+                                    />
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-field"&gt;
+    &lt;label for="input-line-readonly" class="form-label"&gt;읽기전용 상태&lt;/label&gt;
+    &lt;input
+        type="text"
+        id="input-line-readonly"
+        class="form-input form-input-line"
+        value="수정할 수 없습니다"
+        readonly
+    /&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- 전화번호 입력 오류 -->
+                            <h4>phone input - 에러</h4>
+                            <div class="markup-box">
+                                <div class="form-field is-error">
+                                    <span class="form-label">휴대폰 에러</span>
+                                    <div
+                                        class="form-phone"
+                                        role="group"
+                                        aria-label="휴대폰 번호"
+                                    >
+                                        <div class="form-select-wrap">
+                                            <select
+                                                class="form-select form-select-box"
+                                                title="휴대폰 번호 앞자리"
+                                                aria-invalid="true"
+                                                aria-describedby="phone-split-error-message"
+                                            >
+                                                <option value="010">010</option>
+                                                <option value="011">011</option>
+                                                <option value="016">016</option>
+                                                <option value="017">017</option>
+                                                <option value="018">018</option>
+                                                <option value="019">019</option>
+                                            </select>
+                                        </div>
+                                        <span
+                                            class="form-phone-dash"
+                                            aria-hidden="true"
+                                            >-</span
+                                        >
+                                        <input
+                                            type="tel"
+                                            class="form-input form-input-box js-number-only"
+                                            title="휴대폰 번호 가운데 자리"
+                                            maxlength="4"
+                                            inputmode="numeric"
+                                            autocomplete="tel-local-prefix"
+                                            placeholder="0000"
+                                            aria-invalid="true"
+                                            aria-describedby="phone-split-error-message"
+                                        />
+                                        <span
+                                            class="form-phone-dash"
+                                            aria-hidden="true"
+                                            >-</span
+                                        >
+                                        <input
+                                            type="tel"
+                                            class="form-input form-input-box js-number-only"
+                                            title="휴대폰 번호 마지막 자리"
+                                            maxlength="4"
+                                            inputmode="numeric"
+                                            autocomplete="tel-local-suffix"
+                                            placeholder="0000"
+                                            aria-invalid="true"
+                                            aria-describedby="phone-split-error-message"
+                                        />
+                                    </div>
+                                    <p
+                                        id="phone-split-error-message"
+                                        class="form-msg form-msg-error"
+                                    >
+                                        휴대폰 번호를 정확히 입력해주세요.
+                                    </p>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-field is-error"&gt;
+    &lt;span class="form-label"&gt;휴대폰 에러&lt;/span&gt;
+
+    &lt;div
+        class="form-phone"
+        role="group"
+        aria-label="휴대폰 번호"&gt;
+
+        &lt;div class="form-select-wrap"&gt;
+            &lt;select
+                class="form-select form-select-box"
+                title="휴대폰 번호 앞자리"
+                aria-invalid="true"
+                aria-describedby="phone-split-error-message"&gt;
+                &lt;option value="010"&gt;010&lt;/option&gt;
+                &lt;option value="011"&gt;011&lt;/option&gt;
+                &lt;option value="016"&gt;016&lt;/option&gt;
+                &lt;option value="017"&gt;017&lt;/option&gt;
+                &lt;option value="018"&gt;018&lt;/option&gt;
+                &lt;option value="019"&gt;019&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;span class="form-phone-dash" aria-hidden="true"&gt;-&lt;/span&gt;
+
+        &lt;input
+            type="tel"
+            class="form-input form-input-box js-number-only"
+            title="휴대폰 번호 가운데 자리"
+            maxlength="4"
+            inputmode="numeric"
+            autocomplete="tel-local-prefix"
+            placeholder="0000"
+            aria-invalid="true"
+            aria-describedby="phone-split-error-message"
+        /&gt;
+
+        &lt;span class="form-phone-dash" aria-hidden="true"&gt;-&lt;/span&gt;
+
+        &lt;input
+            type="tel"
+            class="form-input form-input-box js-number-only"
+            title="휴대폰 번호 마지막 자리"
+            maxlength="4"
+            inputmode="numeric"
+            autocomplete="tel-local-suffix"
+            placeholder="0000"
+            aria-invalid="true"
+            aria-describedby="phone-split-error-message"
+        /&gt;
+    &lt;/div&gt;
+
+    &lt;p
+        id="phone-split-error-message"
+        class="form-msg form-msg-error"&gt;
+        휴대폰 번호를 정확히 입력해주세요.
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- 전화번호 입력 경고 -->
+                            <h4>phone input - 경고</h4>
+
+                            <div class="markup-box">
+                                <div class="form-field is-warn">
+                                    <span class="form-label">휴대폰 경고</span>
+
+                                    <div
+                                        class="form-phone"
+                                        role="group"
+                                        aria-label="휴대폰 번호"
+                                    >
+                                        <div class="form-select-wrap">
+                                            <select
+                                                class="form-select form-select-box"
+                                                title="휴대폰 번호 앞자리"
+                                                aria-describedby="phone-split-warning-message"
+                                            >
+                                                <option value="010">010</option>
+                                                <option value="011">011</option>
+                                                <option value="016">016</option>
+                                                <option value="017">017</option>
+                                                <option value="018">018</option>
+                                                <option value="019">019</option>
+                                            </select>
+                                        </div>
+
+                                        <span
+                                            class="form-phone-dash"
+                                            aria-hidden="true"
+                                            >-</span
+                                        >
+
+                                        <input
+                                            type="tel"
+                                            class="form-input form-input-box js-number-only"
+                                            title="휴대폰 번호 가운데 자리"
+                                            maxlength="4"
+                                            inputmode="numeric"
+                                            autocomplete="tel-local-prefix"
+                                            placeholder="0000"
+                                            aria-describedby="phone-split-warning-message"
+                                        />
+
+                                        <span
+                                            class="form-phone-dash"
+                                            aria-hidden="true"
+                                            >-</span
+                                        >
+
+                                        <input
+                                            type="tel"
+                                            class="form-input form-input-box js-number-only"
+                                            title="휴대폰 번호 마지막 자리"
+                                            maxlength="4"
+                                            inputmode="numeric"
+                                            autocomplete="tel-local-suffix"
+                                            placeholder="0000"
+                                            aria-describedby="phone-split-warning-message"
+                                        />
+                                    </div>
+
+                                    <p
+                                        id="phone-split-warning-message"
+                                        class="form-msg form-msg-warn"
+                                    >
+                                        본인 명의 휴대폰 번호인지 확인해주세요.
+                                    </p>
+                                </div>
+
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-field is-warn"&gt;
+    &lt;span class="form-label"&gt;휴대폰 경고&lt;/span&gt;
+
+    &lt;div
+        class="form-phone"
+        role="group"
+        aria-label="휴대폰 번호"&gt;
+
+        &lt;div class="form-select-wrap"&gt;
+            &lt;select
+                class="form-select form-select-box"
+                title="휴대폰 번호 앞자리"
+                aria-describedby="phone-split-warning-message"&gt;
+                &lt;option value="010"&gt;010&lt;/option&gt;
+                &lt;option value="011"&gt;011&lt;/option&gt;
+                &lt;option value="016"&gt;016&lt;/option&gt;
+                &lt;option value="017"&gt;017&lt;/option&gt;
+                &lt;option value="018"&gt;018&lt;/option&gt;
+                &lt;option value="019"&gt;019&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;span class="form-phone-dash" aria-hidden="true"&gt;-&lt;/span&gt;
+
+        &lt;input
+            type="tel"
+            class="form-input form-input-box js-number-only"
+            title="휴대폰 번호 가운데 자리"
+            maxlength="4"
+            inputmode="numeric"
+            autocomplete="tel-local-prefix"
+            placeholder="0000"
+            aria-describedby="phone-split-warning-message"
+        /&gt;
+
+        &lt;span class="form-phone-dash" aria-hidden="true"&gt;-&lt;/span&gt;
+
+        &lt;input
+            type="tel"
+            class="form-input form-input-box js-number-only"
+            title="휴대폰 번호 마지막 자리"
+            maxlength="4"
+            inputmode="numeric"
+            autocomplete="tel-local-suffix"
+            placeholder="0000"
+            aria-describedby="phone-split-warning-message"
+        /&gt;
+    &lt;/div&gt;
+
+    &lt;p
+        id="phone-split-warning-message"
+        class="form-msg form-msg-warn"&gt;
+        본인 명의 휴대폰 번호인지 확인해주세요.
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-box">
+                        <h3>
+                            <em>03.</em>
+                            Textinput - 플로팅 라벨 (예시)
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="form-field form-float is-error">
+                                    <label
+                                        for="input-float-required"
+                                        class="form-label form-float-label"
+                                    >
+                                        <span class="form-float-text">
+                                            이름
+                                            <span
+                                                class="form-required"
+                                                aria-hidden="true"
+                                                >*</span
+                                            >
+                                            <span class="blind">필수</span>
+                                        </span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="input-float-required"
+                                        class="form-input form-input-box"
+                                        placeholder="이름을 입력해 주세요."
+                                        aria-invalid="true"
+                                        aria-describedby="input-float-required-error"
+                                        required
+                                    />
+                                    <p
+                                        id="input-float-required-error"
+                                        class="form-msg form-msg-error"
+                                    >
+                                        이름을 입력해 주세요.
+                                    </p>
+                                </div>
+
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-field form-float is-error"&gt;
+    &lt;label for="input-float-required" class="form-label form-float-label"&gt;
+        &lt;span class="form-float-text"&gt;
+            이름
+            &lt;span class="form-required" aria-hidden="true"&gt;*&lt;/span&gt;
+            &lt;span class="blind"&gt;필수&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;input
+        type="text"
+        id="input-float-required"
+        class="form-input form-input-box"
+        placeholder="이름을 입력해 주세요."
+        aria-invalid="true"
+        aria-describedby="input-float-required-error"
+        required
+    /&gt;
+    &lt;p id="input-float-required-error" class="form-msg form-msg-error"&gt;
+        이름을 입력해 주세요.
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+
+                                <div class="pub-blockquote">
+                                    label은 12px로 표시하며 PC와 모바일에서 모두
+                                    입력 테두리의 왼쪽 상단에 겹쳐 배치한다. 흰색
+                                    배경은 label 전체가 아닌 텍스트 영역에만
+                                    적용한다.
+                                    <br />
+                                    필수 입력은 required 속성을 사용하고, 별표는
+                                    장식으로 숨긴 뒤 화면낭독기용 필수 문구를 함께
+                                    제공한다.
+                                </div>
+                            </div>
+
+                            <h4>플로팅 라벨 + 비활성 (예시)</h4>
+                            <div class="markup-box">
+                                <div class="form-field form-float is-disabled">
+                                    <label
+                                        for="input-float-disabled"
+                                        class="form-label form-float-label"
+                                    >
+                                        <span class="form-float-text">이름</span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="input-float-disabled"
+                                        class="form-input form-input-box"
+                                        placeholder="이름을 입력해 주세요."
+                                        disabled
+                                    />
+                                </div>
+
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-field form-float is-disabled"&gt;
+    &lt;label for="input-float-disabled" class="form-label form-float-label"&gt;
+        &lt;span class="form-float-text"&gt;이름&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;input
+        type="text"
+        id="input-float-disabled"
+        class="form-input form-input-box"
+        placeholder="이름을 입력해 주세요."
+        disabled
+    /&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    disabled input은 label 텍스트 배경도 비활성
+                                    배경색으로 전환된다.
+                                    <br />
+                                    :has(.form-input:disabled) 선택자로 disabled
+                                    input을 포함한 플로팅 영역을 감지한다.
+                                    <br />
+                                    :has()를 지원하지 않는 환경에서는 .form-float에
+                                    .is-disabled 클래스를 함께 사용한다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-box">
+                        <h3>
+                            <em>04.</em>
+                            Textinput - 반응형 플로팅 라벨 (예시)
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="form-row form-row-float">
+                                    <label
+                                        for="input-row-float-required"
+                                        class="form-row-label"
+                                    >
+                                        <span class="form-float-text">
+                                            이메일
+                                            <span
+                                                class="form-required"
+                                                aria-hidden="true"
+                                                >*</span
+                                            >
+                                            <span class="blind">필수</span>
+                                        </span>
+                                    </label>
+                                    <div class="form-row-control">
+                                        <input
+                                            type="email"
+                                            id="input-row-float-required"
+                                            class="form-input form-input-box"
+                                            placeholder="이메일을 입력해 주세요."
+                                            required
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-row form-row-float"&gt;
+    &lt;label for="input-row-float-required" class="form-row-label"&gt;
+        &lt;span class="form-float-text"&gt;
+            이메일
+            &lt;span class="form-required" aria-hidden="true"&gt;*&lt;/span&gt;
+            &lt;span class="blind"&gt;필수&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;div class="form-row-control"&gt;
+        &lt;input
+            type="email"
+            id="input-row-float-required"
+            class="form-input form-input-box"
+            placeholder="이메일을 입력해 주세요."
+            required
+        /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+
+                                <div class="pub-blockquote">
+                                    PC에서는 label을 입력 영역 왼쪽에 배치하고,
+                                    768px 이하에서는 12px label이 입력 테두리의
+                                    왼쪽 상단에 겹치는 형태로 전환된다.
+                                    <br />
+                                    비활성 적용 시 부모 요소에 .is-disabled를
+                                    추가하여 .form-row.form-row-float.is-disabled로
+                                    사용하고,
+                                    <br />
+                                    input에는 disabled 속성을 적용한다.
+                                    모바일 겹침 상태에서도 label 텍스트 배경이
+                                    비활성 배경색으로 전환된다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-box">
+                        <h3>
+                            <em>05.</em>
+                            브라우저 자동완성 스타일 (참고)
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="pub-blockquote">
+                                    Chrome, Edge, Safari 등 일부 브라우저는
+                                    자동완성된 input에 브라우저 기본 배경색과
+                                    글자색을 적용할 수 있다. 디자인 유지가 필요한
+                                    경우에만 다음 스타일을 참고하여 선택적으로
+                                    사용한다.
+                                </div>
+
+                                <div class="code-box">
+                                    <pre><code class="css">/* Chrome·Edge 등 자동완성 배경 대응 */
+.form-input:-webkit-autofill,
+.form-input:-webkit-autofill:hover,
+.form-input:-webkit-autofill:focus,
+.form-input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset;
+    -webkit-text-fill-color: #222;
+    caret-color: #222;
+    transition: background-color 9999s ease-out;
+}</code></pre>
+                                </div>
+
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        필수 공통 스타일이 아니며 자동완성 배경이
+                                        디자인과 충돌할 때만 사용한다.
+                                    </li>
+                                    <li>
+                                        선택자는 전체 input이 아닌 적용 대상 클래스
+                                        범위로 제한한다.
+                                    </li>
+                                    <li>
+                                        inset 색상과 글자색, caret 색상은 실제 입력
+                                        영역의 배경색과 디자인 색상에 맞게 변경한다.
+                                    </li>
+                                    <li>
+                                        긴 transition은 브라우저 기본 배경의 재적용을
+                                        늦추는 우회 방식이므로 프로젝트에서 상태 전환에
+                                        영향이 없는지 확인하고 불필요하면 제외한다.
+                                    </li>
+                                    <li>
+                                        자동완성 기능 자체를 제거하지 않으며
+                                        autocomplete 속성은 입력 목적에 맞게
+                                        제공한다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 여러 줄 입력 가이드 -->
+                <section id="textarea" class="pub-section">
+                    <h2>textarea</h2>
+                    <div class="guide-box">
+                        <h3>
+                            <em>01.</em>
+                            기본형
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <label class="form-label" for="textarea-basic">문의 내용</label>
+                                <textarea
+                                    id="textarea-basic"
+                                    class="form-textarea"
+                                    rows="5"
+                                    maxlength="500"
+                                    placeholder="내용을 입력해 주세요."
+                                    aria-describedby="textarea-help"
+                                ></textarea>
+                                <p id="textarea-help" class="form-msg">
+                                    최대 500자까지 입력할 수 있습니다.
+                                </p>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- textarea 기본형 --&gt;
+&lt;label class="form-label" for="textarea-basic"&gt;문의 내용&lt;/label&gt;
+&lt;textarea id="textarea-basic" class="form-textarea" rows="5" maxlength="500" aria-describedby="textarea-help"&gt;&lt;/textarea&gt;
+&lt;p id="textarea-help" class="form-msg"&gt;최대 500자까지 입력할 수 있습니다.&lt;/p&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    label을 연결하고 글자 수 제한이나 오류
+                                    안내는 aria-describedby로 제공한다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 파일 첨부 가이드 -->
+                <section id="file" class="pub-section">
+                    <h2>file</h2>
+                    <div class="guide-box">
+                        <h3>
+                            <em>01.</em>
+                            기본형
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <label class="form-label" for="file-basic">첨부 파일</label>
+                                <input
+                                    id="file-basic"
+                                    class="form-file"
+                                    type="file"
+                                    accept=".jpg,.jpeg,.png,.pdf"
+                                    aria-describedby="file-help"
+                                />
+                                <p id="file-help" class="form-msg">
+                                    JPG, PNG, PDF 파일만 첨부할 수 있습니다.
+                                </p>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- file 기본형 --&gt;
+&lt;input id="file-basic" class="form-file" type="file" accept=".jpg,.jpeg,.png,.pdf" /&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-box">
+                        <h3>
+                            <em>02.</em>
+                            버튼 좌측 / 우측
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="form-file-group">
+                                    <input
+                                        id="file-left"
+                                        class="form-file-input js-file"
+                                        type="file"
+                                        data-file-name="#file-left-name"
+                                    />
+                                    <label class="form-file-button" for="file-left">파일 선택</label>
+                                    <input
+                                        id="file-left-name"
+                                        class="form-file-name"
+                                        type="text"
+                                        readonly
+                                        placeholder="선택된 파일 없음"
+                                        aria-label="선택된 파일명"
+                                    />
+                                </div>
+                                <br />
+                                <div class="form-file-group">
+                                    <input
+                                        id="file-right-name"
+                                        class="form-file-name"
+                                        type="text"
+                                        readonly
+                                        placeholder="선택된 파일 없음"
+                                        aria-label="선택된 파일명"
+                                    />
+                                    <input
+                                        id="file-right"
+                                        class="form-file-input js-file"
+                                        type="file"
+                                        data-file-name="#file-right-name"
+                                    />
+                                    <label class="form-file-button" for="file-right">파일 선택</label>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- file 버튼 우측형 --&gt;
+&lt;div class="form-file-group"&gt;
+    &lt;input id="file-name" class="form-file-name" type="text" readonly aria-label="선택된 파일명" /&gt;
+    &lt;input
+        id="file-select"
+        class="form-file-input js-file"
+        type="file"
+        data-file-name="#file-name"
+    /&gt;
+    &lt;label class="form-file-button" for="file-select"&gt;파일 선택&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-box">
+                        <h3>
+                            <em>03.</em>
+                            박스형 / 아이콘형
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="form-file-box">
+                                    <p>파일을 선택해 첨부해 주세요.</p>
+                                    <input id="file-box" class="form-file-input" type="file" />
+                                    <label class="form-file-button" for="file-box">파일 선택</label>
+                                </div>
+                                <br />
+                                <div class="form-file-group">
+                                    <input
+                                        id="file-icon-name"
+                                        class="form-file-name"
+                                        type="text"
+                                        readonly
+                                        placeholder="선택된 파일 없음"
+                                        aria-label="선택된 파일명"
+                                    />
+                                    <input
+                                        id="file-icon"
+                                        class="form-file-input js-file"
+                                        type="file"
+                                        data-file-name="#file-icon-name"
+                                    />
+                                    <label
+                                        class="form-file-button form-file-icon"
+                                        for="file-icon"
+                                        aria-label="파일 선택"
+                                    >
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            aria-hidden="true"
+                                            focusable="false"
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="M11 16V7.8L8.4 10.4 7 9l5-5 5 5-1.4 1.4L13 7.8V16h-2zm-5 4v-6h2v4h8v-4h2v6H6z"
+                                            />
+                                        </svg>
+                                    </label>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- file 아이콘 버튼형 --&gt;
+&lt;input id="file-icon" class="form-file-input" type="file" /&gt;
+&lt;label class="form-file-button form-file-icon" for="file-icon" aria-label="파일 선택"&gt;
+    &lt;svg aria-hidden="true" focusable="false"&gt;...&lt;/svg&gt;
+&lt;/label&gt;</code></pre>
+                                </div>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        파일 input은 display:none으로 제거하지
+                                        않고 label을 통해 키보드와 보조기기에서
+                                        선택할 수 있게 연결한다.
+                                    </li>
+                                    <li>
+                                        아이콘 단독 선택 버튼에는 aria-label로
+                                        동작명을 제공한다.
+                                    </li>
+                                    <li>
+                                        accept는 선택 보조 수단이므로 파일
+                                        형식과 용량은 서버에서도 검증한다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="../assets/js/vendor/jquery-3.5.1.min.js"></script>
+        <script src="../assets/js/vendor/guide-vendor.js"></script>
+        <script src="../assets/js/guide.js"></script>
+    </body>
+</html>

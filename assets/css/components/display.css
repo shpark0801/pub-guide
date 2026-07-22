@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+/* 아코디언 */
+.ui-accordion {
+    border-top: 1px solid #ddd;
+}
+
+.ui-accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.ui-accordion-button {
+    position: relative;
+    width: 100%;
+    padding: 16px 40px 16px 0;
+    border: 0;
+    background: #fff;
+    color: #222;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.ui-accordion-button::after {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    content: "+";
+    transform: translateY(-50%);
+}
+
+.ui-accordion-button[aria-expanded="true"]::after {
+    content: "−";
+}
+
+.ui-accordion-panel {
+    max-height: 0;
+    padding: 0;
+    color: #555;
+    overflow: hidden;
+    transition:
+        max-height 0.3s ease,
+        padding-bottom 0.3s ease;
+}
+
+.ui-accordion-panel.is-open {
+    padding-bottom: 16px;
+}
+
+.ui-accordion-panel p + p {
+    margin-top: 8px;
+}
+
+/* 타임라인 */
+.ui-timeline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ui-timeline-item {
+    position: relative;
+    padding: 0 0 24px 24px;
+    border-left: 1px solid #ccc;
+}
+
+.ui-timeline-item::before {
+    position: absolute;
+    top: 3px;
+    left: -5px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #222;
+    content: "";
+}
+
+.ui-timeline-item:last-child {
+    padding-bottom: 0;
+    border-left-color: transparent;
+}
+
+.ui-timeline-date {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: #667085;
+}
+
+/* 페이지네이션 */
+.ui-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.ui-pagination a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #555;
+    font-size: 12px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.ui-pagination a[aria-current="page"] {
+    border-color: #222;
+    background: #222;
+    color: #fff;
+}
+
+.ui-pagination-symbol,
+.ui-pagination-icon {
+    padding: 0 8px;
+}
+
+.ui-pagination-icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* 툴팁 */
+.ui-tooltip {
+    position: relative;
+    display: inline-flex;
+}
+
+.ui-tooltip-text {
+    position: absolute;
+    z-index: 10;
+    bottom: calc(100% + 8px);
+    left: 0;
+    width: max-content;
+    max-width: min(240px, calc(100vw - 32px));
+    padding: 8px 10px;
+    border-radius: 4px;
+    background: #222;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: left;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.ui-tooltip-center .ui-tooltip-text {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ui-tooltip-end .ui-tooltip-text {
+    right: 0;
+    left: auto;
+}
+
+.ui-tooltip-bottom .ui-tooltip-text {
+    top: calc(100% + 8px);
+    bottom: auto;
+}
+
+.ui-tooltip-bubble .ui-tooltip-text::after {
+    position: absolute;
+    top: 100%;
+    left: 12px;
+    border: 6px solid transparent;
+    border-top-color: #222;
+    content: "";
+}
+
+.ui-tooltip-bubble.ui-tooltip-center .ui-tooltip-text::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ui-tooltip-bubble.ui-tooltip-end .ui-tooltip-text::after {
+    right: 12px;
+    left: auto;
+}
+
+.ui-tooltip-bubble.ui-tooltip-bottom .ui-tooltip-text::after {
+    top: auto;
+    bottom: 100%;
+    border-top-color: transparent;
+    border-bottom-color: #222;
+}
+
+.ui-tooltip:not(:hover):not(:focus-within) .ui-tooltip-text,
+.ui-tooltip.is-hidden .ui-tooltip-text {
+    display: none;
+}
+
+/* 배지 */
+.ui-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 2px 8px;
+    border-radius: 11px;
+    background: #eef2f6;
+    color: #344054;
+    font-size: 12px;
+}
+
+.ui-badge.is-emphasis {
+    background: #e8f2ff;
+    color: #2563eb;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ui-accordion-panel {
+        transition: none;
+    }
+}

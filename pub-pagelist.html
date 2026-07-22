@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>산출물 리스트 | 퍼블리싱 가이드</title>
+        <link rel="stylesheet" href="assets/css/import.css" />
+    </head>
+
+    <body>
+        <div id="skip-nav">
+            <a href="#contents">본문 바로가기</a>
+        </div>
+        <div class="pub">
+            <header class="pub-header pub-header-full">
+                <h1>퍼블리싱 가이드</h1>
+                <nav class="pub-gnb" aria-label="상단 메뉴">
+                    <ul>
+                        <li><a href="index.html">가이드</a></li>
+                        <li class="is-active">
+                            <a href="pub-pagelist.html" aria-current="page"
+                                >페이지</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main id="contents" class="pub-container pub-container-full">
+                <section class="pub-section">
+                    <h2>산출물 리스트</h2>
+                    <!-- 산출물 리스트 탭 -->
+                    <div class="ui-tab ui-tab-line js-tab">
+                        <div
+                            class="ui-tab-list"
+                            role="tablist"
+                            aria-label="산출물 리스트 메뉴"
+                        >
+                            <button
+                                type="button"
+                                id="pagelist-tab-01"
+                                class="ui-tab-button"
+                                role="tab"
+                                aria-controls="pagelist-panel-01"
+                                aria-selected="true"
+                            >
+                                산출물 리스트
+                            </button>
+                            <button
+                                type="button"
+                                id="pagelist-tab-02"
+                                class="ui-tab-button"
+                                role="tab"
+                                aria-controls="pagelist-panel-02"
+                                aria-selected="false"
+                                tabindex="-1"
+                            >
+                                작성 방법
+                            </button>
+                        </div>
+                        <div
+                            id="pagelist-panel-01"
+                            class="ui-tab-panel"
+                            role="tabpanel"
+                            aria-labelledby="pagelist-tab-01"
+                        >
+                            <div class="guide-box">
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        페이지 경로와 작업 상태는 산출물 변경 시
+                                        함께 갱신한다.
+                                    </li>
+                                    <li>
+                                        비고에는 신규·수정·참조 이력을 날짜와
+                                        함께 최신순으로 작성한다.
+                                    </li>
+                                </ul>
+                                <div
+                                    class="pub-status-list"
+                                    aria-label="페이지 상태 유형"
+                                >
+                                    <span class="pub-status pub-status-wait"
+                                        >대기</span
+                                    >
+                                    <span class="pub-status pub-status-progress"
+                                        >진행</span
+                                    >
+                                    <span class="pub-status pub-status-review"
+                                        >검수</span
+                                    >
+                                    <span class="pub-status pub-status-complete"
+                                        >완료</span
+                                    >
+                                </div>
+                                <div class="pub-pagelist-wrap">
+                                    <table class="pub-page pub-pagelist">
+                                        <caption class="blind">
+                                            퍼블리싱 산출물 페이지 목록
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 8%" />
+                                            <col style="width: 8%" />
+                                            <col style="width: 8%" />
+                                            <col style="width: 8%" />
+                                            <col style="width: 8%" />
+                                            <col style="width: 12%" />
+                                            <col style="width: 15%" />
+                                            <col style="width: 7%" />
+                                            <col style="width: 9%" />
+                                            <col />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">1Depth</th>
+                                                <th scope="col">2Depth</th>
+                                                <th scope="col">3Depth</th>
+                                                <th scope="col">4Depth</th>
+                                                <th scope="col">화면 ID</th>
+                                                <th scope="col">페이지명</th>
+                                                <th scope="col">페이지 경로</th>
+                                                <th scope="col">상태</th>
+                                                <th scope="col">최종 수정일</th>
+                                                <th scope="col">비고</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>가이드</td>
+                                                <td>규칙</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>-</td>
+                                                <td class="pub-page-name">
+                                                    퍼블리싱 작성 규칙
+                                                </td>
+                                                <td class="pub-page-path">
+                                                    <a href="index.html"
+                                                        >index.html</a
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="pub-status pub-status-complete"
+                                                        >완료</span
+                                                    >
+                                                </td>
+                                                <td class="pub-page-date"></td>
+                                                <td class="pub-page-note"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>컴포넌트</td>
+                                                <td>Form</td>
+                                                <td>Input</td>
+                                                <td>Textarea / File</td>
+                                                <td>-</td>
+                                                <td class="pub-page-name">
+                                                    Input / Textarea / File
+                                                </td>
+                                                <td class="pub-page-path">
+                                                    <a href="html/input.html"
+                                                        >html/input.html</a
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="pub-status pub-status-complete"
+                                                        >완료</span
+                                                    >
+                                                </td>
+                                                <td class="pub-page-date"></td>
+                                                <td class="pub-page-note"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>컴포넌트</td>
+                                                <td>Form</td>
+                                                <td>Select</td>
+                                                <td></td>
+                                                <td>-</td>
+                                                <td class="pub-page-name">
+                                                    Select
+                                                </td>
+                                                <td class="pub-page-path">
+                                                    <a href="html/select.html"
+                                                        >html/select.html</a
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="pub-status pub-status-complete"
+                                                        >완료</span
+                                                    >
+                                                </td>
+                                                <td class="pub-page-date"></td>
+                                                <td class="pub-page-note"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>컴포넌트</td>
+                                                <td>Form</td>
+                                                <td>Checkbox</td>
+                                                <td></td>
+                                                <td>-</td>
+                                                <td class="pub-page-name">
+                                                    Checkbox
+                                                </td>
+                                                <td class="pub-page-path">
+                                                    <a href="html/checkbox.html"
+                                                        >html/checkbox.html</a
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="pub-status pub-status-complete"
+                                                        >완료</span
+                                                    >
+                                                </td>
+                                                <td class="pub-page-date"></td>
+                                                <td class="pub-page-note"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>컴포넌트</td>
+                                                <td>Form</td>
+                                                <td>Radio</td>
+                                                <td></td>
+                                                <td>-</td>
+                                                <td class="pub-page-name">
+                                                    Radio
+                                                </td>
+                                                <td class="pub-page-path">
+                                                    <a href="html/radio.html"
+                                                        >html/radio.html</a
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="pub-status pub-status-complete"
+                                                        >완료</span
+                                                    >
+                                                </td>
+                                                <td class="pub-page-date"></td>
+                                                <td class="pub-page-note"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>컴포넌트</td>
+                                                <td>Form</td>
+                                                <td>Toggle</td>
+                                                <td></td>
+                                                <td>-</td>
+                                                <td class="pub-page-name">
+                                                    Toggle
+                                                </td>
+                                                <td class="pub-page-path">
+                                                    <a href="html/toggle.html"
+                                                        >html/toggle.html</a
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="pub-status pub-status-complete"
+                                                        >완료</span
+                                                    >
+                                                </td>
+                                                <td class="pub-page-date"></td>
+                                                <td class="pub-page-note"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>컴포넌트</td>
+                                                <td>UI</td>
+                                                <td>Button / Tab</td>
+                                                <td>Accordion 외</td>
+                                                <td>-</td>
+                                                <td class="pub-page-name">
+                                                    Button / Tab / Display
+                                                </td>
+                                                <td class="pub-page-path">
+                                                    <a href="html/ui.html"
+                                                        >html/ui.html</a
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="pub-status pub-status-complete"
+                                                        >완료</span
+                                                    >
+                                                </td>
+                                                <td class="pub-page-date"></td>
+                                                <td class="pub-page-note"></td>
+                                            </tr>
+                                            <!-- 이미지 페이지 -->
+                                            <tr>
+                                                <td>컴포넌트</td>
+                                                <td>UI</td>
+                                                <td>Image</td>
+                                                <td>Banner / Thumbnail</td>
+                                                <td>-</td>
+                                                <td class="pub-page-name">
+                                                    Image
+                                                </td>
+                                                <td class="pub-page-path">
+                                                    <a href="html/image.html"
+                                                        >html/image.html</a
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="pub-status pub-status-complete"
+                                                        >완료</span
+                                                    >
+                                                </td>
+                                                <td class="pub-page-date"></td>
+                                                <td class="pub-page-note"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>컴포넌트</td>
+                                                <td>UI</td>
+                                                <td>Status</td>
+                                                <td></td>
+                                                <td>-</td>
+                                                <td class="pub-page-name">
+                                                    Progress / Loading
+                                                </td>
+                                                <td class="pub-page-path">
+                                                    <a href="html/status.html"
+                                                        >html/status.html</a
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="pub-status pub-status-complete"
+                                                        >완료</span
+                                                    >
+                                                </td>
+                                                <td class="pub-page-date"></td>
+                                                <td class="pub-page-note"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>컴포넌트</td>
+                                                <td>Overlay</td>
+                                                <td>Popup</td>
+                                                <td></td>
+                                                <td>-</td>
+                                                <td class="pub-page-name">
+                                                    Modal / Bottom Sheet / Toast
+                                                </td>
+                                                <td class="pub-page-path">
+                                                    <a href="html/popup.html"
+                                                        >html/popup.html</a
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="pub-status pub-status-complete"
+                                                        >완료</span
+                                                    >
+                                                </td>
+                                                <td class="pub-page-date"></td>
+                                                <td class="pub-page-note"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="pagelist-panel-02"
+                            class="ui-tab-panel"
+                            role="tabpanel"
+                            aria-labelledby="pagelist-tab-02"
+                            hidden
+                        >
+                            <div class="guide-box">
+                                <h3>
+                                    <em>01.</em>
+                                    항목 작성 기준
+                                </h3>
+                                <table class="tbl mb-10">
+                                    <caption class="blind">
+                                        산출물 리스트 항목별 작성 방법
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 18%" />
+                                        <col style="width: 32%" />
+                                        <col />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">항목</th>
+                                            <th scope="col">작성 기준</th>
+                                            <th scope="col">예시</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1~4Depth</th>
+                                            <td>
+                                                IA 순서에 따라 상위에서 하위
+                                                메뉴 순으로 작성한다.
+                                            </td>
+                                            <td>
+                                                컴포넌트 &gt; UI &gt; Button
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">화면 ID</th>
+                                            <td>
+                                                별도의 화면 ID를 사용하지 않는
+                                                경우 하이픈으로 표시한다.
+                                            </td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">페이지명</th>
+                                            <td>
+                                                브라우저 제목이 아닌 화면의 대표
+                                                명칭을 작성한다.
+                                            </td>
+                                            <td>Button / Tab</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">페이지 경로</th>
+                                            <td>
+                                                현재 파일에서 접근 가능한 상대
+                                                경로를 링크로 연결한다.
+                                            </td>
+                                            <td>ui.html</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">상태</th>
+                                            <td>
+                                                대기, 진행, 검수, 완료 중 현재
+                                                상태 하나를 표시한다.
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="pub-status pub-status-progress"
+                                                    >진행</span
+                                                >
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">최종 수정일</th>
+                                            <td>
+                                                페이지 내용이 마지막으로 변경된
+                                                날짜를 YYYY-MM-DD로 작성한다.
+                                            </td>
+                                            <td class="pub-page-date">
+                                                <time datetime="2026-07-15"
+                                                    >2026-07-15</time
+                                                >
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">비고</th>
+                                            <td>
+                                                신규·수정·참조 이력을 날짜와
+                                                핵심 내용으로 구분해 최신순으로
+                                                작성한다.
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="history-tag is-update"
+                                                    >수정</span
+                                                >
+                                                <time
+                                                    class="history-date"
+                                                    datetime="2026-07-15"
+                                                    >2026-07-15</time
+                                                >
+                                                버튼 정렬 보완
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="guide-box">
+                                <h3>
+                                    <em>02.</em>
+                                    이력 배지
+                                </h3>
+                                <ul class="history-list history-guide">
+                                    <li class="history-item">
+                                        <span class="history-tag is-new"
+                                            >신규</span
+                                        >
+                                        <span
+                                            >페이지나 기능을 새로 추가한
+                                            경우</span
+                                        >
+                                    </li>
+                                    <li class="history-item">
+                                        <span class="history-tag is-update"
+                                            >수정</span
+                                        >
+                                        <span
+                                            >마크업, 스타일, 기능을 변경한
+                                            경우</span
+                                        >
+                                    </li>
+                                    <li class="history-item">
+                                        <span class="history-tag is-reference"
+                                            >참조</span
+                                        >
+                                        <span
+                                            >연관 페이지, 개발 조건, 확인 사항을
+                                            안내하는 경우</span
+                                        >
+                                    </li>
+                                </ul>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        동일 날짜의 작은 수정은 한 항목으로
+                                        묶고, 영향 범위를 알아볼 수 있게
+                                        작성한다.
+                                    </li>
+                                    <li>
+                                        단순히 “수정”이라고 작성하지 않고 변경한
+                                        컴포넌트나 기능을 명시한다.
+                                    </li>
+                                    <li>
+                                        최종 수정일은 가장 최근 이력의 날짜와
+                                        일치해야 한다.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="guide-box">
+                                <h3>
+                                    <em>03.</em>
+                                    상태별 클래스
+                                </h3>
+                                <ul class="history-list history-guide">
+                                    <li class="history-item">
+                                        <span class="pub-status pub-status-wait"
+                                            >대기</span
+                                        >
+                                        <code>.pub-status-wait</code>
+                                    </li>
+                                    <li class="history-item">
+                                        <span
+                                            class="pub-status pub-status-progress"
+                                            >진행</span
+                                        >
+                                        <code>.pub-status-progress</code>
+                                    </li>
+                                    <li class="history-item">
+                                        <span
+                                            class="pub-status pub-status-review"
+                                            >검수</span
+                                        >
+                                        <code>.pub-status-review</code>
+                                    </li>
+                                    <li class="history-item">
+                                        <span
+                                            class="pub-status pub-status-complete"
+                                            >완료</span
+                                        >
+                                        <code>.pub-status-complete</code>
+                                    </li>
+                                </ul>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>
+                                        각 상태 클래스는 공통
+                                        <code>.pub-status</code>
+                                        와 함께 사용한다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="assets/js/vendor/jquery-3.5.1.min.js"></script>
+        <script src="assets/js/guide.js"></script>
+    </body>
+</html>
