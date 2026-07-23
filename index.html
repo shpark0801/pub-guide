@@ -18,7 +18,7 @@
         <!-- 헤더 -->
         <div class="pub">
             <header class="pub-header">
-                <h1>퍼블리싱 가이드</h1>
+                <h1><a href="index.html">퍼블리싱 가이드</a></h1>
                 <div class="pub-toggle">
                     <button
                         type="button"
@@ -75,6 +75,11 @@
                             </li>
                             <li>
                                 <a href="index.html#css-rule">CSS 규칙</a>
+                            </li>
+                            <li>
+                                <a href="index.html#performance"
+                                    >성능 최적화</a
+                                >
                             </li>
                             <li>
                                 <a href="index.html#accessibility">웹접근성</a>
@@ -366,6 +371,33 @@
                     <div class="guide-box">
                         <h3>
                             <em>02.</em>
+                            운영 스크립트 로드 순서
+                        </h3>
+                        <ul class="guide-msg guide-msg-note">
+                            <li>
+                                외부 라이브러리, 기능별 플러그인, 공통 UI 스크립트
+                                순서로 의존성을 고려해 불러온다.
+                            </li>
+                            <li>
+                                Swiper 등 기능별 라이브러리는 사용하는 페이지에서만
+                                로드하고, 사용하지 않는 플러그인은 불러오지 않는다.
+                            </li>
+                            <li>
+                                운영 스크립트는 body 종료 직전에 선언하며, 가이드
+                                전용 guide-vendor.js와 guide.js는 운영 ui.js와
+                                구분해 관리한다.
+                            </li>
+                        </ul>
+                        <div class="code-box">
+                            <pre><code class="html">&lt;script src="../assets/js/vendor/jquery-4.0.0.min.js"&gt;&lt;/script&gt;
+&lt;!-- Swiper 사용 페이지에서만 로드 --&gt;
+&lt;script src="../assets/js/vendor/swiper-bundle.min.js"&gt;&lt;/script&gt;
+&lt;script src="../assets/js/ui.js"&gt;&lt;/script&gt;</code></pre>
+                        </div>
+                    </div>
+                    <div class="guide-box">
+                        <h3>
+                            <em>03.</em>
                             Git 작업 메시지 규칙
                         </h3>
                         <ul class="guide-msg">
@@ -385,7 +417,7 @@
                     </div>
                     <div class="guide-box">
                         <h3>
-                            <em>03.</em>
+                            <em>04.</em>
                             Git 작업 관리
                         </h3>
                         <ul class="guide-msg">
@@ -428,7 +460,7 @@
                     <!-- 컴포넌트 작성 및 검수 기준 -->
                     <div class="guide-box">
                         <h3>
-                            <em>04.</em>
+                            <em>05.</em>
                             컴포넌트 작성 기준
                         </h3>
                         <ul class="guide-msg">
@@ -631,7 +663,7 @@
                     <!-- 렌더링 검수 기준 -->
                     <div class="guide-box">
                         <h3>
-                            <em>05.</em>
+                            <em>06.</em>
                             구현 및 렌더링 검수
                         </h3>
                         <ol class="guide-msg">
@@ -905,7 +937,7 @@
                             </div>
                             <div class="gd-tree-row depth4">
                                 <span class="gd-tree-name"
-                                    >├─ jquery-3.5.1.min.js</span
+                                    >├─ jquery-4.0.0.min.js</span
                                 >
                                 <span class="gd-tree-desc"
                                     >가이드 공통 jQuery</span
@@ -1299,7 +1331,7 @@
                             </div>
                             <div class="gd-tree-row depth2">
                                 <span class="gd-tree-name"
-                                    >├─ jquery-3.5.1.min.js</span
+                                    >├─ jquery-4.0.0.min.js</span
                                 >
                                 <span class="gd-tree-desc"
                                     >프로젝트 공통 jQuery</span
@@ -1595,7 +1627,7 @@
         &lt;footer class="footer"&gt;&lt;/footer&gt;
     &lt;/div&gt;
 
-    &lt;script src="../assets/js/vendor/jquery-3.5.1.min.js"&gt;&lt;/script&gt;
+    &lt;script src="../assets/js/vendor/jquery-4.0.0.min.js"&gt;&lt;/script&gt;
     &lt;script src="../assets/js/ui.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
@@ -1922,6 +1954,77 @@ ex) btn btn-primary, is-disabled</code></pre>
                                 <li>Mobile First 작성 예시</li>
                             </ul>
                         </div>
+                    </div>
+                </section>
+
+                <!-- 성능 최적화 -->
+                <section class="pub-section" id="performance">
+                    <h2>성능 최적화</h2>
+                    <div class="guide-box">
+                        <h3><em>01.</em> CLS 대응 기준</h3>
+                        <ul class="guide-msg">
+                            <li>이미지 크기와 Lazy Loading 구현은 이미지 가이드 기준을 따르고, width, height 또는 aspect-ratio로 렌더링 전 표시 영역이 확보되는지 확인한다.</li>
+                            <li>비동기 콘텐츠는 Skeleton UI 또는 Placeholder를 제공하고 실제 콘텐츠와 유사한 크기를 유지한다.</li>
+                            <li>초기 렌더링 이후 기존 콘텐츠를 밀어내는 방식으로 새 요소를 삽입하지 않는다.</li>
+                            <li>애니메이션은 transform과 opacity를 우선 사용하고 width, height, top, left 변경은 지양한다.</li>
+                            <li>display: none에서 block으로 전환되는 요소는 초기 표시 상태와 전환 이후의 레이아웃 영향을 함께 확인한다.</li>
+                            <li>min-height 고정은 실제 원인을 해결할 수 없는 경우에만 마지막 수단으로 사용한다.</li>
+                        </ul>
+                        <div class="guide-contents">
+                            <h4>컴포넌트 작성 규칙</h4>
+                            <ul class="guide-msg">
+                                <li>컴포넌트의 초기 상태와 JavaScript 적용 후 상태가 동일한 표시 영역을 유지하도록 작성한다.</li>
+                                <li>Swiper, Carousel, Tab, Accordion은 초기화 전에도 컨테이너와 필요한 콘텐츠 영역을 확보한다.</li>
+                                <li>JavaScript 초기화가 레이아웃 이동의 원인인 경우 CSS만으로 임시 대응하지 않고 초기화 흐름과 상태를 먼저 확인한다.</li>
+                                <li>로딩, 빈 상태, 오류 상태는 콘텐츠 영역의 높이가 급격히 달라지지 않도록 함께 설계한다.</li>
+                            </ul>
+                        </div>
+                        <div class="guide-contents">
+                            <h4>마크업 체크리스트</h4>
+                            <ul class="guide-msg guide-msg-note">
+                                <li>이미지에 width와 height 속성을 선언했는지 확인한다.</li>
+                                <li>동영상과 iframe에 크기 또는 비율을 확보하는 구조를 적용했는지 확인한다.</li>
+                                <li>Lazy Loading 대상이 로드 전에도 필요한 표시 공간을 유지하는지 확인한다.</li>
+                                <li>초기 렌더링 이후 DOM 삽입으로 기존 콘텐츠가 이동하지 않는지 확인한다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="guide-box">
+                        <h3><em>02.</em> LCP 대응 기준</h3>
+                        <ul class="guide-msg">
+                            <li>첫 화면의 주요 콘텐츠와 LCP 후보 요소는 초기 HTML에 포함하고 불필요한 JavaScript 완료를 기다려 표시하지 않도록 한다.</li>
+                            <li>LCP 이미지에는 loading="lazy"를 적용하지 않으며 실제 표시 크기에 맞는 이미지 리소스를 사용한다.</li>
+                            <li>LCP 이미지가 명확한 경우에만 preload와 fetchpriority="high" 적용을 검토한다.</li>
+                            <li>첫 화면 렌더링을 지연시키는 CSS, 폰트, JavaScript와 외부 리소스의 필요성을 확인한다.</li>
+                        </ul>
+                    </div>
+                    <div class="guide-box">
+                        <h3><em>03.</em> 이미지 최적화</h3>
+                        <ul class="guide-msg">
+                            <li>콘텐츠 특성에 맞게 WebP, AVIF 등 적절한 형식과 압축 품질을 사용한다.</li>
+                            <li>화면 크기별로 필요한 이미지 크기가 다른 경우 picture, source 또는 srcset 사용을 검토한다.</li>
+                            <li>첫 화면 밖 이미지는 loading="lazy" 적용을 검토하되, LCP 후보 이미지에는 적용하지 않는다.</li>
+                        </ul>
+                    </div>
+                    <div class="guide-box">
+                        <h3><em>04.</em> 웹폰트 최적화</h3>
+                        <ul class="guide-msg">
+                            <li>폰트 파일 등록과 형식 선택은 CSS 작성 규칙의 폰트 기준을 따른다.</li>
+                            <li>font-display 설정은 폰트 표시 지연과 대체 폰트 적용 후 레이아웃 이동을 함께 고려해 결정한다.</li>
+                            <li>첫 화면에 반드시 필요한 폰트만 preload 적용을 검토하며, 불필요한 preload는 추가하지 않는다.</li>
+                            <li>웹폰트 적용 전후 줄바꿈과 요소 높이 변화가 없는지 주요 화면에서 확인한다.</li>
+                        </ul>
+                    </div>
+                    <div class="guide-box">
+                        <h3><em>05.</em> 최종 성능 체크리스트</h3>
+                        <ul class="guide-msg">
+                            <li>Chrome DevTools Performance에서 Layout Shift와 Affected Node, Culprit을 확인한다.</li>
+                            <li>수정 전후 CLS 발생 원인과 수정 이유를 함께 기록한다.</li>
+                            <li>레이아웃 이동이 발생한 경우 CSS만으로 해결 가능한지 판단하고, JavaScript 초기화와 동적 동작의 영향을 함께 확인한다.</li>
+                            <li>LCP 후보 요소, 렌더링 차단 리소스, 이미지와 웹폰트 로딩 순서를 확인한다.</li>
+                            <li>주요 반응형 해상도에서 초기 로딩, 이미지 로딩, 비동기 콘텐츠 노출 후 레이아웃 이동을 확인한다.</li>
+                            <li>Google Search Console의 CLS 수치만으로 원인을 단정하지 않고 실제 Performance 기록을 함께 확인한다.</li>
+                        </ul>
                     </div>
                 </section>
 
@@ -2335,7 +2438,7 @@ new Swiper('.js-banner-swiper', {
                 </section>
             </main>
         </div>
-        <script src="assets/js/vendor/jquery-3.5.1.min.js"></script>
+        <script src="assets/js/vendor/jquery-4.0.0.min.js"></script>
         <script src="assets/js/vendor/guide-vendor.js"></script>
         <script src="assets/js/guide.js"></script>
     </body>

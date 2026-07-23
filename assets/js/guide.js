@@ -435,7 +435,7 @@ $(function () {
             toast.classList.add("is-open");
             toastTimer = window.setTimeout(function () {
                 toast.classList.remove("is-open");
-            }, 3000);
+            }, 1000);
         });
     });
 
