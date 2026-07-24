@@ -49,6 +49,7 @@ $(function () {
             ["bottom-sheet", "bottom sheet"],
             ["bottom-sheet-close", "bottom sheet close"],
             ["bottom-sheet-row", "bottom sheet 2 column"],
+            ["terms", "terms view"],
             ["toast", "toast popup"],
         ];
 
@@ -311,6 +312,8 @@ $(function () {
 
     /* modal popup */
     let lastFocusedElement = null;
+    let termsParentLayer = null;
+    let termsFullOpenButton = null;
 
     function trapFocus(container, event) {
         const focusableElements = Array.from(
@@ -340,6 +343,16 @@ $(function () {
 
         modal.classList.remove("is-open");
         modal.setAttribute("aria-hidden", "true");
+
+        if (modal.id === "guide-terms-full" && termsParentLayer) {
+            termsParentLayer.classList.add("is-open");
+            termsParentLayer.setAttribute("aria-hidden", "false");
+            termsFullOpenButton.focus();
+            termsParentLayer = null;
+            termsFullOpenButton = null;
+            return;
+        }
+
         document.body.classList.remove("is-modal-open");
 
         if (lastFocusedElement) {
@@ -560,6 +573,44 @@ $(function () {
     });
 
     /* bottom sheet */
+    document.querySelectorAll(".js-terms-open").forEach(function (button) {
+        button.addEventListener("click", function () {
+            const target = window.matchMedia("(max-width: 768px)").matches
+                ? document.querySelector("#guide-terms-sheet")
+                : document.querySelector("#guide-terms-modal");
+
+            if (!target) return;
+
+            lastFocusedElement = this;
+            target.classList.add("is-open");
+            target.setAttribute("aria-hidden", "false");
+            document.body.classList.add("is-modal-open");
+            target.querySelector(".js-terms-full-open, .js-modal-close").focus();
+        });
+    });
+
+    document.querySelectorAll(".js-terms-full-open").forEach(function (button) {
+        button.addEventListener("click", function () {
+            const parentLayer = this.closest(
+                ".ui-bottom-sheet, .ui-modal:not(.ui-modal-full)",
+            );
+            const fullModal = document.querySelector("#guide-terms-full");
+
+            if (!fullModal) return;
+
+            if (parentLayer) {
+                termsParentLayer = parentLayer;
+                termsFullOpenButton = this;
+                parentLayer.classList.remove("is-open", "is-opening", "is-closing");
+                parentLayer.setAttribute("aria-hidden", "true");
+            }
+
+            fullModal.classList.add("is-open");
+            fullModal.setAttribute("aria-hidden", "false");
+            fullModal.querySelector(".js-modal-close").focus();
+        });
+    });
+
     document
         .querySelectorAll(".js-bottom-sheet-open")
         .forEach(function (button) {

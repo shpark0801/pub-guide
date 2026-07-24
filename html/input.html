@@ -426,6 +426,107 @@
                                 </div>
                             </div>
 
+                        </div>
+                    </div>
+
+                    <div class="guide-box">
+                        <h3>
+                            <em>03.</em>
+                            휴대폰 번호 입력 - 기본 및 상태별
+                        </h3>
+                        <div class="guide-contents">
+                            <!-- 휴대폰 번호 기본 -->
+                            <h4>phone input - 기본</h4>
+                            <div class="markup-box">
+                                <div class="form-field">
+                                    <span class="form-label">휴대폰 번호</span>
+                                    <div
+                                        class="form-phone"
+                                        role="group"
+                                        aria-label="휴대폰 번호"
+                                    >
+                                        <div class="form-select-wrap">
+                                            <select
+                                                class="form-select form-select-box"
+                                                title="휴대폰 번호 앞자리"
+                                            >
+                                                <option value="010">010</option>
+                                                <option value="011">011</option>
+                                                <option value="016">016</option>
+                                                <option value="017">017</option>
+                                                <option value="018">018</option>
+                                                <option value="019">019</option>
+                                            </select>
+                                        </div>
+                                        <span
+                                            class="form-phone-dash"
+                                            aria-hidden="true"
+                                            >-</span
+                                        >
+                                        <input
+                                            type="tel"
+                                            class="form-input form-input-box"
+                                            title="휴대폰 번호 가운데 자리"
+                                            maxlength="4"
+                                            inputmode="numeric"
+                                            autocomplete="tel-local-prefix"
+                                            placeholder="0000"
+                                        />
+                                        <span
+                                            class="form-phone-dash"
+                                            aria-hidden="true"
+                                            >-</span
+                                        >
+                                        <input
+                                            type="tel"
+                                            class="form-input form-input-box"
+                                            title="휴대폰 번호 마지막 자리"
+                                            maxlength="4"
+                                            inputmode="numeric"
+                                            autocomplete="tel-local-suffix"
+                                            placeholder="0000"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-field"&gt;
+    &lt;span class="form-label"&gt;휴대폰 번호&lt;/span&gt;
+    &lt;div class="form-phone" role="group" aria-label="휴대폰 번호"&gt;
+        &lt;div class="form-select-wrap"&gt;
+            &lt;select class="form-select form-select-box" title="휴대폰 번호 앞자리"&gt;
+                &lt;option value="010"&gt;010&lt;/option&gt;
+                &lt;option value="011"&gt;011&lt;/option&gt;
+                &lt;option value="016"&gt;016&lt;/option&gt;
+                &lt;option value="017"&gt;017&lt;/option&gt;
+                &lt;option value="018"&gt;018&lt;/option&gt;
+                &lt;option value="019"&gt;019&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;span class="form-phone-dash" aria-hidden="true"&gt;-&lt;/span&gt;
+        &lt;input
+            type="tel"
+            class="form-input form-input-box"
+            title="휴대폰 번호 가운데 자리"
+            maxlength="4"
+            inputmode="numeric"
+            autocomplete="tel-local-prefix"
+            placeholder="0000"
+        /&gt;
+        &lt;span class="form-phone-dash" aria-hidden="true"&gt;-&lt;/span&gt;
+        &lt;input
+            type="tel"
+            class="form-input form-input-box"
+            title="휴대폰 번호 마지막 자리"
+            maxlength="4"
+            inputmode="numeric"
+            autocomplete="tel-local-suffix"
+            placeholder="0000"
+        /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
                             <!-- 전화번호 입력 오류 -->
                             <h4>phone input - 에러</h4>
                             <div class="markup-box">
@@ -686,10 +787,74 @@
 
                     <div class="guide-box">
                         <h3>
-                            <em>03.</em>
+                            <em>04.</em>
+                            휴대폰 번호 자동 하이픈
+                        </h3>
+                        <div class="guide-contents">
+                            <div class="markup-box">
+                                <div class="form-field">
+                                    <label for="input-phone-auto" class="form-label"
+                                        >휴대폰 번호</label
+                                    >
+                                    <input
+                                        type="tel"
+                                        id="input-phone-auto"
+                                        class="form-input form-input-line js-phone-auto"
+                                        inputmode="numeric"
+                                        autocomplete="tel"
+                                        maxlength="13"
+                                        placeholder="010-0000-0000"
+                                    />
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-field"&gt;
+    &lt;label for="input-phone-auto" class="form-label"&gt;휴대폰 번호&lt;/label&gt;
+    &lt;input type="tel" id="input-phone-auto" class="form-input form-input-line js-phone-auto" inputmode="numeric" autocomplete="tel" maxlength="13" placeholder="010-0000-0000" /&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="pub-blockquote">
+                                    숫자 입력 시 010-0000-0000 형식으로 하이픈을 자동으로 추가합니다.
+                                    <br />
+                                    형식 오류 시 부모 요소에 .is-error를 추가하고 aria-invalid 및
+                                    .form-msg.form-msg-error 오류 메시지를 함께 제공합니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-box">
+                        <h3>
+                            <em>05.</em>
                             Textinput - 플로팅 라벨 (예시)
                         </h3>
                         <div class="guide-contents">
+                            <h4>플로팅 라벨 - 기본</h4>
+                            <div class="markup-box">
+                                <div class="form-field form-float">
+                                    <label
+                                        for="input-float-basic"
+                                        class="form-label form-float-label"
+                                    >
+                                        <span class="form-float-text">이름</span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="input-float-basic"
+                                        class="form-input form-input-box"
+                                        placeholder="이름을 입력해주세요"
+                                    />
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-field form-float"&gt;
+    &lt;label for="input-float-basic" class="form-label form-float-label"&gt;
+        &lt;span class="form-float-text"&gt;이름&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;input type="text" id="input-float-basic" class="form-input form-input-box" placeholder="이름을 입력해주세요" /&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <h4>플로팅 라벨 - 에러</h4>
                             <div class="markup-box">
                                 <div class="form-field form-float is-error">
                                     <label
@@ -807,10 +972,11 @@
 
                     <div class="guide-box">
                         <h3>
-                            <em>04.</em>
+                            <em>06.</em>
                             Textinput - 반응형 플로팅 라벨 (예시)
                         </h3>
                         <div class="guide-contents">
+                            <h4>반응형 플로팅 라벨 - 기본</h4>
                             <div class="markup-box">
                                 <div class="form-row form-row-float">
                                     <label
@@ -873,12 +1039,40 @@
                                     비활성 배경색으로 전환된다.
                                 </div>
                             </div>
+
+                            <h4>반응형 플로팅 라벨 - 비활성</h4>
+                            <div class="markup-box">
+                                <div class="form-row form-row-float is-disabled">
+                                    <label
+                                        for="input-row-float-disabled"
+                                        class="form-row-label"
+                                        >이메일</label
+                                    >
+                                    <div class="form-row-control">
+                                        <input
+                                            type="email"
+                                            id="input-row-float-disabled"
+                                            class="form-input form-input-box"
+                                            value="example@radcns.com"
+                                            disabled
+                                        />
+                                    </div>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-row form-row-float is-disabled"&gt;
+    &lt;label for="input-row-float-disabled" class="form-row-label"&gt;이메일&lt;/label&gt;
+    &lt;div class="form-row-control"&gt;
+        &lt;input type="email" id="input-row-float-disabled" class="form-input form-input-box" value="example@radcns.com" disabled /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="guide-box">
                         <h3>
-                            <em>05.</em>
+                            <em>07.</em>
                             브라우저 자동완성 스타일 (참고)
                         </h3>
                         <div class="guide-contents">
@@ -989,9 +1183,15 @@
                                 <p id="file-help" class="form-msg">
                                     JPG, PNG, PDF 파일만 첨부할 수 있습니다.
                                 </p>
+                                <p class="form-msg">
+                                    참고 파일명: 사업자등록증.pdf, 제품이미지.jpg
+                                </p>
                                 <div class="code-box">
                                     <pre><code class="html">&lt;!-- file 기본형 --&gt;
-&lt;input id="file-basic" class="form-file" type="file" accept=".jpg,.jpeg,.png,.pdf" /&gt;</code></pre>
+&lt;label class="form-label" for="file-basic"&gt;첨부 파일&lt;/label&gt;
+&lt;input id="file-basic" class="form-file" type="file" accept=".jpg,.jpeg,.png,.pdf" aria-describedby="file-help" /&gt;
+&lt;p id="file-help" class="form-msg"&gt;JPG, PNG, PDF 파일만 첨부할 수 있습니다.&lt;/p&gt;
+&lt;p class="form-msg"&gt;참고 파일명: 사업자등록증.pdf, 제품이미지.jpg&lt;/p&gt;</code></pre>
                                 </div>
                             </div>
                         </div>
@@ -1009,6 +1209,7 @@
                                         class="form-file-input js-file"
                                         type="file"
                                         data-file-name="#file-left-name"
+                                        aria-describedby="file-left-help"
                                     />
                                     <label class="form-file-button" for="file-left">파일 선택</label>
                                     <input
@@ -1020,6 +1221,9 @@
                                         aria-label="선택된 파일명"
                                     />
                                 </div>
+                                <p id="file-left-help" class="form-msg">
+                                    참고 파일명: 제품이미지.jpg
+                                </p>
                                 <br />
                                 <div class="form-file-group">
                                     <input
@@ -1035,21 +1239,29 @@
                                         class="form-file-input js-file"
                                         type="file"
                                         data-file-name="#file-right-name"
+                                        aria-describedby="file-right-help"
                                     />
                                     <label class="form-file-button" for="file-right">파일 선택</label>
                                 </div>
+                                <p id="file-right-help" class="form-msg">
+                                    참고 파일명: 제품설명서.pdf
+                                </p>
                                 <div class="code-box">
-                                    <pre><code class="html">&lt;!-- file 버튼 우측형 --&gt;
+                                    <pre><code class="html">&lt;!-- file 버튼 좌측형 --&gt;
 &lt;div class="form-file-group"&gt;
-    &lt;input id="file-name" class="form-file-name" type="text" readonly aria-label="선택된 파일명" /&gt;
-    &lt;input
-        id="file-select"
-        class="form-file-input js-file"
-        type="file"
-        data-file-name="#file-name"
-    /&gt;
-    &lt;label class="form-file-button" for="file-select"&gt;파일 선택&lt;/label&gt;
-&lt;/div&gt;</code></pre>
+    &lt;input id="file-left" class="form-file-input js-file" type="file" data-file-name="#file-left-name" aria-describedby="file-left-help" /&gt;
+    &lt;label class="form-file-button" for="file-left"&gt;파일 선택&lt;/label&gt;
+    &lt;input id="file-left-name" class="form-file-name" type="text" readonly placeholder="선택된 파일 없음" aria-label="선택된 파일명" /&gt;
+&lt;/div&gt;
+&lt;p id="file-left-help" class="form-msg"&gt;참고 파일명: 제품이미지.jpg&lt;/p&gt;
+
+&lt;!-- file 버튼 우측형 --&gt;
+&lt;div class="form-file-group"&gt;
+    &lt;input id="file-right-name" class="form-file-name" type="text" readonly placeholder="선택된 파일 없음" aria-label="선택된 파일명" /&gt;
+    &lt;input id="file-right" class="form-file-input js-file" type="file" data-file-name="#file-right-name" aria-describedby="file-right-help" /&gt;
+    &lt;label class="form-file-button" for="file-right"&gt;파일 선택&lt;/label&gt;
+&lt;/div&gt;
+&lt;p id="file-right-help" class="form-msg"&gt;참고 파일명: 제품설명서.pdf&lt;/p&gt;</code></pre>
                                 </div>
                             </div>
                         </div>
@@ -1063,9 +1275,17 @@
                             <div class="markup-box">
                                 <div class="form-file-box">
                                     <p>파일을 선택해 첨부해 주세요.</p>
-                                    <input id="file-box" class="form-file-input" type="file" />
+                                    <input
+                                        id="file-box"
+                                        class="form-file-input"
+                                        type="file"
+                                        aria-describedby="file-box-help"
+                                    />
                                     <label class="form-file-button" for="file-box">파일 선택</label>
                                 </div>
+                                <p id="file-box-help" class="form-msg">
+                                    참고 파일명: 회사소개서.pdf
+                                </p>
                                 <br />
                                 <div class="form-file-group">
                                     <input
@@ -1081,6 +1301,7 @@
                                         class="form-file-input js-file"
                                         type="file"
                                         data-file-name="#file-icon-name"
+                                        aria-describedby="file-icon-help"
                                     />
                                     <label
                                         class="form-file-button form-file-icon"
@@ -1099,12 +1320,29 @@
                                         </svg>
                                     </label>
                                 </div>
+                                <p id="file-icon-help" class="form-msg">
+                                    참고 파일명: 프로필이미지.png
+                                </p>
                                 <div class="code-box">
-                                    <pre><code class="html">&lt;!-- file 아이콘 버튼형 --&gt;
-&lt;input id="file-icon" class="form-file-input" type="file" /&gt;
-&lt;label class="form-file-button form-file-icon" for="file-icon" aria-label="파일 선택"&gt;
-    &lt;svg aria-hidden="true" focusable="false"&gt;...&lt;/svg&gt;
-&lt;/label&gt;</code></pre>
+                                    <pre><code class="html">&lt;!-- file 박스형 --&gt;
+&lt;div class="form-file-box"&gt;
+    &lt;p&gt;파일을 선택해 첨부해 주세요.&lt;/p&gt;
+    &lt;input id="file-box" class="form-file-input" type="file" aria-describedby="file-box-help" /&gt;
+    &lt;label class="form-file-button" for="file-box"&gt;파일 선택&lt;/label&gt;
+&lt;/div&gt;
+&lt;p id="file-box-help" class="form-msg"&gt;참고 파일명: 회사소개서.pdf&lt;/p&gt;
+
+&lt;!-- file 아이콘형 --&gt;
+&lt;div class="form-file-group"&gt;
+    &lt;input id="file-icon-name" class="form-file-name" type="text" readonly placeholder="선택된 파일 없음" aria-label="선택된 파일명" /&gt;
+    &lt;input id="file-icon" class="form-file-input js-file" type="file" data-file-name="#file-icon-name" aria-describedby="file-icon-help" /&gt;
+    &lt;label class="form-file-button form-file-icon" for="file-icon" aria-label="파일 선택"&gt;
+        &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+            &lt;path fill="currentColor" d="M11 16V7.8L8.4 10.4 7 9l5-5 5 5-1.4 1.4L13 7.8V16h-2zm-5 4v-6h2v4h8v-4h2v6H6z" /&gt;
+        &lt;/svg&gt;
+    &lt;/label&gt;
+&lt;/div&gt;
+&lt;p id="file-icon-help" class="form-msg"&gt;참고 파일명: 프로필이미지.png&lt;/p&gt;</code></pre>
                                 </div>
                                 <ul class="guide-msg guide-msg-note">
                                     <li>

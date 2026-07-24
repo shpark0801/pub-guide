@@ -78,6 +78,39 @@ body.is-modal-open {
     overflow: hidden;
 }
 
+.ui-modal-full {
+    padding: 0;
+}
+
+.ui-modal-full .ui-modal-dialog {
+    max-width: none;
+    height: 100%;
+    border-radius: 0;
+}
+
+.ui-terms-content {
+    height: calc(100vh - 61px);
+    overflow-y: auto;
+}
+
+.ui-terms-list li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 7px 0; }
+.ui-terms-list strong { font-weight: 400; color: #333; }
+.ui-terms-list strong span { color: #ff5252; }
+.ui-terms-view { padding: 0; border: 0; border-bottom: 1px solid #555; background: transparent; color: #555; }
+.ui-terms-actions { display: grid; gap: 12px; margin-top: 24px; }
+
+@media (max-width: 768px) {
+    #guide-terms-modal {
+        display: none !important;
+    }
+}
+
+@media (min-width: 769px) {
+    #guide-terms-sheet {
+        display: none !important;
+    }
+}
+
 /* 이미지 배너 모달 */
 /* 실행 버튼 */
 .ui-modal-banner-buttons {
