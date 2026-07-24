@@ -528,6 +528,10 @@
                             </div>
 
                             <!-- 전화번호 입력 오류 -->
+                            <div class="pub-blockquote">
+                                휴대폰 번호를 필수로 사용할 경우 앞자리 선택과 가운데·마지막 번호 입력란 모두에 <code>required</code>를 적용하고, 그룹 라벨에 필수 표시를 함께 제공한다.
+                            </div>
+
                             <h4>phone input - 에러</h4>
                             <div class="markup-box">
                                 <div class="form-field is-error">
@@ -854,11 +858,37 @@
                                 </div>
                             </div>
 
-                            <h4>플로팅 라벨 - 에러</h4>
+                            <h4>플로팅 라벨 - 필수</h4>
+                            <div class="markup-box">
+                                <div class="form-field form-float">
+                                    <label for="input-float-required" class="form-label form-float-label">
+                                        <span class="form-float-text">
+                                            이름
+                                            <span class="form-required" aria-hidden="true">*</span>
+                                            <span class="blind">필수</span>
+                                        </span>
+                                    </label>
+                                    <input type="text" id="input-float-required" class="form-input form-input-box" placeholder="이름을 입력해 주세요." required />
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-field form-float"&gt;
+    &lt;label for="input-float-required" class="form-label form-float-label"&gt;
+        &lt;span class="form-float-text"&gt;
+            이름
+            &lt;span class="form-required" aria-hidden="true"&gt;*&lt;/span&gt;
+            &lt;span class="blind"&gt;필수&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;input type="text" id="input-float-required" class="form-input form-input-box" placeholder="이름을 입력해 주세요." required /&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <h4>플로팅 라벨 - 필수 + 에러</h4>
                             <div class="markup-box">
                                 <div class="form-field form-float is-error">
                                     <label
-                                        for="input-float-required"
+                                        for="input-float-required-error"
                                         class="form-label form-float-label"
                                     >
                                         <span class="form-float-text">
@@ -873,15 +903,15 @@
                                     </label>
                                     <input
                                         type="text"
-                                        id="input-float-required"
+                                        id="input-float-required-error"
                                         class="form-input form-input-box"
                                         placeholder="이름을 입력해 주세요."
                                         aria-invalid="true"
-                                        aria-describedby="input-float-required-error"
+                                        aria-describedby="input-float-required-error-message"
                                         required
                                     />
                                     <p
-                                        id="input-float-required-error"
+                                        id="input-float-required-error-message"
                                         class="form-msg form-msg-error"
                                     >
                                         이름을 입력해 주세요.
@@ -890,7 +920,7 @@
 
                                 <div class="code-box">
                                     <pre><code class="html">&lt;div class="form-field form-float is-error"&gt;
-    &lt;label for="input-float-required" class="form-label form-float-label"&gt;
+    &lt;label for="input-float-required-error" class="form-label form-float-label"&gt;
         &lt;span class="form-float-text"&gt;
             이름
             &lt;span class="form-required" aria-hidden="true"&gt;*&lt;/span&gt;
@@ -899,14 +929,14 @@
     &lt;/label&gt;
     &lt;input
         type="text"
-        id="input-float-required"
+        id="input-float-required-error"
         class="form-input form-input-box"
         placeholder="이름을 입력해 주세요."
         aria-invalid="true"
-        aria-describedby="input-float-required-error"
+        aria-describedby="input-float-required-error-message"
         required
     /&gt;
-    &lt;p id="input-float-required-error" class="form-msg form-msg-error"&gt;
+    &lt;p id="input-float-required-error-message" class="form-msg form-msg-error"&gt;
         이름을 입력해 주세요.
     &lt;/p&gt;
 &lt;/div&gt;</code></pre>
@@ -977,6 +1007,28 @@
                         </h3>
                         <div class="guide-contents">
                             <h4>반응형 플로팅 라벨 - 기본</h4>
+                            <div class="markup-box">
+                                <div class="form-row form-row-float">
+                                    <label for="input-row-float-basic" class="form-row-label">
+                                        <span class="form-float-text">이메일</span>
+                                    </label>
+                                    <div class="form-row-control">
+                                        <input type="email" id="input-row-float-basic" class="form-input form-input-box" placeholder="이메일을 입력해 주세요." />
+                                    </div>
+                                </div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;div class="form-row form-row-float"&gt;
+    &lt;label for="input-row-float-basic" class="form-row-label"&gt;
+        &lt;span class="form-float-text"&gt;이메일&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;div class="form-row-control"&gt;
+        &lt;input type="email" id="input-row-float-basic" class="form-input form-input-box" placeholder="이메일을 입력해 주세요." /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <h4>반응형 플로팅 라벨 - 필수</h4>
                             <div class="markup-box">
                                 <div class="form-row form-row-float">
                                     <label
