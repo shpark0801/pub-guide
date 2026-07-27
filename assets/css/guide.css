@@ -844,10 +844,6 @@
     min-width: 0;
 }
 
-.pub-page-note .history-date {
-    flex: 0 0 auto;
-}
-
 .pub-page-note .history-item > span:last-child {
     flex: 0 0 100%;
 }
@@ -856,15 +852,6 @@
     display: flex;
     align-items: flex-start;
     gap: 6px;
-}
-
-.history-date {
-    flex: 0 0 auto;
-    padding-top: 2px;
-    font-family: Consolas, "Courier New", monospace;
-    font-size: 11px;
-    color: #222;
-    white-space: nowrap;
 }
 
 .history-tag {
