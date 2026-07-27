@@ -382,7 +382,7 @@
     background: #f7f7f9;
     font-weight: 600;
     text-align: center;
-    border-bottom: 0;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .tbl tbody th {
@@ -524,6 +524,9 @@
 
 .pub-page th {
     padding: 10px;
+    border-top: 1px solid #666;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
     background: rgba(0, 0, 0, 0.05);
     font-size: 13px;
     font-weight: 500;
