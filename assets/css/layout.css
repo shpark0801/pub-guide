@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/* 헤더, 푸터, 주 메뉴, 좌측 메뉴, 콘텐츠 영역 등 레이아웃 */
+
+.wrap {
+    min-width: 320px;
+    min-height: 100%;
+}
+
+.header {
+    width: 100%;
+}
+
+.gnb {
+}
+
+.lnb {
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 40px);
+    box-sizing: border-box;
+}
+
+.contents {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer {
+    width: 100%;
+}

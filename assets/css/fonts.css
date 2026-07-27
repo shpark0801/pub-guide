@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean");
+
+/* 한글 기본 글꼴 */
+@font-face {
+    font-family: "Noto Sans KR";
+    font-weight: 100;
+    font-style: normal;
+    src:
+        url("../fonts/NotoSans/NotoSans-Thin.eot?") format("eot"),
+        url("../fonts/NotoSans/NotoSans-Thin.woff2") format("woff2"),
+        url("../fonts/NotoSans/NotoSans-Thin.woff") format("woff"),
+        url("../fonts/NotoSans/NotoSans-Thin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-weight: 200;
+    font-style: normal;
+    src:
+        url("../fonts/NotoSans/NotoSans-Light.eot?") format("eot"),
+        url("../fonts/NotoSans/NotoSans-Light.woff2") format("woff2"),
+        url("../fonts/NotoSans/NotoSans-Light.woff") format("woff"),
+        url("../fonts/NotoSans/NotoSans-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    font-style: normal;
+    src:
+        url("../fonts/NotoSans/NotoSans-DemiLight.eot?") format("eot"),
+        url("../fonts/NotoSans/NotoSans-DemiLight.woff2") format("woff2"),
+        url("../fonts/NotoSans/NotoSans-DemiLight.woff") format("woff"),
+        url("../fonts/NotoSans/NotoSans-DemiLight.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-style: normal;
+    src:
+        url("../fonts/NotoSans/NotoSans-Regular.eot?") format("eot"),
+        url("../fonts/NotoSans/NotoSans-Regular.woff2") format("woff2"),
+        url("../fonts/NotoSans/NotoSans-Regular.woff") format("woff"),
+        url("../fonts/NotoSans/NotoSans-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-style: normal;
+    src:
+        url("../fonts/NotoSans/NotoSans-Medium.eot?") format("eot"),
+        url("../fonts/NotoSans/NotoSans-Medium.woff2") format("woff2"),
+        url("../fonts/NotoSans/NotoSans-Medium.woff") format("woff"),
+        url("../fonts/NotoSans/NotoSans-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-weight: 700;
+    font-style: normal;
+    src:
+        url("../fonts/NotoSans/NotoSans-Bold.eot?") format("eot"),
+        url("../fonts/NotoSans/NotoSans-Bold.woff2") format("woff2"),
+        url("../fonts/NotoSans/NotoSans-Bold.woff") format("woff"),
+        url("../fonts/NotoSans/NotoSans-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-weight: 900;
+    font-style: normal;
+    src:
+        url("../fonts/NotoSans/NotoSans-Black.eot?") format("eot"),
+        url("../fonts/NotoSans/NotoSans-Black.woff2") format("woff2"),
+        url("../fonts/NotoSans/NotoSans-Black.woff") format("woff"),
+        url("../fonts/NotoSans/NotoSans-Black.otf") format("opentype");
+}
