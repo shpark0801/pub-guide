@@ -421,27 +421,59 @@
 }
 
 .guide-msg li {
+    position: relative;
     margin-bottom: 5px;
+    padding-left: 14px;
     font-size: 14px;
     line-height: 1.6;
     color: #222;
 }
 
 .guide-msg li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
     content: "- ";
-    padding-left: 5px;
 }
 
 .guide-msg.guide-msg-note li,
 .guide-msg.guide-msg-warn li,
 .guide-msg.guide-msg-tip li {
     margin-bottom: 4px;
+    padding-left: 18px;
     font-size: 13px;
     line-height: 1.4;
 }
 
 .guide-msg.guide-msg-note li {
     color: #555;
+}
+
+.email-sample {
+   margin-top:15px;
+   margin-left:15px;
+}
+
+.email-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #555;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.email-link:hover {
+    border-color: #999;
+    color: #222;
+}
+
+.email-link:focus-visible {
+    outline: 2px solid #222;
+    outline-offset: 2px;
 }
 
 .guide-msg.guide-msg-warn li {
@@ -463,7 +495,6 @@
 .guide-msg.guide-msg-warn li::before,
 .guide-msg.guide-msg-tip li::before {
     content: "※ ";
-    padding-left: 10px;
 }
 
 /* 폴더 구조 */

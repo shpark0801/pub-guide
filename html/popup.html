@@ -1284,7 +1284,13 @@ closeButtons.forEach(function (button) {
                                     <pre><code class="html">&lt;!-- 상단 닫기 버튼형 --&gt;
 &lt;div class="ui-modal ui-modal-msg has-close" role="alertdialog" aria-modal="true"&gt;
     &lt;div class="ui-modal-dialog"&gt;
-        &lt;button type="button" class="ui-modal-close js-modal-close" aria-label="팝업 닫기"&gt;&lt;span aria-hidden="true"&gt;×&lt;/span&gt;&lt;/button&gt;
+        &lt;button
+            type="button"
+            class="ui-modal-close js-modal-close"
+            aria-label="팝업 닫기"
+        &gt;
+            &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+        &lt;/button&gt;
         ...
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -1716,6 +1722,138 @@ document.querySelectorAll('.js-bottom-sheet-close').forEach(function (button) {
                                     <div class="ui-modal-dialog"><div class="ui-modal-header"><h3 id="guide-terms-full-title" class="ui-modal-title">이용약관 전체</h3><button type="button" class="ui-modal-close js-modal-close" aria-label="약관 전체 보기 닫기"><span aria-hidden="true">×</span></button></div><div class="ui-modal-body ui-terms-content"><p>제1조 목적</p><p>본 약관은 서비스 이용에 관한 기본 사항을 정합니다.</p><p>제2조 이용자의 의무</p><p>이용자는 관련 법령과 본 약관을 준수해야 합니다.</p></div></div>
                                 </div>
                                 <div class="pub-blockquote">모바일에서는 바텀시트, PC에서는 모달로 열립니다. 각 레이어의 약관 전체 보기 버튼을 누르면 풀페이지 팝업으로 전환합니다.</div>
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;button type="button" class="btn btn-fill js-terms-open"&gt;약관 보기&lt;/button&gt;
+
+&lt;!-- 모바일 바텀시트 --&gt;
+&lt;div
+    id="guide-terms-sheet"
+    class="ui-bottom-sheet"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="guide-terms-sheet-title"
+    aria-hidden="true"
+&gt;
+    &lt;div class="ui-bottom-sheet-dimmed js-bottom-sheet-close"&gt;&lt;/div&gt;
+    &lt;div class="ui-bottom-sheet-panel has-close"&gt;
+        &lt;button
+            type="button"
+            class="ui-bottom-sheet-close js-bottom-sheet-close"
+            aria-label="약관 보기 닫기"
+        &gt;
+            &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;h3 id="guide-terms-sheet-title" class="ui-bottom-sheet-title"&gt;이용약관&lt;/h3&gt;
+        &lt;div class="ui-bottom-sheet-content"&gt;
+            &lt;ul class="ui-terms-list"&gt;
+                &lt;li&gt;
+                    &lt;strong&gt;&lt;span&gt;[필수]&lt;/span&gt; 개인정보 이용동의&lt;/strong&gt;
+                    &lt;button type="button" class="ui-terms-view js-terms-full-open"&gt;보기&lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;strong&gt;&lt;span&gt;[필수]&lt;/span&gt; 고유 식별정보처리 동의&lt;/strong&gt;
+                    &lt;button type="button" class="ui-terms-view js-terms-full-open"&gt;보기&lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;strong&gt;&lt;span&gt;[필수]&lt;/span&gt; 서비스 이용약관 동의&lt;/strong&gt;
+                    &lt;button type="button" class="ui-terms-view js-terms-full-open"&gt;보기&lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;strong&gt;&lt;span&gt;[필수]&lt;/span&gt; 통신사 이용약관 동의&lt;/strong&gt;
+                    &lt;button type="button" class="ui-terms-view js-terms-full-open"&gt;보기&lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;strong&gt;&lt;span&gt;[필수]&lt;/span&gt; 제3자 정보제공 동의&lt;/strong&gt;
+                    &lt;button type="button" class="ui-terms-view js-terms-full-open"&gt;보기&lt;/button&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class="ui-terms-actions"&gt;
+                &lt;button type="button" class="btn btn-line btn-block js-bottom-sheet-close"&gt;닫기&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- PC 모달 --&gt;
+&lt;div
+    id="guide-terms-modal"
+    class="ui-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="guide-terms-modal-title"
+    aria-hidden="true"
+&gt;
+    &lt;div class="ui-modal-dimmed js-modal-close"&gt;&lt;/div&gt;
+    &lt;div class="ui-modal-dialog"&gt;
+        &lt;div class="ui-modal-header"&gt;
+            &lt;h3 id="guide-terms-modal-title" class="ui-modal-title"&gt;이용약관&lt;/h3&gt;
+            &lt;button
+                type="button"
+                class="ui-modal-close js-modal-close"
+                aria-label="약관 보기 닫기"
+            &gt;
+                &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="ui-modal-body"&gt;
+            &lt;ul class="ui-terms-list"&gt;
+                &lt;li&gt;
+                    &lt;strong&gt;&lt;span&gt;[필수]&lt;/span&gt; 개인정보 이용동의&lt;/strong&gt;
+                    &lt;button type="button" class="ui-terms-view js-terms-full-open"&gt;보기&lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;strong&gt;&lt;span&gt;[필수]&lt;/span&gt; 고유 식별정보처리 동의&lt;/strong&gt;
+                    &lt;button type="button" class="ui-terms-view js-terms-full-open"&gt;보기&lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;strong&gt;&lt;span&gt;[필수]&lt;/span&gt; 서비스 이용약관 동의&lt;/strong&gt;
+                    &lt;button type="button" class="ui-terms-view js-terms-full-open"&gt;보기&lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;strong&gt;&lt;span&gt;[필수]&lt;/span&gt; 통신사 이용약관 동의&lt;/strong&gt;
+                    &lt;button type="button" class="ui-terms-view js-terms-full-open"&gt;보기&lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;strong&gt;&lt;span&gt;[필수]&lt;/span&gt; 제3자 정보제공 동의&lt;/strong&gt;
+                    &lt;button type="button" class="ui-terms-view js-terms-full-open"&gt;보기&lt;/button&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class="ui-terms-actions"&gt;
+                &lt;button type="button" class="btn btn-line btn-block js-modal-close"&gt;닫기&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 약관 전체 모달 --&gt;
+&lt;div
+    id="guide-terms-full"
+    class="ui-modal ui-modal-full"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="guide-terms-full-title"
+    aria-hidden="true"
+&gt;
+    &lt;div class="ui-modal-dialog"&gt;
+        &lt;div class="ui-modal-header"&gt;
+            &lt;h3 id="guide-terms-full-title" class="ui-modal-title"&gt;이용약관 전체&lt;/h3&gt;
+            &lt;button
+                type="button"
+                class="ui-modal-close js-modal-close"
+                aria-label="약관 전체 보기 닫기"
+            &gt;
+                &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="ui-modal-body ui-terms-content"&gt;
+            &lt;p&gt;제1조 목적&lt;/p&gt;
+            &lt;p&gt;본 약관은 서비스 이용에 관한 기본 사항을 정합니다.&lt;/p&gt;
+            &lt;p&gt;제2조 이용자의 의무&lt;/p&gt;
+            &lt;p&gt;이용자는 관련 법령과 본 약관을 준수해야 합니다.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
                             </div>
                         </div>
                     </div>
