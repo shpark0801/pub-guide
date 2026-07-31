@@ -2026,23 +2026,40 @@ ex) btn btn-fill, is-disabled</code></pre>
                             <li>핵심 색상, 글꼴, 크기, 정렬은 인라인 스타일로 적용한다.</li>
                             <li>기본 스타일은 HTML 내부의 클래스로 작성한 뒤 최종 배포 시 인라인 스타일로 변환한다. 미디어쿼리, 다크모드, 클라이언트별 예외 처리가 필요한 클래스는 유지한다.</li>
                             <li>외부 CSS 파일을 link로 연결하거나 @import하는 방식과 JavaScript는 사용하지 않는다.</li>
-                            <li>이미지는 절대 HTTPS 경로, 대체 텍스트, 표시 크기를 함께 제공한다.</li>
+                            <li>이미지는 대체 텍스트와 표시 크기를 함께 제공한다. image 폴더에 저장한 이미지는 상대 경로로 제공한다.</li>
                             <li>
-                                이메일 본문 폭은 600px을 기본값으로 확인한다.
-                                <br />
-                                600px는 Gmail, Outlook, 네이버 메일에서<br>
-                                가로 스크롤 없이 안정적으로 표시되어 많은 이메일 템플릿과 ESP에서 기본값으로 사용한다.
+                                이메일 본문 폭은 600px을 기본값으로 확인한다.<br />
+                                600px는 Gmail, Outlook, 네이버 메일에서 가로 스크롤 없이 안정적으로 표시되어 많은 이메일 작성 도구에서 기본 폭으로 사용한다.
                             </li>
                         </ul>
+                        <div class="code-box">
+                            <pre><code class="html">&lt;!doctype html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8" /&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+        &lt;title&gt;메일 제목&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body style="margin: 0; padding: 0;"&gt;
+        &lt;table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"&gt;
+            &lt;tr&gt;
+                &lt;td align="center" style="padding: 32px 16px;"&gt;
+                    &lt;table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width: 600px; max-width: 600px;"&gt;
+                        &lt;tr&gt;
+                            &lt;td style="padding: 36px 40px;"&gt;
+                                메일 내용
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
                         <p class="email-sample">
                             <a class="email-link" href="html/email.html" target="_blank" title="새 창 열림">메일링 샘플</a>
                         </p>
-                    </div>
-                    <div class="guide-box">
-                        <h3><em>03.</em> 발송 전 확인</h3>
-                        <ul class="guide-msg guide-msg-note">
-                            <li>Gmail, Outlook, 네이버 메일에서 제목, 본문, 이미지, 링크와 모바일 줄바꿈을 각각 확인한다.</li>
-                        </ul>
                     </div>
                 </section>
 
