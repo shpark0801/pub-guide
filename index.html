@@ -334,6 +334,7 @@
                         <ul class="guide-msg">
                             <li>산출물 리스트에서 수정할 화면의 경로와 작업 상태를 확인한다.</li>
                             <li>관련 컴포넌트 예제를 찾아 구조, 상태, 코드와 기존 화면 구현을 함께 확인한다.</li>
+                            <li>Figma에서 추출한 공통 컴포넌트는 Guide에 반영한 뒤 실제 프로젝트 화면에서 재사용한다.</li>
                             <li>기존 구조와 클래스명을 우선 재사용하고, 공통 컴포넌트를 변경한 경우 Guide 예제도 함께 갱신한다.</li>
                             <li>수정 후 프로젝트의 반응형 기준, 키보드 조작, 가로 넘침 여부를 확인한다.</li>
                         </ul>
@@ -395,8 +396,7 @@
                         </h3>
                         <ul class="guide-msg">
                             <li>
-                                기본 렌더링 검수는 Chromium 기반 Chrome에서
-                                진행한다.
+                                기본 렌더링은 Chrome에서 검수한다.
                             </li>
                             <li>
                                 브라우저 검수 우선순위는 Chrome → Naver Whale →
@@ -2124,12 +2124,11 @@ ex) btn btn-fill, is-disabled</code></pre>
                     <div class="guide-box">
                         <h3><em>05.</em> 최종 성능 체크리스트</h3>
                         <ul class="guide-msg">
-                            <li>Chrome DevTools Performance에서 Layout Shift와 Affected Node, Culprit을 확인한다.</li>
-                            <li>수정 전후 CLS 발생 원인과 수정 이유를 함께 기록한다.</li>
-                            <li>레이아웃 이동이 발생한 경우 CSS만으로 해결 가능한지 판단하고, JavaScript 초기화와 동적 동작의 영향을 함께 확인한다.</li>
-                            <li>LCP 후보 요소, 렌더링 차단 리소스, 이미지와 웹폰트 로딩 순서를 확인한다.</li>
-                            <li>주요 반응형 해상도에서 초기 로딩, 이미지 로딩, 비동기 콘텐츠 노출 후 레이아웃 이동을 확인한다.</li>
-                            <li>Google Search Console의 CLS 수치만으로 원인을 단정하지 않고 실제 Performance 기록을 함께 확인한다.</li>
+                            <li>Chrome DevTools Performance에서 Layout Shift의 Affected Node와 Culprit을 확인한다.</li>
+                            <li>레이아웃 이동은 CSS 해결 가능 여부와 JavaScript·동적 동작의 영향을 함께 확인한다.</li>
+                            <li>LCP 요소, 렌더링 차단 리소스, 이미지·웹폰트 로딩 순서를 확인한다.</li>
+                            <li>주요 해상도에서 초기·이미지·비동기 로딩 후 레이아웃 이동을 확인한다.</li>
+                            <li>Search Console CLS 수치만으로 판단하지 않고 Performance 기록을 함께 확인한다.</li>
                         </ul>
                     </div>
                 </section>
