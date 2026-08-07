@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
-/* 모달 / 토스트 / 바텀시트 컴포넌트 */
-/* 모달 팝업 */
+/* Overlay components */
+
+/* 기본 모달: 화면 중앙 모달 패널 */
 .ui-modal {
     position: fixed;
     inset: 0;
@@ -17,12 +18,14 @@
     display: flex;
 }
 
+/* 기본 모달: 배경 dim */
 .ui-modal-dimmed {
     position: absolute;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.55);
 }
 
+/* 기본 모달: 모달 패널 영역 */
 .ui-modal-dialog {
     position: relative;
     z-index: 1;
@@ -34,6 +37,7 @@
     background-color: #fff;
 }
 
+/* 기본 모달: 헤더 · 본문 · 하단 액션 */
 .ui-modal-header,
 .ui-modal-body,
 .ui-modal-footer {
@@ -74,10 +78,13 @@
     gap: 8px;
 }
 
+/* 모달 열림: 문서 스크롤 잠금 */
+html:has(body.is-modal-open),
 body.is-modal-open {
     overflow: hidden;
 }
 
+/* 전체 화면 모달: 약관 등 긴 콘텐츠 */
 .ui-modal-full {
     padding: 0;
 }
@@ -88,6 +95,7 @@ body.is-modal-open {
     border-radius: 0;
 }
 
+/* 약관 보기: 본문 스크롤과 항목 레이아웃 */
 .ui-terms-content {
     height: calc(100vh - 61px);
     overflow-y: auto;
@@ -111,8 +119,7 @@ body.is-modal-open {
     }
 }
 
-/* 이미지 배너 모달 */
-/* 실행 버튼 */
+/* 이미지 배너 모달: 실행 버튼 */
 .ui-modal-banner-btns {
     display: flex;
     flex-wrap: wrap;
@@ -124,7 +131,7 @@ body.is-modal-open {
     padding-left: 16px;
 }
 
-/* 대화상자 레이아웃 */
+/* 이미지 배너 모달: 모달 패널 · 헤더 · 본문 */
 .ui-modal-banner .ui-modal-dialog {
     overflow: hidden;
     border-radius: 0;
@@ -142,7 +149,7 @@ body.is-modal-open {
     padding-bottom: 0;
 }
 
-/* 배너 이미지 */
+/* 이미지 배너 모달: 이미지 영역 */
 .ui-modal-banner-img {
     display: block;
     width: 100%;
@@ -150,7 +157,7 @@ body.is-modal-open {
     object-fit: cover;
 }
 
-/* 하단 액션 */
+/* 이미지 배너 모달: 하단 액션 */
 .ui-modal-banner .ui-modal-footer {
     gap: 0;
     padding: 0;
@@ -183,7 +190,7 @@ body.is-modal-open {
     border-left: 1px solid #e5e5e5;
 }
 
-/* 스와이퍼 이전·다음 버튼 및 페이지네이션 */
+/* 이미지 배너 모달: 슬라이드 · 이전/다음 · 페이지네이션 */
 .ui-modal-banner-slide {
     position: relative;
 }
@@ -281,7 +288,7 @@ body.is-modal-open {
     background-color: #fff;
 }
 
-/* 닫기 버튼 유형 */
+/* 이미지 배너 모달: 닫기 버튼 유형 */
 .ui-modal-banner .ui-modal-close {
     border-radius: 0;
     background-color: transparent;
@@ -308,7 +315,7 @@ body.is-modal-open {
     display: none;
 }
 
-/* 토스트 팝업 */
+/* 토스트: 화면 하단 상태 안내 */
 .ui-toast {
     position: fixed;
     left: 50%;
@@ -339,8 +346,7 @@ body.is-modal-open {
     transform: translate(-50%, 0);
 }
 
-/* 바텀시트 */
-/* 바텀시트 컨테이너 */
+/* 바텀시트: 전체 화면 오버레이 */
 .ui-bottom-sheet {
     position: fixed;
     inset: 0;
@@ -354,7 +360,7 @@ body.is-modal-open {
     display: flex;
 }
 
-/* 열기·닫기 모션 */
+/* 바텀시트: 배경 dim · 패널 · 열기/닫기 모션 */
 .ui-bottom-sheet-dimmed {
     position: absolute;
     inset: 0;
@@ -394,7 +400,7 @@ body.is-modal-open {
     transform: translateY(100%);
 }
 
-/* 바텀시트 헤더 */
+/* 바텀시트: 핸들 · 제목 */
 .ui-bottom-sheet-handle {
     position: absolute;
     top: 8px;
@@ -413,7 +419,7 @@ body.is-modal-open {
     color: #111;
 }
 
-/* 바텀시트 콘텐츠 및 액션 */
+/* 바텀시트: 콘텐츠 · 하단 액션 */
 .ui-bottom-sheet-actions {
     margin-top: 20px;
 }
@@ -422,8 +428,7 @@ body.is-modal-open {
     min-height: 120px;
 }
 
-/* 알림 / 확인 */
-/* 메시지 레이아웃 */
+/* 알림 · 확인 모달: 압축 여백과 버튼 레이아웃 */
 .ui-modal-msg .ui-modal-header,
 .ui-modal-msg .ui-modal-body,
 .ui-modal-msg .ui-modal-footer {
@@ -446,7 +451,7 @@ body.is-modal-open {
     padding-right: 48px;
 }
 
-/* 공통 닫기 버튼 */
+/* 공통: 모달 · 바텀시트 닫기 버튼 */
 .ui-modal-close,
 .ui-bottom-sheet-close {
     position: absolute;
