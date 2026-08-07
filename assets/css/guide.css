@@ -1,11 +1,17 @@
 @charset "utf-8";
 
 /* 공통 */
-.pub {
+html,
+body {
     min-height: 100%;
+    overflow-x: hidden;
+}
+
+.pub {
+    min-height: 100vh;
     padding-top: 60px;
     box-sizing: border-box;
-    overflow: auto;
+    overflow: visible;
 }
 
 /* 주 메뉴 */

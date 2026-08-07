@@ -746,8 +746,10 @@
 }
 
 .form-photo-list-scroll {
+    width: calc(100% + 12px);
     flex-wrap: nowrap;
     margin: -6px;
+    box-sizing: border-box;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
