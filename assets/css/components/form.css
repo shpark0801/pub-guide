@@ -752,7 +752,6 @@
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
-    touch-action: pan-x;
 }
 
 .form-photo-list-wrap {
