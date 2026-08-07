@@ -332,11 +332,11 @@
                             작업 안내
                         </h3>
                         <ul class="guide-msg">
-                            <li>산출물 리스트에서 수정할 화면의 경로와 작업 상태를 확인한다.</li>
-                            <li>관련 컴포넌트 예제를 찾아 구조, 상태, 코드와 기존 화면 구현을 함께 확인한다.</li>
-                            <li>Figma에서 추출한 공통 컴포넌트는 Guide에 반영한 뒤 실제 프로젝트 화면에서 재사용한다.</li>
-                            <li>기존 구조와 클래스명을 우선 재사용하고, 공통 컴포넌트를 변경한 경우 Guide 예제도 함께 갱신한다.</li>
-                            <li>수정 후 프로젝트의 반응형 기준, 키보드 조작, 가로 넘침 여부를 확인한다.</li>
+                            <li>산출물 리스트에서 대상 화면과 상태를 확인한다.</li>
+                            <li>관련 컴포넌트의 구조·상태·예제를 확인한다.</li>
+                            <li>Figma 공통 컴포넌트는 Guide에 반영한 뒤 프로젝트에서 재사용한다.</li>
+                            <li>기존 구조와 클래스를 우선 사용한다. 공통 컴포넌트를 바꾸면 Guide도 함께 수정한다.</li>
+                            <li>수정 후 반응형, 키보드 조작, 가로 넘침을 확인한다.</li>
                         </ul>
                     </div>
                     <div class="guide-box">
@@ -396,35 +396,36 @@
                         </h3>
                         <ul class="guide-msg">
                             <li>
-                                기본 렌더링은 Chrome에서 검수한다.
+                                기본 렌더링은 최신 Chrome에서 검수한다.
                             </li>
                             <li>
-                                브라우저 검수 우선순위는 Chrome → Naver Whale →
-                                Microsoft Edge 순서로 적용한다.
+                                PC는 Chrome, Edge, Safari(macOS)를 확인한다.
                             </li>
                             <li>
-                                Chrome, Whale, Edge는 최신 2개 버전을 기준으로
-                                한다.
+                                모바일은 Chrome(Android), Safari(iOS), Samsung
+                                Internet(Android)을 확인한다.
                             </li>
-                            <li>Safari (macOS / iOS 최신 2개 버전)</li>
-                            <li>Samsung Internet (Android)</li>
                         </ul>
                         <ul class="guide-msg guide-msg-note">
                             <li>
-                                Chrome 검수가 불가능하면 Whale, Edge 순으로
-                                확인하며 정적 파일 검사로 브라우저 검수를
-                                대체하지 않는다.
+                                Safari는 macOS와 iOS에서 각각 확인한다.
+                                모바일은 주소창, 노치, 입력 확대를 점검한다.
                             </li>
                             <li>
-                                Firefox는 프로젝트 요구사항에 따라 지원한다.
+                                Naver Whale과 Firefox는 프로젝트 요구사항 또는
+                                사용자 환경에 따라 추가로 확인한다.
                             </li>
                             <li>
-                                프로젝트 요구사항에 따라 Microsoft Edge의 IE
-                                Mode를 통한 호환성을 지원할 수 있다.
+                                Edge IE Mode와 구형 브라우저는 별도 지원
+                                요구사항이 있는 경우에만 검수한다.
                             </li>
                             <li>
-                                프로젝트 특성에 따라 지원 브라우저가 변경될 수
-                                있다.
+                                DevTools는 보조 검수로 사용한다.
+                                Safari와 Samsung Internet은 실제 기기 확인을 권장한다.
+                            </li>
+                            <li>
+                                메일링은 브라우저 기준이 아닌 Gmail, Outlook,
+                                네이버 메일 호환 기준을 따른다.
                             </li>
                         </ul>
                     </div>

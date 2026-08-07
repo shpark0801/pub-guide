@@ -286,6 +286,13 @@ $(function () {
         });
     });
 
+    // 숫자만 입력
+    document.querySelectorAll(".js-number-only").forEach(function (input) {
+        input.addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+    });
+
     /* checkbox - 전체 선택 */
     document.querySelectorAll(".js-check-all").forEach(function (checkAll) {
         const wrap = checkAll.closest(".markup-box");

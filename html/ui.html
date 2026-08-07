@@ -698,11 +698,23 @@ document.querySelectorAll('.js-tab').forEach(function (tab) {
                                         최근 3개월 내용
                                     </div>
                                 </div>
-                                <div class="pub-blockquote">
-                                    기본 라인형에 .ui-tab-fill을 추가하면
-                                    배경형, .ui-tab-equal을 추가하면 동일 너비로
-                                    사용한다.
+                                <div class="code-box">
+                                    <pre><code class="html">&lt;!-- 배경형 + 균등형 tab 예제 --&gt;
+&lt;div class="ui-tab ui-tab-fill ui-tab-equal js-tab"&gt;
+    &lt;div class="ui-tab-list" role="tablist" aria-label="조회 기간"&gt;
+        &lt;button type="button" id="tab-fill-01" class="ui-tab-btn" role="tab" aria-controls="panel-fill-01" aria-selected="true"&gt;1개월&lt;/button&gt;
+        &lt;button type="button" id="tab-fill-02" class="ui-tab-btn" role="tab" aria-controls="panel-fill-02" aria-selected="false" tabindex="-1"&gt;3개월&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div id="panel-fill-01" class="ui-tab-panel" role="tabpanel" aria-labelledby="tab-fill-01"&gt;최근 1개월 내용&lt;/div&gt;
+    &lt;div id="panel-fill-02" class="ui-tab-panel" role="tabpanel" aria-labelledby="tab-fill-02" hidden&gt;최근 3개월 내용&lt;/div&gt;
+&lt;/div&gt;</code></pre>
                                 </div>
+                                <ul class="guide-msg guide-msg-note">
+                                    <li>.ui-tab-fill: 배경형 탭</li>
+                                    <li>.ui-tab-equal: 짧은 탭을 같은 너비로 배치</li>
+                                    <li>탭명이 길거나 많으면 기본 탭을 사용한다.</li>
+                                    <li>선택 전환은 .js-tab 공통 스크립트를 사용한다.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
