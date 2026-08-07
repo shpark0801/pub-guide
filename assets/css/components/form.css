@@ -752,6 +752,7 @@
     box-sizing: border-box;
     overflow-x: auto;
     overflow-y: hidden;
+    /* iOS Safari 가로 스크롤 관성 */
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
 }
@@ -883,7 +884,8 @@
     .form-input,
     .form-select {
         height: 42px;
-        font-size: 15px;
+        /* iOS 입력 포커스 확대 방지 */
+        font-size: 16px;
     }
 
     .form-group,

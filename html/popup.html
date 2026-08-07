@@ -66,6 +66,9 @@
                                 <a href="../index.html#html-rule">HTML 규칙</a>
                             </li>
                             <li>
+                                <a href="seo-ai.html">SEO · AI 검색 대응 참고</a>
+                            </li>
+                            <li>
                                 <a href="../index.html#css-rule">CSS 규칙</a>
                             </li>
                             <li>
@@ -1398,6 +1401,13 @@ closeButtons.forEach(function (button) {
     min-height: 120px;
 }
 
+/* Samsung Internet 등 Android 탑 버튼과 iOS 안전영역 대응 */
+@media (max-width: 767px) {
+    .ui-bottom-sheet-panel {
+        padding-bottom: calc(76px + env(safe-area-inset-bottom));
+    }
+}
+
 .ui-bottom-sheet.is-closing .ui-bottom-sheet-dimmed {
     opacity: 0;
 }
@@ -1414,6 +1424,10 @@ closeButtons.forEach(function (button) {
     transform: translateY(100%);
 }</code></pre>
                                 </div>
+                                <ul class="guide-msg guide-msg-warn">
+                                    <li>Samsung Internet처럼 자체 탑 버튼을 표시하는 Android 브라우저에서는 바텀시트 안쪽 여백을 유지한다.</li>
+                                    <li>토스트는 모달 또는 바텀시트가 열려 있을 때 노출하지 않는다.</li>
+                                </ul>
                                 <div class="code-box">
                                     <pre><code class="javascript">// bottom sheet 동작
 const sheet = document.querySelector('#guide-bottom-sheet');

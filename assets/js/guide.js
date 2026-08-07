@@ -338,6 +338,8 @@ $(function () {
             return;
         }
 
+        // :has() 미지원 브라우저의 문서 스크롤 잠금 보완
+        document.documentElement.classList.remove("is-modal-open");
         document.body.classList.remove("is-modal-open");
 
         if (lastFocusedElement) {
@@ -356,6 +358,8 @@ $(function () {
             lastFocusedElement = this;
             modal.classList.add("is-open");
             modal.setAttribute("aria-hidden", "false");
+            // :has() 미지원 브라우저의 문서 스크롤 잠금 보완
+            document.documentElement.classList.add("is-modal-open");
             document.body.classList.add("is-modal-open");
             modal.querySelector("button.js-modal-close").focus();
         });
@@ -569,6 +573,7 @@ $(function () {
             lastFocusedElement = this;
             target.classList.add("is-open");
             target.setAttribute("aria-hidden", "false");
+            document.documentElement.classList.add("is-modal-open");
             document.body.classList.add("is-modal-open");
             target.querySelector(".js-terms-full-open, .js-modal-close").focus();
         });
@@ -611,6 +616,7 @@ $(function () {
                 sheet.classList.add("is-opening");
                 sheet.classList.add("is-open");
                 sheet.setAttribute("aria-hidden", "false");
+                document.documentElement.classList.add("is-modal-open");
                 document.body.classList.add("is-modal-open");
                 sheet.querySelector("button.js-bottom-sheet-close").focus();
 
@@ -641,6 +647,7 @@ $(function () {
 
                 window.setTimeout(function () {
                     sheet.classList.remove("is-open", "is-closing");
+                    document.documentElement.classList.remove("is-modal-open");
                     document.body.classList.remove("is-modal-open");
 
                     if (lastFocusedElement) lastFocusedElement.focus();
