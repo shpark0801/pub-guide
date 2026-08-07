@@ -227,28 +227,6 @@ $(function () {
         }
     });
 
-    // LNB 스와이프 토글
-    if ($.fn.swipe) {
-        $(".pub").swipe({
-            swipe: function (event, direction) {
-                if ($(window).width() > 1000) {
-                    return;
-                }
-
-                if (direction === "left") {
-                    $(".js-menu-trigger").removeClass("is-active");
-                    $(".js-pub-lnb").removeClass("is-active");
-                } else if (direction === "right") {
-                    $(".js-menu-trigger").addClass("is-active");
-                    $(".js-pub-lnb").addClass("is-active");
-                }
-            },
-            threshold: 5,
-            // PC에서는 코드 복사 및 텍스트 선택을 위해 마우스 swipe를 비활성화
-            fallbackToMouseEvents: false,
-        });
-    }
-
     // Highlight.js
     if (window.hljs) {
         document.querySelectorAll("pre code").forEach(function (code) {
