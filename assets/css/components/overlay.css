@@ -326,7 +326,7 @@ body.is-modal-open {
 .ui-toast {
     position: fixed;
     left: 50%;
-    /* Samsung Internet 등 Android 탑 버튼과 iOS 안전영역 대응 */
+    /* iOS 안전영역 대응 */
     bottom: calc(30px + env(safe-area-inset-bottom));
     z-index: 1100;
     min-width: 240px;
@@ -352,6 +352,13 @@ body.is-modal-open {
     opacity: 1;
     visibility: visible;
     transform: translate(-50%, 0);
+}
+
+@media (max-width: 767px) {
+    .ui-toast {
+        /* Samsung Internet 등 Android 탑 버튼과 겹침 방지 */
+        bottom: calc(86px + env(safe-area-inset-bottom));
+    }
 }
 
 /* 레이어가 열리면 토스트를 숨겨 콘텐츠 겹침 방지 */
