@@ -32,14 +32,14 @@
     width: 100%;
     max-width: 400px;
     max-height: calc(100vh - 40px);
-    /* Chrome(Android)·Safari(iOS)·Samsung Internet 주소창 표시·숨김 대응 */
+    /* 크롬, 사파리, 삼성 브라우저 주소창 표시·숨김 대응 */
     max-height: calc(100dvh - 40px);
     overflow-y: auto;
     border-radius: 8px;
     background-color: #fff;
 }
 
-/* 기본 모달: 헤더 · 본문 · 하단 액션 */
+/* 기본 모달: 헤더, 본문, 하단 액션 */
 .ui-modal-header,
 .ui-modal-body,
 .ui-modal-footer {
@@ -95,7 +95,7 @@ body.is-modal-open {
 .ui-modal-full .ui-modal-dialog {
     max-width: none;
     height: 100%;
-    /* Chrome(Android)·Safari(iOS)·Samsung Internet 주소창 표시·숨김 대응 */
+    /* 크롬, 사파리, 삼성 브라우저 주소창 표시·숨김 대응 */
     height: 100dvh;
     border-radius: 0;
 }
@@ -103,7 +103,7 @@ body.is-modal-open {
 /* 약관 보기: 본문 스크롤과 항목 레이아웃 */
 .ui-terms-content {
     height: calc(100vh - 61px);
-    /* Chrome(Android)·Safari(iOS)·Samsung Internet 주소창 표시·숨김 대응 */
+    /* 크롬, 사파리, 삼성 브라우저 주소창 표시·숨김 대응 */
     height: calc(100dvh - 61px);
     overflow-y: auto;
 }
@@ -138,7 +138,7 @@ body.is-modal-open {
     padding-left: 16px;
 }
 
-/* 이미지 배너 모달: 모달 패널 · 헤더 · 본문 */
+/* 이미지 배너 모달: 모달 패널, 헤더, 본문 */
 .ui-modal-banner .ui-modal-dialog {
     overflow: hidden;
     border-radius: 0;
@@ -197,7 +197,7 @@ body.is-modal-open {
     border-left: 1px solid #e5e5e5;
 }
 
-/* 이미지 배너 모달: 슬라이드 · 이전/다음 · 페이지네이션 */
+/* 이미지 배너 모달: 슬라이드, 이전/다음, 페이지네이션 */
 .ui-modal-banner-slide {
     position: relative;
 }
@@ -356,7 +356,7 @@ body.is-modal-open {
 
 @media (max-width: 767px) {
     .ui-toast {
-        /* Samsung Internet 등 Android 탑 버튼과 겹침 방지 */
+        /* 삼성 브라우저 등 Android 탑 버튼과 겹침 방지 */
         bottom: calc(86px + env(safe-area-inset-bottom));
     }
 }
@@ -381,7 +381,7 @@ body.is-modal-open .ui-toast {
     display: flex;
 }
 
-/* 바텀시트: 배경 dim · 패널 · 열기/닫기 모션 */
+/* 바텀시트: 배경 dim, 패널, 열기/닫기 모션 */
 .ui-bottom-sheet-dimmed {
     position: absolute;
     inset: 0;
@@ -396,7 +396,7 @@ body.is-modal-open .ui-toast {
     width: 100%;
     max-width: 480px;
     max-height: calc(100vh - 40px);
-    /* Chrome(Android)·Safari(iOS)·Samsung Internet 주소창 표시·숨김 대응 */
+    /* 크롬, 사파리, 삼성 브라우저 주소창 표시·숨김 대응 */
     max-height: calc(100dvh - 40px);
     overflow-y: auto;
     padding: 24px 20px 20px;
@@ -429,7 +429,7 @@ body.is-modal-open .ui-toast {
     transform: translateY(100%);
 }
 
-/* 바텀시트: 핸들 · 제목 */
+/* 바텀시트: 핸들,제목 */
 .ui-bottom-sheet-handle {
     position: absolute;
     top: 8px;
@@ -448,7 +448,7 @@ body.is-modal-open .ui-toast {
     color: #111;
 }
 
-/* 바텀시트: 콘텐츠 · 하단 액션 */
+/* 바텀시트: 콘텐츠, 하단 액션 */
 .ui-bottom-sheet-actions {
     margin-top: 20px;
 }
@@ -457,7 +457,7 @@ body.is-modal-open .ui-toast {
     min-height: 120px;
 }
 
-/* 알림 · 확인 모달: 압축 여백과 버튼 레이아웃 */
+/* 알림, 확인 모달: 압축 여백과 버튼 레이아웃 */
 .ui-modal-msg .ui-modal-header,
 .ui-modal-msg .ui-modal-body,
 .ui-modal-msg .ui-modal-footer {
@@ -480,7 +480,7 @@ body.is-modal-open .ui-toast {
     padding-right: 48px;
 }
 
-/* 공통: 모달 · 바텀시트 닫기 버튼 */
+/* 공통: 모달, 바텀시트 닫기 버튼 */
 .ui-modal-close,
 .ui-bottom-sheet-close {
     position: absolute;
@@ -516,7 +516,7 @@ body.is-modal-open .ui-toast {
     }
 }
 
-/* 메시지 반응형 액션 */
+/* 메시지 */
 @media (max-width: 480px) {
     .ui-modal-msg .ui-modal-footer {
         flex-direction: column;
@@ -538,7 +538,7 @@ body.is-modal-open .ui-toast {
     }
 }
 
-/* 바텀시트 반응형 액션 */
+/* 바텀시트 */
 @media (max-width: 480px) {
     .ui-bottom-sheet-panel {
         padding-right: 16px;
